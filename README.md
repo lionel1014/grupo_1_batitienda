@@ -1,6 +1,5 @@
 # BatiTienda Marketplace
-
-![BatiTienda Marketplace Logo](link_to_logo.png) <!-- Agrega una imagen de tu logo si la tienes -->
+![BatiTienda](https://github.com/lionel1014/grupo_1_batitienda/assets/77951627/d285f110-5db4-49dc-a7cd-bb7568099dd1)
 
 Este repositorio contiene el código fuente de BatiTienda Marketplace, un marketplace en línea dedicado a la venta de cómics y productos relacionados con superhéroes. ¡Bienvenido!
 
@@ -10,10 +9,10 @@ BatiTienda Marketplace es un proyecto de mercado en línea que tiene como objeti
 
 ## Equipo
 
-- Lionel
-- Thiago
-- Enzo
-- Esteban
+- **Lionel N. Diez Gómez:** Desarrollador full stack especializado con .NET Core y Angular con 2 años de experiencia. Actualmente cursando la última asignatura de la carrera del Profesorado en Computación
+- **Thiago:**
+- **Enzo:**
+- **Esteban:**
 
 ## Sitios de Referencia
 
