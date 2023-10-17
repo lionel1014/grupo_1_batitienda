@@ -12,7 +12,7 @@ BatiTienda Marketplace es un proyecto de mercado en línea que tiene como objeti
 - **Lionel N. Diez Gómez:** Desarrollador full stack especializado con .NET Core y Angular con 2 años de experiencia. Actualmente cursando la última asignatura de la carrera del Profesorado en Computación
 - **Thiago:**
 - **Enzo:**
-- **Esteban:**
+- **Esteban:** Estudiante de desarrollo Full Stack con disposición y flexibilidad para aprender, actualmente estudiante de Ingeniería en Agrimensura en la UNCA.
 
 ## Sitios de Referencia
 
