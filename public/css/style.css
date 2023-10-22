@@ -1,5 +1,31 @@
+:root{
+    --cinder-50: #f7f7f8;
+    --cinder-100: #efeef0;
+    --cinder-200: #dbd8df;
+    --cinder-300: #bbb6c3;
+    --cinder-400: #968fa1;
+    --cinder-500: #7a7186;
+    --cinder-600: #635b6e;
+    --cinder-700: #524a5a;
+    --cinder-800: #45404c;
+    --cinder-900: #3d3842;
+    --cinder-950: #1a181c;
+
+    --yellow-900: #ffd900;
+    --red--00: #8c0000;
+    --blue-80: #002080;
+}
+
+@font-face {
+    font-family: 'NextSunday';
+    src: url(fonts/Next_Sunday.otf);
+}
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: comics;
     box-sizing: border-box;
+    background-color: var(--cinder-100);
+    font-family: 'NextSunday';
 }
