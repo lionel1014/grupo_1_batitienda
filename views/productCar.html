@@ -9,12 +9,51 @@
     <title>BatiTienda🦇</title>
 </head>
 <body>
-    <h1>PRODUCT CAR</h1>
-    <ul>
-        <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-        <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-        <li><a href="/">INICIO <i class="fa-solid fa-house"></i></a></li>
-        <li><a href="/productDetail">detalles producto <i class="fa-solid fa-book"></i></a></li>
-    </ul>
+
+    <header>
+        <h1>Carrito de Compras</h1>
+        <h1>PRODUCT CAR</h1>
+        <ul>
+            <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+            <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="/">INICIO <i class="fa-solid fa-house"></i></a></li>
+            <li><a href="/productDetail">detalles producto <i class="fa-solid fa-book"></i></a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2>Productos</h2>
+            <ul>
+                <li>
+                    <img src="producto1.jpg" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Precio: $20.00</p>
+                    <button>Añadir al carrito</button>
+                </li>
+                <li>
+                    <img src="producto2.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Precio: $25.00</p>
+                    <button>Añadir al carrito</button>
+                </li>
+                <!-- Agrega más productos aquí -->
+            </ul>
+        </section>
+
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul>
+                <!-- Elementos del carrito se agregarán dinámicamente con JavaScript -->
+            </ul>
+            <p>Total: <span id="total">0.00</span></p>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tu Tienda en Línea</p>
+    </footer>
+
 </body>
 </html>
