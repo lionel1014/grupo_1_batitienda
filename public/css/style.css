@@ -26,6 +26,23 @@
     padding: 0px;
     font-family: comics;
     box-sizing: border-box;
-    background-color: var(--cinder-100);
     font-family: 'NextSunday';
+}
+body{
+    background-color: var(--cinder-100);
+}
+
+
+/* Tablets */
+@media (min-width: 468px) {
+    body{
+        background-color: var(--yellow-900)
+    }
+}
+
+/* Laptops */
+@media (min-width: 786px) {
+    body{
+        background-color: var(--cinder-900);
+    }
 }
