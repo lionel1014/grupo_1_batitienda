@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>BatiTienda🦇</title>
 </head>
 <body>
@@ -23,30 +22,53 @@
 
     <main>
         <section id="productos">
-            <h2>Productos</h2>
+            <h1>Carrito de Compras - Comics</h1>
             <ul>
                 <li>
-                    <img src="producto1.jpg" alt="Producto 1">
-                    <h3>Producto 1</h3>
-                    <p>Precio: $20.00</p>
-                    <button>Añadir al carrito</button>
+                    <article>
+                        <img src="images/Batgirl.jpg" alt="Producto 1">
+                        <h3>Comic 1</h3>
+                        <button class="agregar">+</button>
+                        <button class="restar">-</button>
+                        <p>Precio: $20.00</p>
+                        <button><i class="fa-solid fa-trash"></i></button>
+                    </article>
                 </li>
                 <li>
-                    <img src="producto2.jpg" alt="Producto 2">
-                    <h3>Producto 2</h3>
-                    <p>Precio: $25.00</p>
-                    <button>Añadir al carrito</button>
+                    <article>
+                        <img src="images/jokerwar.jpg" alt="Producto 2">
+                        <h3>Comic 2</h3>
+                        <button class="agregar">+</button>
+                        <button class="restar">-</button>
+                        <p>Precio: $25.00</p>
+                        <button><i class="fa-solid fa-trash fa-spin"></i></button>
+                    </article>
                 </li>
-                <!-- Agrega más productos aquí -->
             </ul>
         </section>
+        <section>
 
-        <section id="carrito">
-            <h2>Carrito de Compras</h2>
-            <ul>
-                <!-- Elementos del carrito se agregarán dinámicamente con JavaScript -->
-            </ul>
+        <section id="envio">
+            <h2>Opciones de Envío</h2>
+            <article>
+                <input type="radio" name="envio" value="retiro"> Retiro por Local
+                <input type="radio" name="envio" value="domicilio"> Envío a Domicilio
+            </article>
+        </section>
+
+        <section id="medio-pago">
+            <h2>Medios de Pago</h2>
+            <article>
+                <input type="radio" name="pago" value="efectivo"> Efectivo
+                <input type="radio" name="pago" value="tarjeta"> Tarjeta de Débito/Crédito
+                <input type="radio" name="pago" value="transferencia"> Transferencia
+            </article>
+        </section>
+
+        <section id="resumen">
+            <h2>Finalizar Compra</h2>
             <p>Total: <span id="total">0.00</span></p>
+            <button id="comprar">Comprar</button>
             <button id="vaciar-carrito">Vaciar Carrito</button>
         </section>
     </main>
