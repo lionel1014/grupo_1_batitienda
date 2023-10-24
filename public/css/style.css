@@ -32,6 +32,42 @@ body{
     background-color: var(--cinder-100);
 }
 
+section h2 {
+    background-color: var(--cinder-400);
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+article img{
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+article :is(.image-product, .option-product){
+    width: 50%;
+    text-align: center;
+}
+
+.option-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.quantity-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
 
 /* Tablets */
 @media (min-width: 468px) {
