@@ -11,26 +11,146 @@
     --cinder-900: #3d3842;
     --cinder-950: #1a181c;
 
-    --yellow-900: #ffd900;
+    --yellow-900: #fdff00;
     --red--00: #8c0000;
     --blue-80: #002080;
 }
 
 @font-face {
-    font-family: 'NextSunday';
-    src: url(fonts/Next_Sunday.otf);
+    font-family: 'Lato';
+    src: url(fonts/Lato/Lato-Thin.ttf);
 }
+
+/* PALETA DE COLORES: 
+ amarillo para resaltar: #fdff00    
+ mostaza para lo que deba llevar color sin resaltar tanto: #988829    
+ contenedores: #242424    
+ contenedores segunta opción (menos relevante): #282e3c   
+ background: #505c7c 
+ para los parrafos en general usar blanco con el fondo oscuro (#505c7c) y negro con el fondo claro (#242424) */
 
 *{
     margin: 0px;
     padding: 0px;
     font-family: comics;
     box-sizing: border-box;
-    font-family: 'NextSunday';
+    font-family: 'Lato';
 }
 body{
-    background-color: var(--cinder-100);
+    background-color: #242424;
 }
+
+
+/* CARRUSEL */
+
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    width: 90%;
+    max-width: 120em;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.carrusel .slide {
+    width: 100%;
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #f0f0f0; 
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2), 5px 5px 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.carrusel .img {
+    max-width: 100%;
+    min-height: 10vh;
+    height: auto;
+}
+
+.carrusel .punto {
+    background-color: lightslategray;
+    padding: 10px 15px;
+    border: none;
+    font-size: 18px;
+    border-radius: 100%;
+}
+
+.carrusel .punto:hover {
+    background-color: #fdff00;
+}
+
+.carrusel .puntos {
+    padding: 10px;
+    margin: 1em 0 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel .punto.activo {
+    margin: 1em;
+}
+
+
+/* PRODUCTO */
+
+/* Contenedor */
+.producto {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    background-color: #505c7c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .producto img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .producto .nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .producto .descripcion {
+    font-size: 0.9em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .producto .precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fdff00; 
+  }
+  
+  .producto .carrito {
+    display: block;
+    background-color: black;
+    color: #fdff00;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .product .carrito:hover {
+    background-color: #282e3c;
+  }
+
 
 
 /* Tablets */
