@@ -34,3 +34,9 @@ app.get('/productDetail', (request, response) =>{
 app.get('*', (request, response) => {
     response.redirect('/');
   });
+
+
+
+
+  // CARRUSEL 
+

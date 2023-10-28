@@ -1,20 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>BatiTienda🦇</title>
-</head>
-<body>
-    <h1>INDEX</h1>
-    <img src="images/logo-tienda.svg" alt="Logo de BatiTienda">
+  </head>
+  <body>
+    <main>
+      <div class="carrusel">
+        <div class="slide">
+          <img src="design/paletaColores.jpeg" />
+          <img src="design/paletaColores.jpeg" />
+        </div>
+        <ul class="puntos">
+          <li class="punto"></li>
+          <li class="punto"></li>
+        </ul>
+
+        <script type="text/javascript">
+          const slide = document.querySelector(".slide");
+          const punto = document.querySelectorAll(".punto");
+
+          punto.forEach((cadaPunto, i) => {
+            punto[i].addEventListener("click", () => {
+              let posicion = i;
+              let calculo = posicion * -50;
+
+              slide.style.transform = `translateX(${calculo})`;
+
+              punto.forEach((cadaPunto, i) => {
+                punto[i].classList.remove(".activo");
+              });
+
+              punto[i].classList.add(".activo");
+            });
+          });
+        </script>
+      </div>
+      <div class="productos-lista">
+        <div class="producto">
+          <img src="images/Batgirl.jpg" />
+          <div>
+            <h2 class="producto-nombre">comic 1</h2>
+            <p class="producto-precio">$$$$</p>
+            <p class="desripcion-producto">
+              descripcion bien hecha que rn otro momento haré
+            </p>
+            <button class="agregar-carrito"></button>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="images/Aquaman-Deep-Dives-TP.jpg" />
+          <div>
+            <h2 class="producto-nombre">comic 2</h2>
+            <p class="producto-precio">$$$$</p>
+            <p class="desripcion-producto">
+              descripcion bien hecha que rn otro momento haré
+            </p>
+            <button class="agregar-carrito"></button>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="images/Absolute-Batman-the-Killing-Joke-HC.jpg" />
+          <div>
+            <h2 class="producto-nombre">comic 3</h2>
+            <p class="producto-precio">$$$$</p>
+            <p class="desripcion-producto">
+              descripcion bien hecha que en otro momento haré
+            </p>
+            <button class="agregar-carrito"></button>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <ul>
         <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
         <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
         <li><a href="/productCar">Carrito de compras <i class="fa-solid fa-cart-shopping"></i></a></li>
         <li><a href="/productDetail">detalles producto <i class="fa-solid fa-book"></i></a></li>
     </ul>
-</body>
+  </body>
 </html>
