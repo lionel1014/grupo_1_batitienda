@@ -1,3 +1,394 @@
+:root {
+    --cinder-50: #f7f7f8;
+    --cinder-100: #efeef0;
+    --cinder-200: #dbd8df;
+    --cinder-300: #bbb6c3;
+    --cinder-400: #968fa1;
+    --cinder-500: #7a7186;
+    --cinder-600: #635b6e;
+    --cinder-700: #524a5a;
+    --cinder-800: #45404c;
+    --cinder-900: #3d3842;
+    --cinder-950: #1a181c;
+
+    --yellow-900: #fdff00;
+    --red-900: #8c0000;
+    --blue-80: #002080;
+}
+
+/* PALETA DE COLORES:
+   amarillo para resaltar: #fdff00
+   mostaza para lo que deba llevar color sin resaltar tanto: #988829
+   contenedores: #242424
+   contenedores segunda opción (menos relevante): #282e3c
+   background: #505c7c
+   para los párrafos en general usar blanco con el fondo oscuro (#505c7c) y negro con el fondo claro (#242424) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--cinder-50);
+}
+
+section h2 {
+    background-color: var(--cinder-400);
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+article {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+article.sell-options {
+    justify-content: space-between;
+}
+
+article .image-product {
+    width: 25%;
+    max-width: 75px;
+    padding-right: 9px;
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.menu-buttons, .sub-total {
+    display: inline-block;
+    width: 55%;
+}
+
+.sub-total {
+    text-align: right;
+    width: 43%;
+}
+
+.option-product {
+    padding-left: 10px;
+    width: 75%;
+    margin-bottom: 15px;
+}
+
+.quantity-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.quantity-buttons > span {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+button.delete-product {
+    width: 5%;
+    font-size: 18px;
+}
+
+.sell-checkbox, .send-price {
+    display: inline;
+}
+
+.send-price {
+    margin-left: 10px;
+}
+
+#resumen > .price-last-opcions {
+    width: 50%;
+}
+
+.price-last-opcions {
+    margin-left: auto;
+}
+
+.banner-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.banner-inicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para productos */
+
+.productos-lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.producto-descripcion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+    background-color: #333653;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.producto-nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.descripcion-producto {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--cinder-700);
+}
+
+.producto-precio {
+    width: 40%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--yellow-900);
+}
+
+/* Botones */
+.btn {
+    min-width: 37px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #343a40;
+    box-shadow: 0 5px #212529;
+}
+
+.btn:hover {
+    box-shadow: 0 3px #212529;
+    top: 1px;
+}
+
+.btn:active {
+    box-shadow: 0 0 #212529;
+    top: 5px;
+}
+
+/* Botón de borrar */
+.delete-product {
+    background-color: #505c7c;
+}
+
+/* Estilos de contenedor de formulario */
+.form-container {
+    background-color: var(--blue-80);
+}
+
+.login-container,
+.register-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%; /* Ocupa el 100% del ancho en escritorio */
+    height: 80vh;
+}
+
+/* Estilos de formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para botones sociales */
+.social-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Tablets */
+@media (min-width: 468px) {
+    body {
+        background-color: var(--yellow-900);
+    }
+
+    .productos-lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .producto {
+        width: 40vw;
+        margin: 10px;
+    }
+
+    .producto img {
+        height: 254px;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .producto-precio {
+        text-align: left;
+    }
+
+    .producto-nombre {
+        width: 100%;
+    }
+}
+
+/* Laptops */
+@media (min-width: 786px) {
+    body {
+        background-color: var(--cinder-50);
+    }
+
+    article .image-product {
+        width: 10%;
+    }
+
+    h3.title-product {
+        display: inline-block;
+        width: 35%;
+    }
+
+    .menu-buttons,
+    .sub-total {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .sub-total {
+        width: 10%;
+    }
+
+    article.sell-options {
+        flex-direction: column;
+    }
+
+    .sell-checkbox,
+    .checkbox-container {
+        margin: 10px 0;
+    }
+
+    .producto {
+        width: 25vw;
+    }
+
+    .producto img {
+        max-width: 100%;
+        min-height: 340px;
+    }
+
+    .producto-precio {
+        text-align: right;
+    }
+
+    .producto-nombre {
+        width: 60%;
+    }
+
+    .form-container {
+        padding: 15px 0 15px 50px;
+        background-image: url('../images/BMDP.gif');
+        background-size: auto;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+
+    .login-container,
+    .register-container {
+        margin: 0;
+        width: 40%; /* Ocupa el 40% del ancho en escritorio */
+        max-width: 504px; /* Ocupa el 100% del ancho en dispositivos móviles */
+        height: 80vh;
+    }
+}
 :root{
     --cinder-50: #f7f7f8;
     --cinder-100: #efeef0;
@@ -11,27 +402,262 @@
     --cinder-900: #3d3842;
     --cinder-950: #1a181c;
 
-    --yellow-900: #ffd900;
+    --yellow-900: #fdff00;
     --red--00: #8c0000;
     --blue-80: #002080;
 }
 
-@font-face {
-    font-family: 'NextSunday';
-    src: url(./fonts/Next_Sunday.otf);
-}
+
+/* PALETA DE COLORES: 
+ amarillo para resaltar: #fdff00    
+ mostaza para lo que deba llevar color sin resaltar tanto: #988829    
+ contenedores: #242424    
+ contenedores segunta opción (menos relevante): #282e3c   
+ background: #505c7c 
+ para los parrafos en general usar blanco con el fondo oscuro (#505c7c) y negro con el fondo claro (#242424) */
 
 *{
     margin: 0px;
     padding: 0px;
-    font-family: comics;
     box-sizing: border-box;
-    font-family: 'NextSunday';
-}
-body{
-    background-color: var(--cinder-100);
+    font-family: 'Montserrat', sans-serif;
 }
 
+h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+
+body{
+    background-color: #242424;
+}
+
+section h2 {
+    background-color: var(--cinder-400);
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+article{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+article.sell-options{
+    justify-content: space-between;
+}
+
+article :is(.image-product){
+    width: 25%;
+    max-width: 75px;
+    padding-right: 9px;
+}
+
+article img{
+    width: 100%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.menu-buttons,
+.sub-total{
+    display: inline-block;
+    width: 55%;
+}
+
+.sub-total{
+    text-align: right;
+    width: 43%;
+}
+
+.option-product{
+    padding-left: 10px;
+    width: 75%;
+}
+
+.title-product{
+    margin-bottom: 15px;
+}
+
+.quantity-buttons{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.quantity-buttons > span{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+button.delete-product{
+    width: 5%;
+    font-size: 18px;
+}
+
+.sell-checkbox, .send-price{
+    display: inline;
+}
+.send-price{
+    margin-left: 10px;
+}
+
+#resumen >.price-last-opcions{
+    width: 50%;
+}
+
+.price-last-opcions {
+    margin-left: auto;
+}
+
+/* BANNER */
+
+.banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.banner-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
+  }
+  
+  .banner-inicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+
+/* PRODUCTO */
+
+
+.productos-lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+.producto-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+
+    background-color: #252850;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .producto img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .producto-nombre {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    size: 100%;
+    color: #ffff;
+  }
+  
+  .descripcion-producto {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #968fa1;
+    margin: 10px 0;
+  }
+  
+  .producto-precio {
+    width: 40%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fdff00; 
+    margin-bottom: 5px;
+  }
+
+  .precio-carro{
+    display: flex;
+    justify-content:end;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .add-carrito{
+    color: white;
+  }
+  .fa-cart-shopping .carro-producto{
+    margin: 50px;
+    padding: 50px;
+
+  }
+
+/* botones */
+.btn {
+    min-width: 37px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #343a40;
+    box-shadow: 0 5px #212529;
+}
+.btn:hover {
+    box-shadow: 0 3px #212529;
+    top: 1px;
+}
+.btn:active {
+    box-shadow: 0 0 #212529;
+    top: 5px;
+}
+
+/* boton de borrar */
+.delete-product{
+    background-color: #505c7c;
+}
 /* Estilo para el contenedor principal */
 .header-top {
     display: flex;
@@ -204,7 +830,40 @@ input[type="checkbox"]:checked + ul .sub-menu {
 /* Tablets */
 @media (min-width: 468px) {
     body{
-        background-color: var(--yellow-900)
+        background-color: #242424;
+    }
+
+    .productos-lista{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .producto{
+        width: 40vw;
+        margin: 10px;
+    }
+
+    .producto img{
+        height: 254px;
+    }
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .producto-precio{
+        text-align: left;
+    }
+
+    .producto-nombre{
+        width: 100%;
     }
 
     /*-----Footer-----*/
@@ -224,7 +883,32 @@ input[type="checkbox"]:checked + ul .sub-menu {
 /* Laptops */
 @media (min-width: 786px) {
     body{
-        background-color: var(--cinder-900);
+        background-color: #242424;
+    }
+    article :is(.image-product) {
+        width: 10%;
+    }
+
+    h3.title-product {
+        display: inline-block;
+        width: 35%;
+    }
+
+    .menu-buttons, .sub-total {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .sub-total {
+        width: 10%;
+    }
+
+    article.sell-options {
+        flex-direction: column;
+    }
+
+    .sell-checkbox,.checkbox-container{
+        margin: 10px 0 10px 0;
     }
 
     /*-----Footer-----*/
@@ -238,4 +922,25 @@ input[type="checkbox"]:checked + ul .sub-menu {
         grid-column: auto;
     } 
     /*----------------*/
+
+
+
+    .producto{
+        width: 25vw;
+
+    }
+
+    .producto img{
+        max-width: 100%;
+        min-height: 340px;
+    }
+
+    .producto-precio{
+        text-align: right;
+    }
+
+    .producto-nombre{
+        width: 60%;
+    }
+
 }

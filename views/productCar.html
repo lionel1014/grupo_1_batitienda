@@ -11,7 +11,7 @@
 
     <header>
         <h1>Carrito de Compras</h1>
-        <h1>PRODUCT CAR</h1>
+        <h1>PRODUCT CARs</h1>
         <ul>
             <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
             <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
@@ -22,54 +22,93 @@
 
     <main>
         <section id="productos">
-            <h1>Carrito de Compras - Comics</h1>
-            <ul>
-                <li>
-                    <article>
-                        <img src="images/Batgirl.jpg" alt="Producto 1">
-                        <h3>Comic 1</h3>
-                        <button class="agregar">+</button>
-                        <button class="restar">-</button>
-                        <p>Precio: $20.00</p>
-                        <button><i class="fa-solid fa-trash"></i></button>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src="images/jokerwar.jpg" alt="Producto 2">
-                        <h3>Comic 2</h3>
-                        <button class="agregar">+</button>
-                        <button class="restar">-</button>
-                        <p>Precio: $25.00</p>
-                        <button><i class="fa-solid fa-trash fa-spin"></i></button>
-                    </article>
-                </li>
-            </ul>
+            <h2>Carrito de Compras - Comics</h2>
+            <article class="cart-row">
+                <div class="image-product">
+                    <img src="images/Batgirl.jpg" alt="Producto 1">
+                </div>
+                <div class="option-product">
+                    <h3 class="title-product">Comic 1</h3>
+                    <div class="menu-buttons">
+                        <div class="quantity-buttons">
+                            <button class="add-product-button btn"><i class="fa-solid fa-plus"></i></button>
+                            <span>1 </span>
+                            <button class="add-product-button btn"><i class="fa-solid fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <h6 class="sub-total">Precio: $20.00</h6>
+                </div>
+                <div>
+                    <button class="delete-product btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </article>
+            <article class="cart-row">
+                <div class="image-product">
+                    <img src="images/jokerwar.jpg" alt="Producto 2">
+                </div>
+                <div class="option-product">
+                    <h3 class="title-product">Comic 2</h3>
+                    <div class="menu-buttons">
+                        <div class="quantity-buttons">
+                            <button class="add-product-button btn"><i class="fa-solid fa-plus"></i></button>
+                            <span>3 </span>
+                            <button class="add-product-button btn"><i class="fa-solid fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <h6 class="sub-total">Precio: $25.00</h6>
+                </div>
+                <div>
+                    <button class="delete-product btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </article>
         </section>
         <section>
 
         <section id="envio">
             <h2>Opciones de Envío</h2>
-            <article>
-                <input type="radio" name="envio" value="retiro"> Retiro por Local
-                <input type="radio" name="envio" value="domicilio"> Envío a Domicilio
+            <article class="sell-options">
+                <div class="checkbox-container">
+                    <div class="sell-checkbox">
+                        <input type="radio" name="envio" id="retiroLocal" value="retiro"> 
+                        <label for="retiroLocal">Retiro por Local</label>
+                    </div>
+                    <p class="send-price">$0</p>
+                </div>
+                <div class="checkbox-container">
+                    <div class="sell-checkbox">
+                        <input type="radio" name="envio" id="retiroDomicilio" value="domicilio"> 
+                        <label for="retiroDomicilio">Envío a Domicilio</label>
+                    </div>
+                    <p class="send-price">$2000</p>
+                </div>
             </article>
         </section>
 
         <section id="medio-pago">
             <h2>Medios de Pago</h2>
-            <article>
-                <input type="radio" name="pago" value="efectivo"> Efectivo
-                <input type="radio" name="pago" value="tarjeta"> Tarjeta de Débito/Crédito
-                <input type="radio" name="pago" value="transferencia"> Transferencia
+            <article class="sell-options">
+                <div class="sell-checkbox">
+                    <input type="radio" name="pago" value="efectivo" id="efectivo">
+                    <label for="efectivo">Efectivo</label>
+                </div>
+                <div class="sell-checkbox">
+                    <input type="radio" name="pago" value="tarjeta" id="tarjeta">
+                    <label for="tarjeta">Tarjeta de Débito/Crédito</label>
+                </div>
+                <div class="sell-checkbox">
+                    <input type="radio" name="pago" value="transferencia" id="transferencia">
+                    <label for="transferencia">Transferencia</label>
+                </div>
             </article>
         </section>
 
         <section id="resumen">
             <h2>Finalizar Compra</h2>
-            <p>Total: <span id="total">0.00</span></p>
-            <button id="comprar">Comprar</button>
-            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <div class="price-last-opcions">
+                <h3 id="total">Total: <span>100000.00</span></h3>
+                <button id="seguir-comprando" class="btn">Seguir Comprando</button>
+                <button id="vaciar-carrito" class="btn">Finalizar Compra</button>
+            </div>
         </section>
     </main>
 
