@@ -42,8 +42,7 @@ h3{
     font-weight: 600;
 }
 
-.banner-container{
-h6{
+.banner-container h6{
     font-size: 16px;
 }
 
@@ -140,8 +139,6 @@ button.delete-product{
     margin-left: auto;
 }
 
-
-
 .banner-inicio {
     display: flex;
     justify-content: center;
@@ -190,34 +187,34 @@ button.delete-product{
 
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .producto img {
+.producto img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-  }
+}
 
-  .producto-nombre {
+.producto-nombre {
     font-size: 1.2em;
     font-weight: bold;
     margin: 10px 0;
     size: 60%;
-  }
+}
   
-  .descripcion-producto {
+.descripcion-producto {
     margin-top: 10px;
     font-size: 0.9em;
     color: #524a5a;
     margin: 10px 0;
-  }
+}
   
-  .producto-precio {
+.producto-precio {
     width: 40%;
     font-size: 1.2em;
     font-weight: bold;
     color: #fdff00; 
- 
+}
 /* botones */
 .btn {
     min-width: 37px;
@@ -321,8 +318,6 @@ button.delete-product{
         margin: 10px 0 10px 0;
     }
 
-
-
     .producto{
         width: 25vw;
 
@@ -340,5 +335,4 @@ button.delete-product{
     .producto-nombre{
         width: 60%;
     }
-
-}}
+}
