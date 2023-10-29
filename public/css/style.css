@@ -36,8 +36,18 @@
     box-sizing: border-box;
     font-family: 'Lato';
 }
+
+h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h6{
+    font-size: 16px;
+}
+
 body{
-    background-color: #242424;
+    background-color: #f3f3f3;
 }
 
 section h2 {
@@ -49,8 +59,18 @@ section h2 {
 
 article{
     display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+article.sell-options{
+    justify-content: space-between;
+}
+
+article :is(.image-product){
+    width: 25%;
+    max-width: 75px;
+    padding-right: 9px;
 }
 
 article img{
@@ -59,23 +79,67 @@ article img{
     margin: auto;
 }
 
-article :is(.image-product, .option-product){
-    width: 50%;
-    text-align: center;
+.menu-buttons,
+.sub-total{
+    display: inline-block;
+    width: 55%;
+}
+
+.sub-total{
+    text-align: right;
+    width: 43%;
 }
 
 .option-product{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding-left: 10px;
+    width: 75%;
+}
+
+.title-product{
+    margin-bottom: 15px;
 }
 
 .quantity-buttons{
     display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 10px;
+    justify-content: flex-start;
+    margin-top: 10px;
+    align-items: center;
 }
+
+.quantity-buttons > span{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+button.delete-product{
+    width: 5%;
+    font-size: 18px;
+}
+
+.sell-checkbox, .send-price{
+    display: inline;
+}
+.send-price{
+    margin-left: 10px;
+}
+
+#resumen >.price-last-opcions{
+    width: 50%;
+}
+
+.price-last-opcions {
+    margin-left: auto;
+}
+
+
 
 /* CARRUSEL */
 
@@ -133,8 +197,6 @@ article :is(.image-product, .option-product){
 .carrusel .punto.activo {
     margin: 1em;
 }
-
-
 /* PRODUCTO */
 
 /* Contenedor */
@@ -187,7 +249,36 @@ article :is(.image-product, .option-product){
     background-color: #282e3c;
   }
 
+/* botones */
+.btn {
+    min-width: 37px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #343a40;
+    box-shadow: 0 5px #212529;
+}
+.btn:hover {
+    box-shadow: 0 3px #212529;
+    top: 1px;
+}
+.btn:active {
+    box-shadow: 0 0 #212529;
+    top: 5px;
+}
 
+/* boton de borrar */
+.delete-product{
+    background-color: #505c7c;
+}
 
 /* Tablets */
 @media (min-width: 468px) {
@@ -199,6 +290,31 @@ article :is(.image-product, .option-product){
 /* Laptops */
 @media (min-width: 786px) {
     body{
-        background-color: var(--cinder-900);
+        background-color: var(--cinder-50);
+    }
+    article :is(.image-product) {
+        width: 10%;
+    }
+
+    h3.title-product {
+        display: inline-block;
+        width: 35%;
+    }
+
+    .menu-buttons, .sub-total {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .sub-total {
+        width: 10%;
+    }
+
+    article.sell-options {
+        flex-direction: column;
+    }
+
+    .sell-checkbox,.checkbox-container{
+        margin: 10px 0 10px 0;
     }
 }
