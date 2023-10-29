@@ -16,9 +16,10 @@
     --blue-80: #002080;
 }
 
+
 /* @font-face {
-    font-family: 'Lato';
-    src: url(fonts/Lato/Lato-Thin.ttf);
+    font-family: 'Open_Sans';
+    src: url(fonts/Open_Sans/static/OpenSans-Regular.ttf);
 } */
 
 /* PALETA DE COLORES: 
@@ -32,7 +33,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: comics;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
@@ -42,7 +42,7 @@ h3{
     font-weight: 600;
 }
 
-h6{
+.banner-container h6{
     font-size: 16px;
 }
 
@@ -147,22 +147,25 @@ button.delete-product{
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid black;
-}
+  }
   
-.banner-inicio img {
+  .banner-inicio img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
+  }
+
+
 /* PRODUCTO */
 
 /* Contenedor */
+
 .productos-lista{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
+  }
 
 .producto-descripcion{
     display: flex;
@@ -243,57 +246,6 @@ button.delete-product{
     background-color: #505c7c;
 }
 
-/* Estilos de contenedor de formulario */
-.form-container{
-    background-color: #002080;
-}
-
-.login-container,
-.register-container {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 0 auto;
-    width: 100%; /* Ocupa el 100% del ancho en escritorio */
-    height: 80vh;
-}
-
-/* Estilos de formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input {
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-/* Estilos para botones sociales */
-.social-login {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-button {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    color: #333;
-    text-decoration: none;
-}
-
 /* Tablets */
 @media (min-width: 468px) {
     body{
@@ -337,6 +289,7 @@ form input {
 /* Laptops */
 @media (min-width: 786px) {
     body{
+        background-color: #242424;
         background-color: var(--cinder-50);
     }
     article :is(.image-product) {
@@ -367,6 +320,7 @@ form input {
 
     .producto{
         width: 25vw;
+
     }
 
     .producto img{
@@ -381,22 +335,4 @@ form input {
     .producto-nombre{
         width: 60%;
     }
-
-    .form-container{
-        padding: 15px 0px 15px 50px;
-        background-image: url('../images/BMDP.gif'); /* Reemplaza 'tu_archivo.gif' con la ruta correcta de tu archivo GIF */
-        background-size: auto;
-        background-repeat: repeat;
-        background-attachment: fixed;
-    }
-
-    .login-container,
-    .register-container {
-        margin: 0;
-        width: 40%; /* Ocupa el 40% del ancho en escritorio */
-        max-width: 504px; /* Ocupa el 100% del ancho en dispositivos móviles */
-        height: 80vh; 
-        /* a cambiar segun el footer */
-    }
-    
 }
