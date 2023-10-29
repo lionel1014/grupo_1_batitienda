@@ -17,11 +17,6 @@
 }
 
 
-/* @font-face {
-    font-family: 'Open_Sans';
-    src: url(fonts/Open_Sans/static/OpenSans-Regular.ttf);
-} */
-
 /* PALETA DE COLORES: 
  amarillo para resaltar: #fdff00    
  mostaza para lo que deba llevar color sin resaltar tanto: #988829    
@@ -42,12 +37,10 @@ h3{
     font-weight: 600;
 }
 
-.banner-container h6{
-    font-size: 16px;
-}
+
 
 body{
-    background-color: #f3f3f3;
+    background-color: #242424;
 }
 
 section h2 {
@@ -139,6 +132,16 @@ button.delete-product{
     margin-left: auto;
 }
 
+/* BANNER */
+
+.banner-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 16px;
+}
+
 .banner-inicio {
     display: flex;
     justify-content: center;
@@ -158,7 +161,6 @@ button.delete-product{
 
 /* PRODUCTO */
 
-/* Contenedor */
 
 .productos-lista{
     display: flex;
@@ -180,41 +182,61 @@ button.delete-product{
     margin: 5px;
     width: 300px;
 
-    background-color: #333653;
+    background-color: #252850;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     border-radius: 1em;
 
     display: flex;
     flex-direction: column;
-}
+  }
 
-.producto img {
+  .producto img {
     max-width: 100%;
     height: auto;
     object-fit: contain;
-}
+  }
 
-.producto-nombre {
+  .producto-nombre {
     font-size: 1.2em;
     font-weight: bold;
     margin: 10px 0;
-    size: 60%;
-}
+    size: 100%;
+    color: #ffff;
+  }
   
-.descripcion-producto {
+  .descripcion-producto {
     margin-top: 10px;
     font-size: 0.9em;
-    color: #524a5a;
+    color: #968fa1;
     margin: 10px 0;
-}
+  }
   
-.producto-precio {
+  .producto-precio {
     width: 40%;
     font-size: 1.2em;
     font-weight: bold;
     color: #fdff00; 
-}
+    margin-bottom: 5px;
+  }
+
+  .precio-carro{
+    display: flex;
+    justify-content:end;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .add-carrito{
+    color: white;
+  }
+  .fa-cart-shopping .carro-producto{
+    margin: 50px;
+    padding: 50px;
+
+  }
+
 /* botones */
 .btn {
     min-width: 37px;
@@ -249,7 +271,7 @@ button.delete-product{
 /* Tablets */
 @media (min-width: 468px) {
     body{
-        background-color: var(--yellow-900)
+        background-color: #242424;
     }
 
     .productos-lista{
@@ -290,7 +312,6 @@ button.delete-product{
 @media (min-width: 786px) {
     body{
         background-color: #242424;
-        background-color: var(--cinder-50);
     }
     article :is(.image-product) {
         width: 10%;
@@ -318,6 +339,8 @@ button.delete-product{
         margin: 10px 0 10px 0;
     }
 
+
+
     .producto{
         width: 25vw;
 
@@ -335,4 +358,5 @@ button.delete-product{
     .producto-nombre{
         width: 60%;
     }
+
 }
