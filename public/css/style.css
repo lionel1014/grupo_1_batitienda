@@ -16,10 +16,10 @@
     --blue-80: #002080;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Lato';
     src: url(fonts/Lato/Lato-Thin.ttf);
-}
+} */
 
 /* PALETA DE COLORES: 
  amarillo para resaltar: #fdff00    
@@ -34,7 +34,7 @@
     padding: 0px;
     font-family: comics;
     box-sizing: border-box;
-    font-family: 'Lato';
+    font-family: 'Montserrat', sans-serif;
 }
 
 h3{
@@ -139,116 +139,79 @@ button.delete-product{
     margin-left: auto;
 }
 
-
-
-/* CARRUSEL */
-
-.carrusel {
+.banner-inicio {
     display: flex;
-    overflow: hidden;
-    width: 90%;
-    max-width: 120em;
-    margin: 0 auto;
-    padding: 2em;
-}
-
-.carrusel .slide {
-    width: 100%;
-    transition: all 0.5s ease;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: #f0f0f0; 
-    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2), 5px 5px 10px rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-}
-
-.carrusel .img {
-    max-width: 100%;
-    min-height: 10vh;
-    height: auto;
-}
-
-.carrusel .punto {
-    background-color: lightslategray;
-    padding: 10px 15px;
-    border: none;
-    font-size: 18px;
-    border-radius: 100%;
-}
-
-.carrusel .punto:hover {
-    background-color: #fdff00;
-}
-
-.carrusel .puntos {
-    padding: 10px;
-    margin: 1em 0 0;
-
-    display: flex;
-    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    width: 85%;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid black;
 }
-
-.carrusel .punto.activo {
-    margin: 1em;
+  
+.banner-inicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 /* PRODUCTO */
 
 /* Contenedor */
-.producto {
-    border: 1px solid #e0e0e0;
-    padding: 20px;
-    margin: 20px;
-    width: 300px;
-    text-align: center;
-    background-color: #505c7c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+.productos-lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 
-  .producto img {
+.producto-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producto {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    width: 300px;
+
+    background-color: #333653;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.producto img {
     max-width: 100%;
     height: auto;
-  }
+    object-fit: contain;
+}
 
-  .producto .nombre {
+.producto-nombre {
     font-size: 1.2em;
     font-weight: bold;
     margin: 10px 0;
-  }
+    size: 60%;
+}
   
-  .producto .descripcion {
+.descripcion-producto {
+    margin-top: 10px;
     font-size: 0.9em;
-    color: #555;
+    color: #524a5a;
     margin: 10px 0;
-  }
+}
   
-  .producto .precio {
+.producto-precio {
+    width: 40%;
     font-size: 1.2em;
     font-weight: bold;
     color: #fdff00; 
-  }
-  
-  .producto .carrito {
-    display: block;
-    background-color: black;
-    color: #fdff00;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .product .carrito:hover {
-    background-color: #282e3c;
-  }
-
+}
 /* botones */
 .btn {
     min-width: 37px;
@@ -336,6 +299,39 @@ form input {
     body{
         background-color: var(--yellow-900)
     }
+
+    .productos-lista{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .producto{
+        width: 40vw;
+        margin: 10px;
+    }
+
+    .producto img{
+        height: 254px;
+    }
+
+    .img-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .producto-precio{
+        text-align: left;
+    }
+
+    .producto-nombre{
+        width: 100%;
+    }
 }
 
 /* Laptops */
@@ -367,6 +363,23 @@ form input {
 
     .sell-checkbox,.checkbox-container{
         margin: 10px 0 10px 0;
+    }
+
+    .producto{
+        width: 25vw;
+    }
+
+    .producto img{
+        max-width: 100%;
+        min-height: 340px;
+    }
+
+    .producto-precio{
+        text-align: right;
+    }
+
+    .producto-nombre{
+        width: 60%;
     }
 
     .form-container{
