@@ -658,6 +658,174 @@ button.delete-product{
 .delete-product{
     background-color: #505c7c;
 }
+/* Estilo para el contenedor principal */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 5px; /* Espacio alrededor del contenedor */
+    background-color: var(--blue-80);
+  }
+  
+/* Estilo para el logo */
+.logo {
+    max-width: 100%; /* Asegura que el logo no sea más ancho que el contenedor */
+    height: 3.5rem; /* Mantiene la proporción original del logo */
+    display: block; /* Hace que el logo se comporte como un bloque */
+    margin: 0 auto; /* Centra el logo horizontalmente en el contenedor */
+}
+
+.fa-bars {
+    font-size: 30px;
+    margin-left: 10px; /* Espacio entre el menú y el logo */
+    filter: invert(100%);
+}
+
+.fa-cart-shopping {
+    font-size: 24px;
+    margin-right: 10px;
+    filter: invert(100%);
+}
+/*
+/* Estilos para el menú */
+.mobile-menu {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Mostrar el menú cuando el checkbox está marcado */
+.menu-toggle:checked + .mobile-menu {
+    display: fixed;
+}
+
+/* Estilos para el icono de menú */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para los enlaces */
+a {
+    text-decoration: none;
+    color: #333; /* Color del texto de los enlaces */
+}
+
+/* Estilos para el menú desplegable */
+.sub-menu {
+    display: none;
+}
+
+/* Mostrar submenú cuando el checkbox está marcado */
+input[type="checkbox"]:checked + ul .sub-menu {
+    display: fixed;
+}
+
+/*--------------------*/
+
+/* Estilos barra de busqueda */
+.container {
+    width: 100%;
+    height: 3rem;
+    /*background-image: linear-gradient(45deg, #670000, #000);*/
+    background-color: var(--cinder-950);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form {
+    background: #fff;
+    width: 90%;
+    max-width: 650px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 15px 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 20px;
+}
+
+.search-form button {
+    padding: 10px 12px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+/*-----Footer-----*/
+.pie-pagina{
+    width: 100%;
+    background-color: #0a141d;
+}
+.pie-pagina .grupo-1{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:30px;
+    padding: 35px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+/*-----------------------*/
 
 /* Tablets */
 @media (min-width: 468px) {
@@ -697,6 +865,19 @@ button.delete-product{
     .producto-nombre{
         width: 100%;
     }
+
+    /*-----Footer-----*/
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:40px;
+        padding: 40px 0px;
+    }
+    .social{
+        text-align: center;
+        grid-column: span 2;
+    }
+    /*----------------*/
 }
 
 /* Laptops */
@@ -729,6 +910,18 @@ button.delete-product{
     .sell-checkbox,.checkbox-container{
         margin: 10px 0 10px 0;
     }
+
+    /*-----Footer-----*/
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap:50px;
+        padding: 45px 0px;}
+    .social{
+        text-align: left;
+        grid-column: auto;
+    } 
+    /*----------------*/
 
 
 
