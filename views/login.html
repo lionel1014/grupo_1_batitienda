@@ -5,15 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>BatiTienda🦇</title>
+    <title>BatiTienda🦇 - Login</title>
 </head>
 <body>
-    <h1>LOGIN</h1>
-    <ul>
-        <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-        <li><a href="/">INICIO <i class="fa-solid fa-house"></i></a></li>
-        <li><a href="/productCar">Carrito de compras <i class="fa-solid fa-cart-shopping"></i></a></li>
-        <li><a href="/productDetail">destalles producto <i class="fa-solid fa-book"></i></a></li>
-    </ul>
+    <header>
+        <h1>LOGIN</h1>
+        <nav>
+            <ul>
+                <li><a href="/register"><i class="far fa-id-card"></i> Creá tu cuenta</a></li>
+                <li><a href="/"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                <li><a href="/productCar"><i class="fa-solid fa-cart-shopping"></i> Carrito de compras</a></li>
+                <li><a href="/productDetail"><i class="fa-solid fa-book"></i> Detalles producto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form action="procesar_login.php" method="POST">
+                <label for="email">Email y contraseña</label>
+                <input type="email" id="email" name="email" placeholder="📧 Email" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="🔒 Contraseña"required>
+                <label for="recordar"><input type="checkbox" id="recordar" name="recordar"> Recordarme</label>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a>
+            <div class="social-login">
+                <p>O inicia sesión con:</p>
+                <a href="#" class="social-button google"><i class="fab fa-google"></i> Google</a>
+                <a href="#" class="social-button facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="social-button twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
