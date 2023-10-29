@@ -19,15 +19,15 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="form-container">
         <section class="login-container">
             <h2>Iniciar Sesión</h2>
             <form action="procesar_login.php" method="POST">
                 <label for="email">Email y contraseña</label>
                 <input type="email" id="email" name="email" placeholder="📧 Email" required>
                 <input type="password" id="contrasena" name="contrasena" placeholder="🔒 Contraseña"required>
-                <label for="recordar"><input type="checkbox" id="recordar" name="recordar"> Recordarme</label>
-                <button type="submit">Iniciar Sesión</button>
+                <label for="recordar"><input type="checkbox" id="recordar" name="recordar">Recordarme</label>
+                <button class="btn" type="submit">Iniciar Sesión</button>
             </form>
             <a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a>
             <div class="social-login">
