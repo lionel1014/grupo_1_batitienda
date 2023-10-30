@@ -312,6 +312,8 @@ form.login-form input {
     text-decoration: none;
 }
 
+/* :::::::Estilos Header Mobile::::::: */
+
 /* Estilo para el contenedor principal */
 .header-top {
     display: flex;
@@ -420,6 +422,166 @@ input[type="checkbox"]:checked + ul .sub-menu {
     background: transparent;
     cursor: pointer;
 }
+/*---------------------------*/
+
+
+/* :::::::Estilos Header Desktop::::::: */
+
+/* Estilo para el contenedor principal */
+
+.header-desktop {
+    display: none;
+}
+
+.header-top1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 5rem;
+    padding: 0; /* Espacio alrededor del contenedor */
+    background-color: var(--blue-80);
+  }
+  
+/* Estilo para el logo */
+.logo1 {
+    max-width: 100%; /* Asegura que el logo no sea más ancho que el contenedor */
+    height: 4.5rem; /* Mantiene la proporción original del logo */
+    display: block; /* Hace que el logo se comporte como un bloque */
+    padding-bottom: 5px;
+    margin-left: 20px;
+}
+
+.user-cart-icon {
+    padding-bottom: 10px;
+    padding-right: 15px;
+
+}
+
+.fa-cart-shopping , .fa-user {
+    font-size: 30px;
+    margin-right: 15px;
+    filter: invert(100%);
+}
+
+/*--------------------*/
+
+/* Estilos barra de busqueda */
+.container1 {
+    width: 70%;
+    max-width: 500px;
+    background-color: var(--blue-80);
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form1 {
+    background: #fff;
+    width: 90%;
+    max-width: 650px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-form1 input {
+    flex: 1;
+    padding: 15px 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 20px;
+}
+
+.search-form1 button {
+    padding: 10px 12px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    cursor: pointer;
+}
+/*---------------------------*/
+
+
+/* Estilos del menú de navegación */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding-left: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Para alinear a la izquierda */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-right: auto; /* Mueve las opciones hacia la izquierda */
+}
+
+.menu-item {
+    position: relative;
+    margin-right: auto;
+
+}
+
+.menu-item:last-child {
+    margin-right: 0; /* Quita el margen del último elemento */
+}
+
+.menu-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 50px; /* Espacio interior de las opciones */
+    display: block;
+    transition: background-color 0.3s;
+    background-color: #333;
+    height: 100%; /* Ocupa toda la altura del navbar */
+    border-left: 1px solid #161616;
+    border-right: 1px solid #161616;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu-item a:hover {
+    background-color: #444;
+}
+
+/* Estilos del menú desplegable */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    top: 100%;
+    left: 0;
+
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    list-style: none;
+    padding: 0;
+    border-bottom: 2px solid #11111a; /* Línea inferior para separar las opciones */
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: #444;
+}
+
+
 
 /*-----Footer-----*/
 .pie-pagina{
@@ -519,6 +681,8 @@ input[type="checkbox"]:checked + ul .sub-menu {
         width: 100%;
     }
 
+    
+
     /*-----Footer-----*/
     .pie-pagina .grupo-1{
         width: 90%;
@@ -563,6 +727,16 @@ input[type="checkbox"]:checked + ul .sub-menu {
     .sell-checkbox,.checkbox-container{
         margin: 10px 0 10px 0;
     }
+
+    /*-----Header-----*/
+    .header-mobile {
+        display: none;
+    }
+
+    .header-desktop {
+        display: block;
+    }
+    /*----------------*/
 
     /*-----Footer-----*/
     .pie-pagina .grupo-1{
