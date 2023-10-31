@@ -10,47 +10,57 @@
 
     <!--::::Encabezado de Pagina::::::-->
     <header class="header-mobile">
-        <section class="header-top">
-            <div>
-                <input type="checkbox" id="menuToggle" class="menu-toggle" name="menuToggle">
-                <label for="menuToggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-                <nav class="mobile-menu">
-                    <ul class="main-menu">
-                        <li><a href="#">Figuras</a>
-                            <input type="checkbox" id="figurasToggle">
-                            <ul class="sub-menu">
-                                <li><a href="#">Hasbro</a></li>
-                                <li><a href="#">Bandai</a></li>
-                                <li><a href="#">Funko</a></li>
-                                <li><a href="#">Otros</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Comics</a>
-                            <input type="checkbox" id="comicsToggle">
-                            <ul class="sub-menu">
-                                <li><a href="#">Marvel</a></li>
-                                <li><a href="#">DC</a></li>
-                                <li><a href="#">Star Wars</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Mangas</a>
-                            <input type="checkbox" id="mangasToggle">
-                            <ul class="sub-menu">
-                                <li><a href="#">Shonen</a></li>
-                                <li><a href="#">Shojo</a></li>
-                                <li><a href="#">Seinen</a></li>
-                                <li><a href="#">Josei</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Otros</a>
-                            <input type="checkbox" id="otrosToggle">
-                            <ul class="sub-menu">
-                                <li><a href="#">Indumentaria</a></li>
-                                <li><a href="#">Accesorios</a></li>
-                            </ul>
-                        </li>
+        <nav class="header-nav">
+            <input type="checkbox" id="checkbox-menu-toggle" class="menu-toggle" name="menuToggle" style="display: none;">
+            <label for="checkbox-menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+            <div class="main-menu">
+                <ul>
+                <li>
+                    <input type="radio" name="menuToggle" id="figurasToggle" class="menu-toggle">
+                    <label for="figurasToggle" class="menu-icon">Figuras</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Hasbro</a></li>
+                        <li><a href="#">Bandai</a></li>
+                        <li><a href="#">Funko</a></li>
+                        <li><a href="#">Otros</a></li>
                     </ul>
-                </nav>
+                </li>
+                <li>
+                    <input type="radio" name="menuToggle" id="comicsToggle" class="menu-toggle">
+                    <label for="comicsToggle" class="menu-icon">Comics</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Marvel</a></li>
+                        <li><a href="#">DC</a></li>
+                        <li><a href="#">Star Wars</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="radio" name="menuToggle" id="mangasToggle" class="menu-toggle">
+                    <label for="mangasToggle" class="menu-icon">Mangas</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Shonen</a></li>
+                        <li><a href="#">Shojo</a></li>
+                        <li><a href="#">Seinen</a></li>
+                        <li><a href="#">Josei</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="radio" name="menuToggle" id="otrosToggle" class="menu-toggle">
+                    <label for="otrosToggle" class="menu-icon">Otros</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Indumentaria</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <ul>
+                <li>
+                    <a class="btn" href="/login">Inicia Sesión</a>
+                </li>
+                <li>
+                    <a class="btn" href="/register">Registrate</a>
+                </li>
+                </ul>
             </div>
             <a href="/">
                 <img src="images/murcielago1.png" alt="Logo Bati-Tienda" class="logo">
@@ -58,7 +68,7 @@
             <div class="cart-icon">
                 <a href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>  
             </div>
-        </section>
+        </nav>
         <div class="container">
             <form class="search-form" action="#">
                 <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
@@ -92,7 +102,7 @@
                 <li class="menu-item">
                     <a href="#">Figuras</a>
                     <ul class="submenu">
-                        <li><a href="/login">Hasbro</a></li>
+                        <li><a href="#">Hasbro</a></li>
                         <li><a href="#">Bandai</a></li>
                         <li><a href="#">Funko</a></li>
                         <li><a href="#">Otros</a></li>
