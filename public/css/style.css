@@ -160,6 +160,221 @@ button.delete-product{
   }
 
 
+  /* ------- DETALLES DE PRODUCTO ------- */
+
+
+.productDetail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.nombre-PD{
+    font-size: 5vw;
+    padding: 25px;
+    width: 100%;
+	color: yellow;
+
+}
+
+.izquierda{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2vw;
+    gap: 20px;
+}
+
+.derecha{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2vw;
+}
+
+.contenedor-img-PD{
+    display: flex;
+    border: #1a181c;
+    border-radius: 1em;
+    width: 100%;
+	background-color: #f7f7f9;
+	flex: 1;
+}
+
+.contenedor-img-PD img{
+    width: 100%;
+}
+
+.contenedor-add-carrito {
+    margin: 20px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+	gap: 20px;
+
+}
+
+.contenedor-cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+}
+
+.btn-add-carrito {
+	border: none;
+	background-color: #252525;
+	padding: 10px;
+	color: #f7f7f7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.btn-add-carrito:hover {
+	color: #fdff00;
+}
+
+.btn-incremento-decremento {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+
+	right: 7px;
+}
+
+.btn-incremento-decremento i {
+	font-size: 11px;
+	color: #666;
+	cursor: pointer;
+}
+
+.contenedor-info-PD{
+
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 20px;
+
+    background-color: #252850;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    border-radius: 1em;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.contenedor-descripcion{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #e4e4e4;
+	padding: 10px;
+}
+
+
+
+.contenedor-productos-relacionados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor-productos-relacionados h2 {
+    width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+    background-color: #3d3842;
+}
+
+.titulo-descripcion,
+.title-additional-information {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+    font-size: large;
+}
+
+.descripcion-producto-PD{
+    
+	font-size: 20px;
+	color: #dbd8df;
+	line-height: 22px;
+	margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+.lista-prodRelacionados {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+	cursor: pointer;
+    padding: 10px;
+}
+
+.card-img {
+	background: transparent;
+    border-radius: 1em;
+	margin-bottom: 15px;
+}
+
+.card-img img {
+	width: 100%;
+	object-fit: cover;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.info-card {
+	display: flex;
+	justify-content: space-between;
+}
+
+.text-product {
+	color: #252850;
+	font-weight: 300;
+	line-height: 1.4;
+}
+
+.text-product h3{
+    color: inherit;
+    font-weight: inherit;
+    font-size: 15px;
+}
+
+.text-product h3:hover{
+    color: #fdff00;
+}
+
+.text-product p{
+    color: #666;
+    font-size: 13px;
+}
+
+.text-product p:hover{
+    color: #fdff00;
+}
+
+
+
+
+
+
 /* PRODUCTO */
 
 
@@ -695,6 +910,23 @@ input[type="checkbox"]:checked + ul .sub-menu {
         grid-column: span 2;
     }
     /*----------------*/
+
+    /* ----product detail---- */
+
+    .productDetail{
+        flex-direction: row;
+    }
+
+    .izquierda, .derecha{
+        width: 50%;
+        align-items: flex-start;
+    }
+    .lista-prodRelacionados{
+        flex-direction: row;
+    }
+    .card{
+        width: 30%;
+    }
 }
 
 /* Laptops */
