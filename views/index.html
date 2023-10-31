@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fontawesome/css/all.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-
-    
+    <link rel="stylesheet" href="css/style.css" />    
     <title>BatiTienda🦇</title>
   </head>
   <body>
@@ -86,20 +83,20 @@
         <a href="/">
           <img src="images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
         </a>
-
         <div class="container1">
           <form class="search-form1" action="#">
             <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
-          
         <div class="user-cart-icon">
-          <a href="/login"><i class="fa-solid fa-user"></i></a>
-          <a href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+          <div class="login-options">
+            <a href="/login"><i class="fa-solid fa-user">Inicia Sesion</i></a>
+            <a href="/register"><i class="fa-solid fa-user-plus">Registrate</i></a>
+          </div>
+          <a id="car-link" href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>  
       </section>
-
       <nav class="navbar">
         <ul class="menu">
           <li class="menu-item">
@@ -138,7 +135,6 @@
         </ul>
       </nav>
     </header>
-
     <main>
       <div class="banner-container">
         <div class="banner-inicio">
@@ -211,8 +207,6 @@
             <p class="descripcion-producto">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
             </p>
-            
-            
           </div>
         </div>
 
@@ -229,7 +223,32 @@
             </p>
           </div>
         </div>
-
+        <div class="producto">
+          <img src="images/jocker2.jpg" />
+          <div class="producto-descripcion">
+            <h2 class="producto-nombre">Aquaman Deep Dives</h2>
+            <div class="precio-carro">
+              <p class="producto-precio">$1000</p>
+              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+            </div>
+            <p class="descripcion-producto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </p>
+          </div>
+        </div>
+        <div class="producto">
+          <img src="images/jokerHC.jpg" />
+          <div class="producto-descripcion">
+            <h2 class="producto-nombre">Aquaman Deep Dives</h2>
+            <div class="precio-carro">
+              <p class="producto-precio">$1000</p>
+              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+            </div>
+            <p class="descripcion-producto">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </p>
+          </div>
+        </div>
       </div>
     </main>
 

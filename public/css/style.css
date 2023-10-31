@@ -1,29 +1,19 @@
 :root{
-    --cinder-50: #f7f7f8;
-    --cinder-100: #efeef0;
     --cinder-200: #dbd8df;
-    --cinder-300: #bbb6c3;
     --cinder-400: #968fa1;
-    --cinder-500: #7a7186;
-    --cinder-600: #635b6e;
-    --cinder-700: #524a5a;
-    --cinder-800: #45404c;
     --cinder-900: #3d3842;
     --cinder-950: #242424;
 
-    --yellow-900: #fdff00;
+    --amarillo-resaltador: #fdff00;
+    --mostaza:#988829; /*mostaza para lo que deba llevar color sin resaltar tanto:*/
+    --contenedores-2opcion : #282e3c;  /* contenedores segunta opción (menos relevante) */
+
     --red-900: #8c0000;
     --blue-80: #002080;
+    --conteneder-info: #252850;
+
+    -color-fondo:#505c7c;
 }
-
-/* PALETA DE COLORES: 
- amarillo para resaltar: #fdff00    
- mostaza para lo que deba llevar color sin resaltar tanto: #988829    
- contenedores: #242424    
- contenedores segunta opción (menos relevante): #282e3c   
- background: #505c7c 
- para los parrafos en general usar blanco con el fondo oscuro (#505c7c) y negro con el fondo claro (#242424) */
-
 *{
     margin: 0px;
     padding: 0px;
@@ -36,24 +26,41 @@ main,footer {
     top: calc(95px + 1rem); /* Reemplaza 100px con la altura real del header */
 }
 
+main{
+    padding: 2%;
+}
+
 h3{
     font-size: 22px;
     font-weight: 600;
+    color: white
+}
+h4{
+    color: white;
 }
 
 h6 {
     font-size: 16px;
+    color: white;
 }
 
 body{
     background-color: var(--cinder-950);
 }
 
+section:not(.header-top1){
+    background-color: var(--conteneder-info);
+    border: 1px solid black;
+    border-radius: 1em;
+}
+
+
 section h2 {
     background-color: var(--cinder-400);
     padding: 5px;
     margin-top: 2px;
     margin-bottom: 2px;
+    border-radius: 1rem 1rem 0px 0px;
 }
 
 article{
@@ -126,8 +133,13 @@ button.delete-product{
 .sell-checkbox, .send-price{
     display: inline;
 }
+.sell-checkbox> label{
+    color: white;
+}
+
 .send-price{
     margin-left: 10px;
+    color: white;
 }
 
 #resumen >.price-last-opcions{
@@ -152,7 +164,6 @@ button.delete-product{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85%;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid black;
@@ -262,18 +273,8 @@ button.delete-product{
 }
 
 .contenedor-info-PD{
-
     width: 100%;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 5px;
     margin-bottom: 20px;
-
-    background-color: #252850;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-    border-radius: 1em;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -288,8 +289,6 @@ button.delete-product{
 	padding: 10px;
 }
 
-
-
 .contenedor-productos-relacionados{
     display: flex;
     flex-direction: column;
@@ -300,7 +299,6 @@ button.delete-product{
     width: 100%;
 	text-align: center;
 	margin-bottom: 30px;
-    background-color: #3d3842;
 }
 
 .titulo-descripcion,
@@ -315,7 +313,7 @@ button.delete-product{
 .descripcion-producto-PD{
     
 	font-size: 20px;
-	color: #dbd8df;
+	color: var(--cinder-200);
 	line-height: 22px;
 	margin-top: 25px;
     margin-bottom: 10px;
@@ -351,7 +349,7 @@ button.delete-product{
 }
 
 .text-product {
-	color: #252850;
+	color: var(--conteneder-info);
 	font-weight: 300;
 	line-height: 1.4;
 }
@@ -360,6 +358,7 @@ button.delete-product{
     color: inherit;
     font-weight: inherit;
     font-size: 15px;
+    color: var(--cinder-200);
 }
 
 .text-product h3:hover{
@@ -386,7 +385,7 @@ button.delete-product{
 .productos-lista{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -399,9 +398,9 @@ button.delete-product{
 .producto {
     border: 1px solid black;
     padding: 10px;
-    margin: 5px;
     width: 300px;
-    background-color: #252850;
+    margin-bottom: 10px;
+    background-color: var(--conteneder-info);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     display: flex;
@@ -505,6 +504,7 @@ form.login-form {
 
 form.login-form label {
     font-weight: bold;
+    color: var(--cinder-200);
 }
 
 form.login-form input {
@@ -518,6 +518,7 @@ form.login-form input {
 .social-login {
     text-align: center;
     margin-top: 20px;
+    color: var(--cinder-200)
 }
 
 .social-button {
@@ -617,11 +618,10 @@ form.login-form input {
 /* Estilos para los enlaces */
 a {
     text-decoration: none; /* Color del texto de los enlaces */
-    color: var(--yellow-900);
+    color: var(--amarillo-resaltador);
 }
 
 i.fa-bars,
-i.fa-user,
 i.fa-cart-shopping{
     color: #333;
 }
@@ -711,13 +711,22 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
     margin-left: 20px;
 }
 
+.login-options > * {
+    margin: 10px; /* Puedes ajustar el valor del margen según tus necesidades */
+}
+
+#car-link{
+    margin-left: 20px;
+}
+
 .user-cart-icon {
     padding-bottom: 24px;
     padding-right: 15px;
-
+    align-items: center;
+    display: flex;
 }
 
-.fa-cart-shopping , .fa-user {
+.fa-cart-shopping {
     font-size: 30px;
     margin-right: 15px;
     filter: invert(100%);
@@ -771,7 +780,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 .navbar {
     background-color: #333;
     color: #fff;
-    padding-left: 150px;
+    padding-left: 4%;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Para alinear a la izquierda */
@@ -823,6 +832,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 
 .menu-item:hover .submenu {
     display: block;
+    z-index: 1;
 }
 
 .submenu li {
@@ -912,7 +922,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
     .productos-lista{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-start;
         width: 100%;
         padding-left: 20px;
@@ -921,7 +931,6 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 
     .producto{
         width: 40vw;
-        margin: 10px;
     }
 
     .producto img{
@@ -960,11 +969,13 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 
     .productDetail{
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .izquierda, .derecha{
-        width: 50%;
+        width: 45%;
         align-items: flex-start;
+        margin-bottom: 10px;
     }
     .lista-prodRelacionados{
         flex-direction: row;
@@ -1058,9 +1069,14 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 
     main,footer {
         top: 0;
-        z-index: -1;
     }
 
+}
+
+@media (min-width: 1100px) {
+    .producto{
+        width: 20vw;
+    }
 }
 
 #menu {

@@ -81,57 +81,57 @@
     <header class="header-desktop">
         <section class="header-top1">
             <a href="/">
-                <img src="images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
+            <img src="images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
             </a>
-    
             <div class="container1">
-                <form class="search-form1" action="#">
-                    <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+            <form class="search-form1" action="#">
+                <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
             </div>
-    
             <div class="user-cart-icon">
-                <a href="/login"><i class="fa-solid fa-user"></i></a>
-                <a href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+            <div class="login-options">
+                <a href="/login"><i class="fa-solid fa-user">Inicia Sesion</i></a>
+                <a href="/register"><i class="fa-solid fa-user-plus">Registrate</i></a>
             </div>
+            <a id="car-link" href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>  
         </section>
-    
         <nav class="navbar">
             <ul class="menu">
-                <li class="menu-item">
-                    <a href="#">Figuras</a>
-                    <ul class="submenu">
-                        <li><a href="#">Hasbro</a></li>
-                        <li><a href="#">Bandai</a></li>
-                        <li><a href="#">Funko</a></li>
-                        <li><a href="#">Otros</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="#">Comics</a>
-                    <ul class="submenu">
-                        <li><a href="#">Marvel</a></li>
-                        <li><a href="#">DC</a></li>
-                        <li><a href="#">Star Wars</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="#">Mangas</a>
-                    <ul class="submenu">
-                        <li><a href="#">Shonen</a></li>
-                        <li><a href="#">Shojo</a></li>
-                        <li><a href="#">Seinen</a></li>
-                        <li><a href="#">Josei</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="#">Otros</a>
-                    <ul class="submenu">
-                        <li><a href="#">Indumentaria</a></li>
-                        <li><a href="#">Accesorios</a></li>
-                    </ul>
-                </li>
+            <li class="menu-item">
+                <a href="#">Figuras</a>
+                <ul class="submenu">
+                <li><a href="#">Hasbro</a></li>
+                <li><a href="#">Bandai</a></li>
+                <li><a href="#">Funko</a></li>
+                <li><a href="#">Otros</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Comics</a>
+                <ul class="submenu">
+                <li><a href="#">Marvel</a></li>
+                <li><a href="#">DC</a></li>
+                <li><a href="#">Star Wars</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Mangas</a>
+                <ul class="submenu">
+                <li><a href="#">Shonen</a></li>
+                <li><a href="#">Shojo</a></li>
+                <li><a href="#">Seinen</a></li>
+                <li><a href="#">Josei</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Otros</a>
+                <ul class="submenu">
+                <li><a href="#">Indumentaria</a></li>
+                <li><a href="#">Accesorios</a></li>
+                </ul>
+            </li>
             </ul>
         </nav>
     </header>
@@ -169,7 +169,7 @@
                 <div class="contenedor-info-PD">
                     <div class="contenedor-descripcion">
                         <div class="titulo-descripcion">
-                            <h4>Descripción</h4>
+                            <h3>Descripción</h3>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="descripcion-producto-PD">
@@ -192,7 +192,7 @@
                                     <h3>Funko Moon Knight (1047) - Moon Knight (Marvel)</h3>
                                     <p class="category">Funko, Pop!</p>
                                 </div>
-                                <div class="price">$1000</div>
+                                <div class="price"><p class="send-price">$1000</p></div>
                             </div>
                         </div>
                         <div class="card">
@@ -204,7 +204,7 @@
                                     <h3>Funko Killua (1106) Glow Chase - Hunter X Hunter (TV)</h3>
                                     <p class="category">Funko, Pop!</p>
                                 </div>
-                                <div class="price">$1000</div>
+                                <div class="price"><p class="send-price">$1000</p></div>
                             </div>
                         </div>
                         <div class="card">
@@ -216,7 +216,7 @@
                                 <h3>Funko Infinite Deku With Eri </h3>
                                 <p class="category">Funko, My Hero Academy</p>
                             </div>
-                            <div class="price">$1000</div>
+                            <div class="price"><p class="send-price">$1000</p></div>
                         </div>
                     </div>
                 </div>
@@ -230,14 +230,6 @@
             </div>
     
         </main>
-
-        <ul>
-            <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-            <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-            <li><a href="/productCar">Carrito de compras <i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="/">INICIO <i class="fa-solid fa-house"></i></a></li>
-        </ul>
-
         <!--::::Pie de Pagina::::::-->
         <footer class="pie-pagina">
             <div class="grupo-1">
