@@ -179,7 +179,6 @@ button.delete-product{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .producto {
@@ -225,10 +224,10 @@ button.delete-product{
 
 .precio-carro{
     display: flex;
-    justify-content:end;
-    flex-direction: column;
+    justify-content:space-between;
     margin: 5px;
     padding: 5px;
+    width: 100%;
 }
 
 .add-carrito{
@@ -330,12 +329,12 @@ form.login-form input {
     position: relative;
 }
 
-ul {
+.header-mobile ul {
     list-style: none;
     width: 100%;
 }
 
-li {
+.header-mobile li {
     position: relative;
     margin: 15px;
 }
@@ -407,6 +406,7 @@ a {
 }
 
 i.fa-bars,
+i.fa-user,
 i.fa-cart-shopping{
     color: #333;
 }
@@ -497,7 +497,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 }
 
 .user-cart-icon {
-    padding-bottom: 10px;
+    padding-bottom: 24px;
     padding-right: 15px;
 
 }
@@ -804,10 +804,6 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
         min-height: 340px;
     }
 
-    .producto-precio{
-        text-align: right;
-    }
-
     .producto-nombre{
         width: 60%;
     }
@@ -826,6 +822,11 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
         width: 40%; /* Ocupa el 40% del ancho en escritorio */
         max-width: 504px; /* Ocupa el 100% del ancho en dispositivos móviles */
         height: 80vh;
+    }
+
+    main,footer {
+        top: 0;
+        z-index: -1;
     }
 
 }
