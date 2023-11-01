@@ -1,4 +1,4 @@
-# Retroalimentación de Nuestro Proyecto - Octubre 2023
+# Retroalimentación de Nuestro Proyecto - SPRINT 1
 
 ## Lo que Celebrar
 
