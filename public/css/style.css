@@ -852,6 +852,48 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
     background-color: #444;
 }
 
+.create-container {
+    background-color: var(--conteneder-info);
+    border: 1px solid black;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+form.create-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+form.create-form label {
+    font-weight: bold;
+    color: var(--cinder-200);
+}
+
+form.create-form input,
+form.create-form select,
+form.create-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn-create {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-create button {
+    width: 40%;
+}
+
 
 
 /*-----Footer-----*/

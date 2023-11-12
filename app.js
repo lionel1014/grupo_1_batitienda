@@ -31,6 +31,10 @@ app.get("/productDetail", (request, response) => {
   response.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
 });
 
+app.get("/createProduct", (request, response) => {
+  response.sendFile(path.resolve(__dirname, "./views/createProduct.html"));
+});
+
 app.get("*", (request, response) => {
   response.redirect("/");
 });
