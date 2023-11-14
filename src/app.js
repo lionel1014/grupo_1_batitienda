@@ -1,19 +1,20 @@
 const express = require("express");
-const { url } = require("inspector");
 const path = require("path");
+
+const mainRoutes = require("./routes/main.js")
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')))
+app.set('views', path.resolve(__dirname, "./views"));
+app.set('view engine', 'ejs');
 
 app.listen(PORT, () => {
-  console.log("Servidor funcionando en el purto " + PORT);
+  console.log("Servidor funcionando en el puerto 😊 " + PORT);
 });
 
-app.get("/", (request, response) => {
-  response.sendFile(path.resolve(__dirname, "./views/index.html"));
-});
+app.get("/", mainRoutes);
 
 app.get("/login", (request, response) => {
   response.sendFile(path.resolve(__dirname, "./views/user/login.html"));
