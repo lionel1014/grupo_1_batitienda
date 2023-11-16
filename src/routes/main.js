@@ -1,8 +1,8 @@
 const express = require("express");
+const mainController = require("../controllers/mainController");
+
 const router = express.Router();
-//TODO: crear los controladors y rutas para los demás archivos
-router.get("/",(request,response) =>{
-    response.render("index");
-})
+
+router.get("/", mainController.index)
 
 module.exports = router;

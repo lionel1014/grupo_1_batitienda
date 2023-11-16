@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>BatiTienda🦇 - Registro</title>
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>BatiTienda🦇 - Login</title>
 </head>
 <body>
     <!--::::Encabezado de Pagina::::::-->
@@ -63,10 +63,10 @@
                 </ul>
             </div>
             <a href="/">
-                <img src="images/murcielago1.png" alt="Logo Bati-Tienda" class="logo">
+                <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo">
             </a>
             <div class="cart-icon">
-                <a href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>  
+                <a href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>  
             </div>
         </nav>
         <div class="container">
@@ -81,7 +81,7 @@
     <header class="header-desktop">
         <section class="header-top1">
             <a href="/">
-            <img src="images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
+            <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
             </a>
             <div class="container1">
             <form class="search-form1" action="#">
@@ -94,7 +94,7 @@
                 <a href="/login"><i class="fa-solid fa-user">  Inicia Sesion</i></a>
                 <a href="/register"><i class="fa-regular fa-user">  Registrate</i></a>
             </div>
-            <a id="car-link" href="/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a id="car-link" href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
             </div>  
         </section>
         <nav class="navbar">
@@ -137,23 +137,22 @@
     </header>
 
     <main class="form-container">
-        <section class="register-container">
-            <h2>Regístrate</h2>
-            <form class="login-form" action="procesar_registro.php" method="POST">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
-                <label for="correo">Correo Electrónico</label>
-                <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
-                <label for="usuario">Nombre de Usuario</label>
-                <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" required>
-                <label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
-                <label for="confirmar_contrasena">Confirmar Contraseña</label>
-                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
-                <button class="btn" type="submit">Registrarse</button>
+        <section class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form class="login-form" action="procesar_login.php" method="POST">
+                <label for="email">Email y contraseña</label>
+                <input type="email" id="email" name="email" placeholder="📧 Email" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="🔒 Contraseña"required>
+                <label for="recordar"><input type="checkbox" id="recordar" name="recordar">Recordarme</label>
+                <button class="btn" type="submit">Iniciar Sesión</button>
             </form>
+            <a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a>
+            <div class="social-login">
+                <p>O inicia sesión con:</p>
+                <a href="#" class="social-button google"><i class="fab fa-google"></i> Google</a>
+                <a href="#" class="social-button facebook"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#" class="social-button twitter"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
         </section>
     </main>
 
@@ -163,7 +162,7 @@
             <div class="box">
                 <figure>
                     <a href="/">
-                        <img src="images/murcielago1.png" alt="Logo Bati-Tienda">
+                        <img src="/images/murcielago1.png" alt="Logo Bati-Tienda">
                     </a>
                 </figure>
             </div>
