@@ -1103,11 +1103,12 @@ form.create-form textarea {
     }
 
     .login-container,
-    .register-container {
+    .register-container,
+    .create-container {
         margin: 0;
         width: 40%; /* Ocupa el 40% del ancho en escritorio */
         max-width: 504px; /* Ocupa el 100% del ancho en dispositivos móviles */
-        height: 80vh;
+        /* height: 80vh; */
     }
 
     main,footer {
