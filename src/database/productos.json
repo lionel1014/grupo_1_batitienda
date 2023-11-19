@@ -1,0 +1,325 @@
+{
+    "lista_productos": [
+      {
+        "titulo": "¡Funko Pop! Naruto - Naruto",
+        "codigo": 57382,
+        "precio": 14720,
+        "stock": 50,
+        "categoria": "Figura",
+        "subcategoria": "Funko",
+        "descripcion": "¡Tus personajes favoritos de Naruto ahora son figuras de vinilo súper lindas! ¡Este Naruto Pop! La figura de vinilo presenta al ninja multiplicador de la exitosa serie de anime. Con una altura aproximada de 3 3/4 pulgadas, esta figura está empaquetada en una caja expositora.",
+        "imagen": "/images/funko-naruto.jpeg"
+      },
+      {
+        "titulo": "¡Funko Pop! Disney: 30 aniversario de Pesadilla antes de Navidad - Santa Jack",
+        "codigo": 12456,
+        "precio": 8720,
+        "stock": 100,
+        "categoria": "Figura",
+        "subcategoria": "Funko",
+        "descripcion": "¿Qué es esto? El rey de las calabazas ha traído Halloween a Halloween Town, pero ahora está listo para celebrar, con el espíritu de unas fiestas más alegres, ¡Jack Skellington está aquí para celebrar el 30 aniversario de Pesadilla antes de Navidad como papá! ¡Papá Noel!",
+        "imagen": "/images/funko-jack-santa.jpeg"
+      },
+      {
+        "titulo": "Funko Pop! Marvel: Doctor Strange Multiverse of Madness",
+        "codigo": 90872,
+        "precio": 4310,
+        "stock": 75,
+        "categoria": "Figura",
+        "subcategoria": "Funko",
+        "descripcion": "¡Pon a prueba los límites de la realidad y salta al multiverso de Marvel con Pop! ¡Doctor Strange de Doctor Strange en el Multiverso de la Locura! Incluso hay una probabilidad de 1 en 6 de que encuentres la variante de persecución cósmica.",
+        "imagen": "/images/funko-doctor-strange.jpeg"
+      },
+      {
+        "titulo": "Figura Naruto Shippuden Anime Heroes Uzumaki N Sage Mode",
+        "codigo": 36521,
+        "precio": 31500,
+        "stock": 50,
+        "categoria": "Figura",
+        "subcategoria": "Bandai",
+        "descripcion": "Entra en el mundo del anime de Naruto con las figuras de héroes de Bandai. Esta figura de captura el comportamiento frío y determinado de Naruto Shippuden. Viene en embalaje premium influenciado por el manga y el arte japonés. Estas figuras muy detalladas increíblemente decoradas de 17 cm Aproximadamente te permiten recrear los momentos icónicos de Naruto Shippuden y cuenta con más de 16 puntos de articulación. Perfecta para jugar y como exposición.",
+        "imagen": "/images/bandai-naruto-shippuden-naruto-uzumaki.jpeg"
+      },
+      {
+        "titulo": "Figura One Piece Anime Heroes Trafalgar Law Bandai",
+        "codigo": 78904,
+        "precio": 55500,
+        "stock": 100,
+        "categoria": "Figura",
+        "subcategoria": "Bandai",
+        "descripcion": "Luffy es el personaje principal de la serie de manga y anime One Piece y uno de los personajes más fuertes en todo el anime por sus capacidades de cuerpo de goma que le permiten una casi infinita resistencia y una formidable fuerza. Es un personaje despreocupado, siempre alegre y con un carisma sin igual. Esta figura vienen tal como las ves en las fotos de la publicación, en su caja, con su accesorios como las manos intercambiables. Es de gran calidad, totalmente original Anime Heroes de Bandai nuevo.",
+        "imagen": "/images/bandai-one-piece-trafalgar-law.jpeg"
+      },
+      {
+        "titulo": "Figura Bandai Jujutsu Kaisen Anime Heroes Megumi",
+        "codigo": 23145,
+        "precio": 55500,
+        "stock": 75,
+        "categoria": "Figura",
+        "subcategoria": "Bandai",
+        "descripcion": "Únase a sus hechiceros favoritos de Tokyo Jujutsu High, de Jujutsu Kaisen, y reviva las increíbles escenas de lucha, las maldiciones demoníacas y el galardonado anime que tomó al mundo por sorpresa. La figura de acción de Jujutsu Kaisen Anime Heroes Megumi Fushiguro mide aproximadamente 6 1/2 pulgadas de alto y presenta múltiples puntos de articulación.",
+        "imagen": "/images/bandai-jujutsu-kaisen-megumi-fushiguro.jpeg"
+      },
+      {
+        "titulo": "Figura de acción Marvel Legends Series Winter Soldier",
+        "codigo": 67890,
+        "precio": 38350,
+        "stock": 50,
+        "categoria": "Figura",
+        "subcategoria": "Hasbro",
+        "descripcion": "Aunque Bucky Barnes ha luchado para volver a ser él mismo, en sus pesadillas más oscuras cobra vida su mayor temor... ¡de que siga siendo el Soldado de Invierno! Con más de 80 años de historia del entretenimiento, Marvel se ha convertido en la piedra angular de las colecciones de fans de todo el mundo. Con la serie Marvel Legends, los personajes favoritos de Marvel Comic Universe y Marvel Cinematic Universe están diseñados con detalles y articulaciones de primera calidad para posar y exhibir en colecciones. Desde figuras hasta vehículos y artículos de juego de rol premium, la serie Marvel Legends ofrece productos inspirados en personajes de élite para los fanáticos y coleccionistas de Marvel. Las figuras adicionales se venden por separado.",
+        "imagen": "/images/hasbro-avengers-winter-soldier.jpg"
+      },
+      {
+        "titulo": "Figura de acción coleccionable Star Wars The Black Series Darth Vader",
+        "codigo": 54321,
+        "precio": 51030,
+        "stock": 100,
+        "categoria": "Figura",
+        "subcategoria": "Hasbro",
+        "descripcion": "La figura de acción de Darth Vader de la serie negra a escala de 6 pulgadas está diseñada para parecerse al personaje de Star Wars: The Empire Strikes Back, con detalles de primera calidad y múltiples puntos de articulación.",
+        "imagen": "/images/hasbro-star-wars-darth-vader.jpg"
+      },
+      {
+        "titulo": "Figura de acción de X-Men de Marvel Legends",
+        "codigo": 87654,
+        "precio": 21760,
+        "stock": 75,
+        "categoria": "Figura",
+        "subcategoria": "Hasbro",
+        "descripcion": "Resucitado de repente y con unas garras de adamantio sobrecalentadas, Wolverine debe luchar una vez más para recuperar su libertad y su mente. Con más de 80 años de historia en el mundo del entretenimiento, Marvel se ha convertido en la piedra angular de las colecciones de fans de todo el mundo. Con la serie Marvel Legends, los personajes favoritos de los fans de Marvel Comic Universe y Marvel Cinematic Universe están diseñados con detalles y articulaciones de primera calidad para posar y exhibirlos en colecciones. Desde figuras hasta vehículos y objetos de juego de rol de primera calidad, la serie Marvel Legends ofrece productos inspirados en personajes de élite para los fanáticos y coleccionistas de Marvel.",
+        "imagen": "/images/hasbro-xmen-wolverine.jpg"
+      },
+      {
+        "titulo": "Aquaman Deep Dives",
+        "codigo": 19876,
+        "precio": 39030,
+        "stock": 50,
+        "categoria": "Comic",
+        "subcategoria": "DC",
+        "descripcion": "Aquaman, el rey de la Atlántida y los Siete Mares, emerge de las profundidades del océano con nuevas historias de algunos de los mejores escritores y artistas de cómics. Con sus extraordinarias habilidades acuáticas, fuerza, valentía y humanidad, ¡Aquaman es una fuerza a tener en cuenta! ¡Sumérgete en las nuevas complejidades de su legado en esta colección de nuevas imágenes de los mejores talentos de DC como Marv Wolfman, Tom Taylor, Steve Orlando y muchos, muchos más!",
+        "imagen": "/images/Aquaman-Deep-Dives-TP.jpg"
+      },
+      {
+        "titulo": "Batgirl: La chica murciélago de Burnside",
+        "codigo": 43210,
+        "precio": 38427,
+        "stock": 100,
+        "categoria": "Comic",
+        "subcategoria": "DC",
+        "descripcion": "Barbara Gordon está lista para superar su traumático pasado, hacer las maletas y afrontar todo tipo de retos en Burnside, el vecindario más cool de Gotham City. Allí retomará sus estudios de posgrado, hará nuevas amistades e investigará casos como Batgirl, luciendo para la ocasión un flamante uniforme.",
+        "imagen": "/images/Batgirl.jpg"
+      },
+      {
+        "titulo": "Absolute Batman the Killing Joke HC",
+        "codigo": 76543,
+        "precio": 57106,
+        "stock": 75,
+        "categoria": "Comic",
+        "subcategoria": "DC",
+        "descripcion": "Una de las novelas gráficas más populares de todos los tiempos, esta retorcida historia de locura y perseverancia se presenta como una Edición Absoluta por primera vez. Buscando demostrar que cualquier hombre puede ser empujado más allá de su punto de ruptura hasta la locura, el Joker intenta volver loco al comisionado Gordon. Gordon se niega a darse por vencido y lucha por mantener la cordura con la ayuda de Batman en un esfuerzo desesperado por vencer al loco.",
+        "imagen": "/images/Absolute-Batman-the-Killing-Joke-HC.jpg"
+      },
+      {
+        "titulo": "El Inmortal Hulk Vol. 10: Del Infierno y la Muerte",
+        "codigo": 10987,
+        "precio": 14000,
+        "stock": 50,
+        "categoria": "Comic",
+        "subcategoria": "Marvel",
+        "descripcion": "Los monstruos gamma volvieron y convergen, uno a uno, en Nueva York. ¿Quién los detendrá? ¿Y quién nos salvará del Inmortal Hulk? Los Avengers harán su mejor esfuerzo, pero la última vez destruyeron una ciudad entera mientras luchaban contra Hulk",
+        "imagen": "/images/marvel-hulk.jpeg"
+      },
+      {
+        "titulo": "La Muerte de Wolverine (Marvel Must Have)",
+        "codigo": 65432,
+        "precio": 13000,
+        "stock": 100,
+        "categoria": "Comic",
+        "subcategoria": "Marvel",
+        "descripcion": "Ha llegado la hora. Después de toda una vida luchando por aquello en lo que creía, Wolverine ha llegado al final del camino. Agotado, sin factor curativo, y con una recompensa por su cabeza, Logan tendrá que luchar una última vez para irse bajo sus propios términos, haciendo que su muerte, igual que su vida, tenga un sentido. Charles Soule y Steve McNiven saben por quién tañen las campanas. Tañen por ti, tañen por mí, ahora que el mayor héroe de todos emprende su último viaje. Adiós, Logan.",
+        "imagen": "/images/marvel-wolverine.jpeg"
+      },
+      {
+        "titulo": "Venom Vol. 8: El Rey de Negro",
+        "codigo": 21098,
+        "precio": 13000,
+        "stock": 75,
+        "categoria": "Comic",
+        "subcategoria": "Marvel",
+        "descripcion": "La horripilante amenaza del Rey de Negro, el todo poderoso dios de la raza simbionte, se ha cernido por años. Ahora, luego de milenios de encierro, ¡Knull y su ejército de simbiontes llegan a la Tierra! Pero ¿cuáles son sus horrendos planes? ¿Y qué le ocurrirá a Venom cuando finalmente se enfrente cara a cara con el amo del abismo? Eddie Brock está a punto de enfrentar el mayor desafío de su vida, pero no está solo. ¿Quién luchará a su lado en el momento más oscuro de la Tierra? ¿Tendrán alguna oportunidad de vencer? ¡Es el fin de una era y el comienzo de una nueva leyenda!",
+        "imagen": "/images/marvel-venom.jpeg"
+      },
+      {
+        "titulo": "Star Wars Vol. 4: El último Vuelo De Harbinger",
+        "codigo": 54367,
+        "precio": 6000,
+        "stock": 50,
+        "categoria": "Comic",
+        "subcategoria": "Star Wars",
+        "descripcion": "Con uno de los Rebeldes capturado y encarcelado, ¡regresamos una vez más a los diarios de Ben Kenobi y a una aventura legendaria con Yoda, el Maestro Jedi! Yoda se encuentra atrapado en un mundo lleno de salvajes y misteriosos niños. Vencido y capturado, el Maestro debe convertirse en alumno una vez más. Además, ¡los ecos de la lucha de Yoda en el pasado son percibidos por Luke en el presente! ¡Conectado todo está!",
+        "imagen": "/images/star-wars-el-ultimo-vuelo-de-harbinger.jpeg"
+      },
+      {
+        "titulo": "Star Wars Legends Colección Vol. 10: Lazos de Sangre - Jango Y Boba Fett",
+        "codigo": 89012,
+        "precio": 4000,
+        "stock": 100,
+        "categoria": "Comic",
+        "subcategoria": "Star Wars",
+        "descripcion": "Una fuerza maligna está a punto de liberarse. Parlan Spinner, el hilandero de la muerte, roba un arma secreta que los viejos Jedi han mantenido oculta durante miles de años para evitar el caos que podría ocasionar en toda la Galaxia. Se trata de Lord Dreypa, uno de los principales fundadores de la Orden Sith. Ahora este ser aterrador está libre y amenaza con destruir la tribu perdida de los Sith.",
+        "imagen": "/images/star-wars-lazos-de-sangre.jpeg"
+      },
+      {
+        "titulo": "Star Wars Legends: Infinities Omnibus",
+        "codigo": 34521,
+        "precio": 8000,
+        "stock": 75,
+        "categoria": "Comic",
+        "subcategoria": "Star Wars",
+        "descripcion": "¿Qué tal si en Una nueva esperanza, en lugar de destruir la Estrella de la Muerte, el misil de protones de Luke hubiera funcionado mal? ¿Qué tal si en El imperio contraataca Han no hubiera llegado a tiempo en Hoth para evitar que Luke muriera congelado? ¿Qué tal si en El regreso del jedi el detonador termal de Leia hubiera volado el palacio de Jabba the Hutt antes de rescatar a Han? Estas y otras preguntas son respondidas en estas historias especiales donde se cuentan versiones distintas de las versiones clásicas, a fin de explorar qué pudo ser diferente. ¡No te pierdas Star Wars Infinities, que reúne las versiones alternas de los episodios originales de la saga!",
+        "imagen": "/images/star-wars-infinities-omnibus.jpeg"
+      },
+      {
+        "titulo": "Atom: The Beginning #06",
+        "codigo": 67809,
+        "precio": 3500,
+        "stock": 50,
+        "categoria": "Manga",
+        "subcategoria": "Shonen",
+        "descripcion": "Los robots más fuertes del mundo se preparan para la primera edición del WRB (World Robot Battling). Tenma y su equipo inscriben a U-ran, su nueva creación, pero... ¡Llega el emocionante sexto tomo de la historia previa al nacimiento de Atom (Astroboy)!",
+        "imagen": "/images/shonen-atom-the-beginning.jpeg"
+      },
+      {
+        "titulo": "Akame Ga Kill! #15",
+        "codigo": 87654,
+        "precio": 3600,
+        "stock": 100,
+        "categoria": "Manga",
+        "subcategoria": "Shonen",
+        "descripcion": "Tatsumi se aventura en la Capital en busca de fortuna para ayudar a su pueblo. Él vivía ignorante de la corrupción y manejos turbios que reinaban allí cuando una bella delincuente le roba. Por suerte, otra linda chica que forma parte de The Night Raid, un grupo de asesinos, lo rescata. Lo que no sabe Tatsumi es que esa joven va a recibir una visita de una familia de asesinos (incluida la chica ladrona) y que puede que ellos sean los buenos (o los menos malos)... y lo quieran reclutar. ¡Sumate al viaje de Tatsumi mientras se replantea su forma de ver el mundo de la mano de Akame, ¡La asesina de ojos rojos!!",
+        "imagen": "/images/shonen-akame-ga-kill.jpeg"
+      },
+      {
+        "titulo": "Ahora Soy Zombie #02",
+        "codigo": 54323,
+        "precio": 4100,
+        "stock": 75,
+        "categoria": "Manga",
+        "subcategoria": "Shonen",
+        "descripcion": "Fuuka y Zukekiyo, rodeados por la gente caida de Heike, viven la vida lenta y larga como zombie. Lo bueno de la vida aqui es que si te lastimas la cabeza no pasa nada. Este mundo es el paraiso.",
+        "imagen": "/images/shonen-ahora-soy-zombie.jpeg"
+      },
+      {
+        "titulo": "Amar y Ser Amado, Dejar y Ser Dejado #01",
+        "codigo": 65784,
+        "precio": 3200,
+        "stock": 50,
+        "categoria": "Manga",
+        "subcategoria": "Shojo",
+        "descripcion": "Yuna y Akari son dos chicas con un concepto del amor completamente opuesto: Yuna es soñadora y romántica, Akari es realista y directa. A pesar de sus diferencias, la casualidad las llevará a convertirse en muy buenas amigas, ayudándose a ampliar la forma en que entienden el mundo y crecer como persona. Las cosas se complicarán cuando Yuna se enamore de Rio, el hermanastro de Araki, que cuenta con una muy mala fama en materia de mujeres y Akari comience a sentir cosas por Kazuomi, un amigo de la infancia de Yuna al que en un principio quería enganchar con esta. ",
+        "imagen": "/images/shojo-amar-y-ser-amado.jpeg"
+      },
+      {
+        "titulo": "Aoha Ride #07",
+        "codigo": 90823,
+        "precio": 3600,
+        "stock": 100,
+        "categoria": "Manga",
+        "subcategoria": "Shojo",
+        "descripcion": "Aoha Ride (también conocida como Ao Haru Ride) muestra las vicisitudes de la vida en el colegio: la amistad, la dificultad de entablar relaciones con otros compañeros con personalidades distintas, el primer amor… mediante la emotiva historia que protagonizan Futaba y Kou.",
+        "imagen": "/images/shojo-aoha-ride.jpeg"
+      },
+      {
+        "titulo": "Cardcaptor Sakura Clear Card Arc #04",
+        "codigo": 12345,
+        "precio": 3200,
+        "stock": 75,
+        "categoria": "Manga",
+        "subcategoria": "Shojo",
+        "descripcion": "La historia se sitúa exactamente después del epílogo de la serie anterior, con los personajes a punto de iniciar la secundaria baja, tras un período de tranquilidad una vez que Sakura logró recapturar a todas las cartas. Ahora es momento de que la protagonista pueda relajarse y disfrutar de un nuevo ciclo escolar, con sus amigas de siempre y el regreso de Syaoran… Hasta que surgen complicaciones: las cartas de Sakura pierden su poder, y una vez más tiene que reiniciar su captura. Así nacen las “clear cards”, unas misteriosas cartas transparentes. Pero eso no es todo… Ahora guiada por la “Llave de los Sueños” y a su vez desorientada por las premoniciones que le surgen al soñar (a veces dormida, a veces despierta), Sakura se embarca en una nueva aventura, que por supuesto incluye nuevos personajes, diseños impresionantes y las impredecibles vueltas de tuerca a las que nos tienen malacostumbrados las autoras de este manga.",
+        "imagen": "/images/shojo-sakura-cardcaptor.jpeg"
+      },
+      {
+        "titulo": "20th Century Boys #08",
+        "codigo": 56789,
+        "precio": 8900,
+        "stock": 50,
+        "categoria": "Manga",
+        "subcategoria": "Seinen",
+        "descripcion": "20th Century Boys (y su continuación/epílogo, 21st Century Boys) es un manga perpetrado por el reconocidísimo Naoki Urasawa. El manga transcurre principalmente en tres líneas temporales paralelas, que van armando un puzzle: principios de los 70s, fines de los 90s y mediados de la década de 2010 (que en el momento de publicarse el manga, se trataba del futuro cercano), donde seguimos la vida de varios personajes, sus familias y hasta la muerte de algunos.",
+        "imagen": "/images/seinen-century-boys.jpeg"
+      },
+      {
+        "titulo": "Ajin: Semihumano #01",
+        "codigo": 34567,
+        "precio": 3600,
+        "stock": 100,
+        "categoria": "Manga",
+        "subcategoria": "Seinen",
+        "descripcion": "Se descubre la existencia de seres que no pueden morir, o bien si mueren, resucitan rápidamente y se regeneran. Son los llamados Ajin (semihumanos). Son el bicho raro de la humanidad. Son pocos los descubiertos hasta el momento y no se diferencian en nada de los humanos normales a no ser que sufran un accidente y deban regenerarse. El disparador de la historia se da cuando Kei Nagai descubre que es uno de ellos, ante la mirada atónita de la gente que por primera vez lo ve reviviendo tras ser atropellado y destrozado por un camión. Es entonces cuando empieza a ser perseguido hasta el hartazgo, ya que los Ajin por su condición son buscados bajo enormes recompensas para experimentar con ellos y así descubrir la posible causa de su inmortalidad. Muchos otros Ajin van revelando su existencia y surge un conflicto entre éstos y los humanos. Kei debe tomar partido por uno de esos bandos.",
+        "imagen": "/images/seinen-ajin.jpeg"
+      },
+      {
+        "titulo": "Perfect World #11",
+        "codigo": 98765,
+        "precio": 6000,
+        "stock": 75,
+        "categoria": "Manga",
+        "subcategoria": "Josei",
+        "descripcion": "¿Qué iré a sentir cuando vea por primera vez al bebé?. Ayukawa y Kawana deciden seguir adelante con la adopción con muchas dudas, van a una organización que se encarga de las adopciones plenas. Hay muchos requisitos que van a tener que cumplir como pareja, en el trabajo y también en cuanto a la discapacidad de Ayukawa… sin embargo, de a poco va avanzando y dándole forma a la que será su familia. ¿Cómo será él bebe que adopten?",
+        "imagen": "/images/josei-perfect-world.jpeg"
+      },
+      {
+        "titulo": "Wotakoi #03",
+        "codigo": 23456,
+        "precio": 6000,
+        "stock": 75,
+        "categoria": "Manga",
+        "subcategoria": "Josei",
+        "descripcion": "Narumi Momose, una fan del yaoi que hasta ahora ocultaba su afición a la sociedad, y Hirotaka Nifuji, un gamer sin remedio, son amigos de la infancia, compañeros de trabajo y desde hace poco comenzaron a salir juntos. Sin embargo, a él le preocupa que su relación no haya cambiado desde que eran pequeños, con lo que le propone salir un día y tener una cita normal... con una condición: no pueden hacer ninguna referencia otaku. Al mismo tiempo, van a seguir compartiendo sus aficiones y fetiches con la otra pareja otaku que trabaja en su misma empresa, Tarô Kabakura y Hanako Koyanagi.",
+        "imagen": "/images/josei-wotakoi.jpeg"
+      },
+      {
+        "titulo": "Llavero Spy x Family - Anya Forger",
+        "codigo": 87654,
+        "precio": 3000,
+        "stock": 75,
+        "categoria": "Otro",
+        "subcategoria": "Accesorio",
+        "descripcion": "Lleva a tu personaje favorito de Spy x Family siempre contigo, y sorprende a tus amigos con este original llavero. ¡No te lo pierdas!",
+        "imagen": "/images/accesorio-llavero-spy-x-family.jpeg"
+      },
+      {
+        "titulo": "Llavero Mjolnir (Thor)",
+        "codigo": 45678,
+        "precio": 1000,
+        "stock": 75,
+        "categoria": "Otro",
+        "subcategoria": "Accesorio",
+        "descripcion": "Lleva a tu Superheroe favorito de Marvel siempre contigo, y sorprende a tus amigos con este original llavero del Mjolnir. ¡No te lo pierdas!",
+        "imagen": "/images/accesorio-llavero-mjolnir.jpeg"
+      },
+      {
+        "titulo": "Billetera Batman",
+        "codigo": 67890,
+        "precio": 11500,
+        "stock": 75,
+        "categoria": "Otro",
+        "subcategoria": "Accesorio",
+        "descripcion": "Lleva siempre contigo tu fanatismo por el superhéroe Batman gracias a esta hermosa billetera realizada en material cuero sintético. Cuenta con doble división, tarjetero y monedero. ¡No te la pierdas!",
+        "imagen": "/images/accesorio-billetera-batman.jpeg"
+      },
+      {
+        "titulo": "Medias Cortas Joker(TM)",
+        "codigo": 32109,
+        "precio": 2000,
+        "stock": 75,
+        "categoria": "Otro",
+        "subcategoria": "Indumentaria",
+        "descripcion": "Desata tu lado salvaje con nuestro par de medias cortas del Joker. Diseño vibrante, comodidad extrema. ¡Caos con estilo en cada paso!",
+        "imagen": "/images/indumentaria-medias-cortas-joker.jpeg"
+      }
+      
+    ]
+  }
