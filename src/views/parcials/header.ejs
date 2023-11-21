@@ -1,0 +1,127 @@
+<!--::::Encabezado de Pagina Mobile::::::-->
+<header class="header-mobile">
+    <nav class="header-nav">
+        <input type="checkbox" id="checkbox-menu-toggle" class="menu-toggle" name="menuToggle" style="display: none;">
+        <label for="checkbox-menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+        <div class="main-menu">
+            <ul>
+                <li>
+                    <input type="radio" name="menuToggle" id="figurasToggle" class="menu-toggle">
+                    <label for="figurasToggle" class="menu-icon">Figuras</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Hasbro</a></li>
+                        <li><a href="#">Bandai</a></li>
+                        <li><a href="#">Funko</a></li>
+                        <li><a href="#">Otros</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="radio" name="menuToggle" id="comicsToggle" class="menu-toggle">
+                    <label for="comicsToggle" class="menu-icon">Comics</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Marvel</a></li>
+                        <li><a href="#">DC</a></li>
+                        <li><a href="#">Star Wars</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="radio" name="menuToggle" id="mangasToggle" class="menu-toggle">
+                    <label for="mangasToggle" class="menu-icon">Mangas</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Shonen</a></li>
+                        <li><a href="#">Shojo</a></li>
+                        <li><a href="#">Seinen</a></li>
+                        <li><a href="#">Josei</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input type="radio" name="menuToggle" id="otrosToggle" class="menu-toggle">
+                    <label for="otrosToggle" class="menu-icon">Otros</label>
+                    <ul class="sub-menu">
+                        <li><a href="#">Indumentaria</a></li>
+                        <li><a href="#">Accesorios</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="btn" href="/login">Inicia Sesión</a>
+                </li>
+                <li>
+                    <a class="btn" href="/register">Registrate</a>
+                </li>
+            </ul>
+        </div>
+        <a href="/">
+            <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo">
+        </a>
+        <div class="cart-icon">
+            <a href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </nav>
+    <div class="container">
+        <form class="search-form" action="#">
+            <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+</header>
+
+<!--::::Encabezado de Pagina desktop::::::-->
+<header class="header-desktop">
+    <section class="header-top1">
+        <a href="/">
+            <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
+        </a>
+        <div class="container1">
+            <form class="search-form1" action="#">
+                <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+        <div class="user-cart-icon">
+            <div class="login-options">
+                <a href="/login"><i class="fa-solid fa-user"> Inicia Sesion</i></a>
+                <a href="/register"><i class="fa-regular fa-user"> Registrate</i></a>
+            </div>
+            <a id="car-link" href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </section>
+    <nav class="navbar">
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#">Figuras</a>
+                <ul class="submenu">
+                    <li><a href="#">Hasbro</a></li>
+                    <li><a href="#">Bandai</a></li>
+                    <li><a href="#">Funko</a></li>
+                    <li><a href="#">Otros</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Comics</a>
+                <ul class="submenu">
+                    <li><a href="#">Marvel</a></li>
+                    <li><a href="#">DC</a></li>
+                    <li><a href="#">Star Wars</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Mangas</a>
+                <ul class="submenu">
+                    <li><a href="#">Shonen</a></li>
+                    <li><a href="#">Shojo</a></li>
+                    <li><a href="#">Seinen</a></li>
+                    <li><a href="#">Josei</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Otros</a>
+                <ul class="submenu">
+                    <li><a href="#">Indumentaria</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>

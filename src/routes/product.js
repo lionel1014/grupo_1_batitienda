@@ -7,6 +7,6 @@ const router = express.Router();
 router.get("/", productController.index)
 router.get("/productCar", productController.productCar)
 router.get("/createProduct", productController.createProduct)
-router.get("/listProduct", productController.productList)
+router.get("/productList", productController.productList)
 
 module.exports = router;

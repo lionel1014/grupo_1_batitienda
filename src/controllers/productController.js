@@ -9,7 +9,7 @@ const productController = {
         response.render("product/createProduct")
     },
     productList: function(request, response){
-        response.send("pagina en curso")
+        response.render("product/productList")
     }
 }
 
