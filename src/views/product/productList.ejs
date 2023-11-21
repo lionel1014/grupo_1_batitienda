@@ -1,6 +1,25 @@
 <%- include('../parcials/head') -%>
 <body>
     <%- include('../parcials/header') -%>
+
+    <nav>
+        <label for="filtroPrecio">Filtrar por Precio:</label>
+        <select id="filtroPrecio">
+            <option value="0">Todos</option>
+            <option value="20">$0 - $2000</option>
+            <option value="50">$2000 - $5000</option>
+            <option value="100">+ $5000</option>
+        </select>
+    
+        <label for="filtroCategoria">Filtrar por Categoría:</label>
+        <select id="filtroCategoria">
+            <option value="figuras">Figuras</option>
+            <option value="comics">Comics</option>
+            <option value="mangas">Mangas</option>
+            <option value="libros">Otros</option>
+        </select>
+    </nav>
+
     <section class="lista-figuras">
         <h2 class="lista-titulo">Figuras:</h2>
 
