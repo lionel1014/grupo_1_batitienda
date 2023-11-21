@@ -1,4 +1,5 @@
-const productosLista = require('')
+const archivo = require('../../database/productos.json')
+const productosLista = archivo.lista_productos
 
 let createCard = {
     filtrarProductos: function (propiedad, valor) {
@@ -8,21 +9,21 @@ let createCard = {
 
     crearTarjetaProducto: function (idNum) {
         
-    let producto = this.filtrarProductos( 'id', idNum)
+    let producto = this.filtrarProductos( 'codigo', idNum)
     
     const tarjeta = document.createElement('div');
     tarjeta.classList.add('producto');
     
     const imagen = document.createElement('img');
     imagen.src = producto.imagen;
-    imagen.alt = producto.nombre;
+    imagen.alt = producto.titulo;
     imagen.classList.add('producto-image');
 
     const descripcion = document.createElement('div');
     descripcion.classList.add('producto-descripcion');
 
     const nombre = document.createElement('h2');
-    nombre.textContent = producto.nombre;
+    nombre.textContent = producto.titulo;
     nombre.classList.add('producto-nombre')
 
     const precioCarro = document.createElement('div');
@@ -63,7 +64,7 @@ agregarTarjetasAlContenedor: function (propiedad, valor) {
     const contenedor = document.getElementById('productos-container');
 
     productosFiltrados.forEach(producto => {
-        const tarjeta = crearTarjetaProducto(producto.id);
+        const tarjeta = crearTarjetaProducto(producto.codigo);
         contenedor.appendChild(tarjeta);
 
         // Agregar que redirja al detalle de producto
