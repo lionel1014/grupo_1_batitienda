@@ -10,6 +10,9 @@ const productController = {
     createProduct: function(request, response){
         response.render("product/createProduct")
     },
+    editProduct: function(request, response){
+        response.render("product/editProduct")
+    },
     productList: function(request, response){
         response.render("product/productList")
     }
