@@ -139,11 +139,10 @@
     <body>
 
         <main class="productDetail">
-            <h1 class="nombre-PD">Funko Deluxe Sukuna - Jujutsu Kaisen</h1>
-    
+            <h1 class="nombre-PD"><%=product.titulo%></h1>
             <section class="izquierda">
                 <div class="contenedor-img-PD">
-                    <img src="https://acdn.mitiendanube.com/stores/001/017/593/products/xgcol4291-ff23971e53b821f89616801858975626-640-0.webp" alt="imagen-producto"/>
+                    <img src="<%= product.imagen %>" alt="imagen-producto"/>
                 </div>
                 <div class="contenedor-add-carrito">
                     <div class="contenedor-cantidad">
@@ -174,9 +173,8 @@
                         </div>
                         <div class="descripcion-producto-PD">
                             <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam iure
-                                provident atque voluptatibus reiciendis quae rerum, maxime placeat enim cupiditate voluptatum, temporibus quis iusto. Enim eum qui delectus deleniti similique? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint autem magni earum est dolorem saepe perferendis repellat ipsam laudantium cum assumenda quidem quam, vero similique? Iusto officiis quod blanditiis iste?
-                                </p>
+                                <%= product.descripcion %>
+                            </p>
                         </div>
                     </div>
                 </div>

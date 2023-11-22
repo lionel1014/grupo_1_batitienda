@@ -142,113 +142,23 @@
         </div>
       </div>
       <div class="productos-lista">
+        <% for(product of products) { %>
         <div class="producto">
-          <img src="/images/Aquaman-Deep-Dives-TP.jpg" />
+          <a href="/product/<%=product.id%>" >
+            <img src="<%=product.imagen%>" />
+          </a>
           <div class="producto-descripcion">
-            <h2 class="producto-nombre">Aquaman Deep Dives</h2>
+            <h2 class="producto-nombre"><%= product.titulo %></h2>
             <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
+              <p class="producto-precio">$<%= product.precio %></p>
               <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
             </div>
             <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              <%= product.descripcion %>
             </p>
           </div>
         </div>
-        <div class="producto">
-          <img src="/images/Batgirl.jpg" />
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">BatGirl Vol. 1</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
-        <div class="producto">
-          <img src="/images/Absolute-Batman-the-Killing-Joke-HC.jpg" />
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">Absolute Batman the Killing Joke</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
-        <div class="producto">
-          <img src="/images/Batgirl.jpg" />
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">BatGirl Vol. 1</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
-        <div class="producto">
-          <div class="img-container">
-            <img src="/images/Absolute-Batman-the-Killing-Joke-HC.jpg" />
-          </div>
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">Absolute Batman the Killing-Joke</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
-
-        <div class="producto">
-          <img src="/images/Aquaman-Deep-Dives-TP.jpg" />
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">Aquaman Deep Dives</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
-        <div class="producto">
-          <img src="/images/jocker2.jpg" />
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">Aquaman Deep Dives</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
-        <div class="producto">
-          <img src="/images/jokerHC.jpg" />
-          <div class="producto-descripcion">
-            <h2 class="producto-nombre">Aquaman Deep Dives</h2>
-            <div class="precio-carro">
-              <p class="producto-precio">$1000</p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-            </div>
-            <p class="descripcion-producto">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-            </p>
-          </div>
-        </div>
+        <% } %>
       </div>
     </main>
 
