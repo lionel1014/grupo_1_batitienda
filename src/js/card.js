@@ -76,3 +76,28 @@ agregarTarjetasAlContenedor: function (propiedad, valor) {
 }
 
 module.exports = createCard
+
+
+<ul class="sub-menu">
+                <li><a href="/product/listProduct?category=Figuras&brand=Hasbro">Hasbro</a></li>
+                <li><a href="">Bandai</a></li>
+                <li><a href="/product/listProduct?category=Funko">Funko</a></li>
+                <li><a href="/product/listProduct?category=Otros">Otros</a></li>
+</ul>
+
+productList: function(request, response){
+        
+    response.render("product/editProduct", {productos})
+
+},
+productListFilter: function(request, response){
+    const {category, price} = request.query
+
+
+    const productosFiltrados = []
+    if(category){
+        productosFiltrados = productos.filter(producto => producto.category == category)
+    }
+
+    if(price){
+        productosFiltrados = productos.filter(producto => producto.price == price)

@@ -9,10 +9,13 @@
         </div>
       </div>
       <div class="productos-lista">
-        
-        <%=createCard.agregarTarjetasAlContenedor( 'oferta', true )%>
-
+        <%= card %>
       </div>
+      <script src="../js/card.js"></script>
+      <script>
+        const tarjetas = createCard.agregarTarjetasAlContenedor('categoria', 'figura');
+        document.write(tarjetas);
+      </script>
     </main>
     <%- include('./parcials/footer') -%>
   </body>

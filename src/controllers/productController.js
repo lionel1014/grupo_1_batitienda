@@ -1,3 +1,5 @@
+
+
 const productController = {
     index: function(request, response){
         response.render("product/productDetail")
