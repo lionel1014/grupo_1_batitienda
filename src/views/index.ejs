@@ -18,10 +18,13 @@
             <h2 class="producto-nombre"><%= product.titulo %></h2>
             <div class="precio-carro">
               <p class="producto-precio">$<%= product.precio %></p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+              <button class="btn-add-carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Añadir
+              </button>
             </div>
             <p class="descripcion-producto">
-              <%= product.descripcion %>
+              <%= product.descripcion %>...
             </p>
           </div>
         </div>

@@ -1,36 +1,10 @@
 <%- include('../parcials/head') -%>
 <body>
     <%- include('../parcials/header') -%>
-
-    <nav>
-        <form action="/product" method="get">
-            <label for="filtroPrecio">Filtrar por Precio Máximo:</label>
-                <select id="filtroPrecio">
-                    <option value="0">Todos</option>
-                    <option value="2000">$2000</option>
-                    <option value="5000">$5000</option>
-                    <option value="10000">$10000</option>
-                </select>
-    
-            <label for="filtroCategoria">Filtrar por Categoría:</label>
-                <select id="filtroCategoria">
-                    <option value="figuras">Figuras</option>
-                    <option value="comics">Comics</option>
-                    <option value="mangas">Mangas</option>
-                    <option value="libros">Otros</option>
-                </select>
-
-            <label for="filtroSubcategoria">Filtrar por Subategoría:</label>
-                <select id="filtroSubcategoria">
-                    <option value="Indumentaria">Indumentaria</option>
-                    <option value=""></option>
-                </select>
-            <button type="submit">asdasd</button>
-        </form>
         
     </nav>
     <section>
-        <h2>Nuestros productos: </h2>
+        <h2 class="radius-invertido">Nuestros productos: </h2>
     </section>
     <div class="productos-lista">
         <% for(product of productos) { %>
@@ -42,10 +16,13 @@
             <h2 class="producto-nombre"><%= product.titulo %></h2>
             <div class="precio-carro">
               <p class="producto-precio">$<%= product.precio %></p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+              <button class="btn-add-carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Añadir
+              </button>
             </div>
             <p class="descripcion-producto">
-              <%= product.descripcion %>
+              <%= product.descripcion %>...
             </p>
           </div>
         </div>
