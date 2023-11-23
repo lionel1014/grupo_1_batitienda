@@ -12,10 +12,10 @@
         <% for(product of products) { %>
         <div class="producto">
           <a href="/product/<%=product.id%>" >
-            <img src="<%=product.imagen%>" />
+            <img src="<%=product.image%>" />
           </a>
           <div class="producto-descripcion">
-            <h2 class="producto-nombre"><%= product.titulo %></h2>
+            <h2 class="producto-nombre"><%= product.tittle %></h2>
             <div class="precio-carro">
               <p class="producto-precio">$<%= product.precio %></p>
               <button class="btn-add-carrito">

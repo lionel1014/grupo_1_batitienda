@@ -1,19 +1,47 @@
 <%- include('../parcials/head') -%>
 <body>
     <%- include('../parcials/header') -%>
+
+    <nav>
+        <form action="/product/listProduct" method="get">
+            <label for="filtroPrecio">Filtrar por Precio Máximo:</label>
+                <select id="filtroPrecio" name="price">
+                    <option value="0">Todos</option>
+                    <option value="2000">$2000</option>
+                    <option value="5000">$5000</option>
+                    <option value="10000">$10000</option>
+                    <option value=""></option>
+                </select>
+    
+            <label for="filtroCategoria">Filtrar por Categoría:</label>
+                <select id="filtroCategoria" name="category">
+                    <option value="Figura">Figuras</option>
+                    <option value="Comic">Comics</option>
+                    <option value="Manga">Mangas</option>
+                    <option value="Otro">Otros</option>
+                    <option value=""></option>
+                </select>
+
+            <label for="filtroSubcategoria">Filtrar por Subategoría:</label>
+                <select id="filtroSubcategoria" name="subcategory">
+                    <option value="Indumentaria">Indumentaria</option>
+                    <option value=""></option>
+                </select>
+            <button type="submit">asdasd</button>
+        </form>
         
     </nav>
     <section>
         <h2 class="radius-invertido">Nuestros productos: </h2>
     </section>
     <div class="productos-lista">
-        <% for(product of productos) { %>
+        <% for(product of products) { %>
         <div class="producto">
           <a href="/product/<%=product.id%>" >
-            <img src="<%=product.imagen%>" />
+            <img src="<%=product.image%>" />
           </a>
           <div class="producto-descripcion">
-            <h2 class="producto-nombre"><%= product.titulo %></h2>
+            <h2 class="producto-nombre"><%= product.tittle %></h2>
             <div class="precio-carro">
               <p class="producto-precio">$<%= product.precio %></p>
               <button class="btn-add-carrito">
