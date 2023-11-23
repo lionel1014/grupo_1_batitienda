@@ -5,10 +5,10 @@
         <%- include('../parcials/header') -%>
 
         <main class="productDetail">
-            <h1 class="nombre-PD"><%=product.titulo%></h1>
+            <h1 class="nombre-PD"><%=product.tittle%></h1>
             <section class="izquierda">
                 <div class="contenedor-img-PD">
-                    <img src="<%= product.imagen %>" alt="imagen-producto"/>
+                    <img src="<%= product.image %>" alt="imagen-producto"/>
                 </div>
                 <div class="contenedor-add-carrito">
                     <div class="contenedor-cantidad">
@@ -39,7 +39,7 @@
                         </div>
                         <div class="descripcion-producto-PD">
                             <p>
-                                <%= product.descripcion %>
+                                <%= product.description %>
                             </p>
                         </div>
                     </div>

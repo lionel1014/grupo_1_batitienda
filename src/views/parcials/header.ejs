@@ -9,46 +9,45 @@
                     <input type="radio" name="menuToggle" id="figurasToggle" class="menu-toggle">
                     <label for="figurasToggle" class="menu-icon">Figuras</label>
                     <ul class="sub-menu">
-                        <li><a href="/product/listProduct?subcategory=Hasbro">Hasbro</a></li>
-                        <li><a href="/product/listProduct?subcategory=Bandai">Bandai</a></li>
-                        <li><a href="/product/listProduct?subcategory=Funko">Funko</a></li>
-                        <li><a href="/product/listProduct?subcategory=Otros">Otros</a></li>
+                        <li><a href="/product/listProduct?category=Figura&subcategory=Hasbro">Hasbro</a></li>
+                        <li><a href="/product/listProduct?category=Figura&subcategory=Bandai">Bandai</a></li>
+                        <li><a href="/product/listProduct?category=Figura&subcategory=Funko">Funko</a></li>
                     </ul>
                 </li>
                 <li>
                     <input type="radio" name="menuToggle" id="comicsToggle" class="menu-toggle">
                     <label for="comicsToggle" class="menu-icon">Comics</label>
                     <ul class="sub-menu">
-                        <li><a href="/product/listProduct?subcategory=Marvel">Marvel</a></li>
-                        <li><a href="/product/listProduct?subcategory=DC">DC</a></li>
-                        <li><a href="/product/listProduct?subcategory=Star_Wars">Star Wars</a></li>
+                        <li><a href="/product/listProduct?category=Comic&subcategory=Marvel">Marvel</a></li>
+                        <li><a href="/product/listProduct?category=Comic&subcategory=DC">DC</a></li>
+                        <li><a href="/product/listProduct?category=Comic&subcategory=Star Wars">Star Wars</a></li>
                     </ul>
                 </li>
                 <li>
                     <input type="radio" name="menuToggle" id="mangasToggle" class="menu-toggle">
                     <label for="mangasToggle" class="menu-icon">Mangas</label>
                     <ul class="sub-menu">
-                        <li><a href="/product/listProduct?subcategory=Shonen">Shonen</a></li>
-                        <li><a href="/product/listProduct?subcategory=Shojo">Shojo</a></li>
-                        <li><a href="/product/listProduct?subcategory=Seinen">Seinen</a></li>
-                        <li><a href="/product/listProduct?subcategory=Josei">Josei</a></li>
+                        <li><a href="/product/listProduct?category=Manga&subcategory=Shonen">Shonen</a></li>
+                        <li><a href="/product/listProduct?category=Manga&subcategory=Shojo">Shojo</a></li>
+                        <li><a href="/product/listProduct?category=Manga&subcategory=Seinen">Seinen</a></li>
+                        <li><a href="/product/listProduct?category=Manga&subcategory=Josei">Josei</a></li>
                     </ul>
                 </li>
                 <li>
                     <input type="radio" name="menuToggle" id="otrosToggle" class="menu-toggle">
                     <label for="otrosToggle" class="menu-icon">Otros</label>
                     <ul class="sub-menu">
-                        <li><a href="/product/listProduct?subcategory=Indumentaria">Indumentaria</a></li>
-                        <li><a href="/product/listProduct?subcategory=Accesorios">Accesorios</a></li>
+                        <li><a href="/product/listProduct?category=Otro&subcategory=Indumentaria">Indumentaria</a></li>
+                        <li><a href="/product/listProduct?category=Otro&subcategory=Accesorio">Accesorios</a></li>
                     </ul>
                 </li>
             </ul>
             <ul>
                 <li>
-                    <a class="btn" href="/login">Inicia Sesión</a>
+                    <a class="btn" href="/user/login">Inicia Sesión</a>
                 </li>
                 <li>
-                    <a class="btn" href="/register">Registrate</a>
+                    <a class="btn" href="/user">Registrate</a>
                 </li>
             </ul>
         </div>
@@ -81,8 +80,8 @@
         </div>
         <div class="user-cart-icon">
             <div class="login-options">
-                <a href="/login"><i class="fa-solid fa-user"> Inicia Sesion</i></a>
-                <a href="/register"><i class="fa-regular fa-user"> Registrate</i></a>
+                <a href="/user/login"><i class="fa-solid fa-user"> Inicia Sesion</i></a>
+                <a href="/user"><i class="fa-regular fa-user"> Registrate</i></a>
             </div>
             <a id="car-link" href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
@@ -90,36 +89,35 @@
     <nav class="navbar">
         <ul class="menu">
             <li class="menu-item">
-                <a href="/product/listProduct?category=Figuras">Figuras</a>
-                <ul class="sub-menu">
-                    <li><a href="/product/listProduct?subcategory=Hasbro">Hasbro</a></li>
-                    <li><a href="/product/listProduct?subcategory=Bandai">Bandai</a></li>
-                    <li><a href="/product/listProduct?subcategory=Funko">Funko</a></li>
-                    <li><a href="/product/listProduct?subcategory=Otros">Otros</a></li>
+                <a href="/product/listProduct?category=Figura">Figuras</a>
+                <ul class="submenu">
+                    <li><a href="/product/listProduct?category=Figura&subcategory=Hasbro">Hasbro</a></li>
+                    <li><a href="/product/listProduct?category=Figura&subcategory=Bandai">Bandai</a></li>
+                    <li><a href="/product/listProduct?category=Figura&subcategory=Funko">Funko</a></li>
                 </ul>
             </li>
             <li class="menu-item">
                 <a href="/product/listProduct?category=Comic">Comics</a>
-                <ul class="sub-menu">
-                    <li><a href="/product/listProduct?subcategory=Marvel">Marvel</a></li>
-                    <li><a href="/product/listProduct?subcategory=DC">DC</a></li>
-                    <li><a href="/product/listProduct?subcategory=Star_Wars">Star Wars</a></li>
+                <ul class="submenu">
+                    <li><a href="/product/listProduct?category=Comic&subcategory=Marvel">Marvel</a></li>
+                    <li><a href="/product/listProduct?category=Comic&subcategory=DC">DC</a></li>
+                    <li><a href="/product/listProduct?category=Comic&subcategory=Star Wars">Star Wars</a></li>
                 </ul>
             </li>
             <li class="menu-item">
-                <a href="/product/listProduct?category=Mangas">Mangas</a>
-                <ul class="sub-menu">
-                    <li><a href="/product/listProduct?subcategory=Shonen">Shonen</a></li>
-                    <li><a href="/product/listProduct?subcategory=Shojo">Shojo</a></li>
-                    <li><a href="/product/listProduct?subcategory=Seinen">Seinen</a></li>
-                    <li><a href="/product/listProduct?subcategory=Josei">Josei</a></li>
+                <a href="/product/listProduct?category=Manga">Mangas</a>
+                <ul class="submenu">
+                    <li><a href="/product/listProduct?category=Manga&subcategory=Shonen">Shonen</a></li>
+                    <li><a href="/product/listProduct?category=Manga&subcategory=Shojo">Shojo</a></li>
+                    <li><a href="/product/listProduct?category=Manga&subcategory=Seinen">Seinen</a></li>
+                    <li><a href="/product/listProduct?category=Manga&subcategory=Josei">Josei</a></li>
                 </ul>
             </li>
             <li class="menu-item">
-                <a href="/product/listProduct?category=Otros">Otros</a>
-                <ul class="sub-menu">
-                    <li><a href="/product/listProduct?subcategory=Indumentaria">Indumentaria</a></li>
-                    <li><a href="/product/listProduct?subcategory=Accesorios">Accesorios</a></li>
+                <a href="/product/listProduct?category=Otro">Otros</a>
+                <ul class="submenu">
+                    <li><a href="/product/listProduct?category=Otro&subcategory=Indumentaria">Indumentaria</a></li>
+                    <li><a href="/product/listProduct?category=Otro&subcategory=Accesorio">Accesorios</a></li>
                 </ul>
             </li>
         </ul>

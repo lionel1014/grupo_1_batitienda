@@ -26,13 +26,13 @@ const productController = {
         const {category, subcategory, price} = request.query
 
         if(category){
-            productToFilter = productToFilter.filter(producto => producto.categoria == category)
+            productToFilter = productToFilter.filter(producto => producto.category == category)
         }
         if(subcategory){
-            productToFilter = productToFilter.filter(producto => producto.subcategoria == subcategory)
+            productToFilter = productToFilter.filter(producto => producto.subcategory == subcategory)
         }
         if(price){
-            productToFilter = productToFilter.filter(producto => producto.precio == price)
+            productToFilter = productToFilter.filter(producto => producto.price == price)
         }
         response.render("product/productList",{products: productToFilter});
 
