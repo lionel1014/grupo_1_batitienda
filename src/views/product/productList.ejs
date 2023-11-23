@@ -1,38 +1,146 @@
 <%- include('../parcials/head') -%>
 <body>
-    <%- include('../parcials/header') -%>
+    <!--::::Encabezado de Pagina Mobile::::::-->
+<header class="header-mobile">
+  <nav class="header-nav">
+      <input type="checkbox" id="checkbox-menu-toggle" class="menu-toggle" name="menuToggle" style="display: none;">
+      <label for="checkbox-menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+      <div class="main-menu">
+        <form action="/product/listProduct" method="get"  style="margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;" class="login-form">
+          <label for="filtroPrecio" class="menu-icon">Filtrar por Precio Máximo:</label><br>
+              <select id="filtroPrecio" name="price" class="elegir-filtro">
+                  <option value="0">Todos</option>
+                  <option value="2000">$2000</option>
+                  <option value="5000">$5000</option>
+                  <option value="10000">$10000</option>
+                  <option value=""></option>
+              </select>
+              <br>
+          <label for="filtroCategoria" class="menu-icon">Filtrar por Categoría:</label><br>
+              <select id="filtroCategoria" name="category" class="elegir-filtro">
+                  <option value="Figura">Figuras</option>
+                  <option value="Comic">Comics</option>
+                  <option value="Manga">Mangas</option>
+                  <option value="Otro">Otros</option>
+                  <option value=""></option>
+              </select>
+              <br>
+          <label for="filtroSubcategoria" class="menu-icon">Filtrar por Subategoría:</label><br>
+              <select id="filtroSubcategoria" name="subcategory" class="elegir-filtro">
+                <option value="Hasbro">Hasbro</option>
+                <option value="Bandai">Bandai</option>
+                <option value="Funko">Funko</option>
+                <option value="Marvel">Marvel</option>
+                <option value="DC">DC</option>
+                <option value="Star Wars">Star Wars</option>
+                <option value="Shonen">Shonen</option>
+                <option value="Shojo">Shojo</option>
+                <option value="Seinen">Seinen</option>
+                <option value="Josei">Josei</option>
+                <option value="Indumentaria">Indumentaria</option>
+                <option value="Accesorio">Accesorios</option>
+              </select>
+              <br>
+          <button type="submit" class="btn">Filtrar</button>
+      </form>
+          
+          <ul>
+              <li>
+                  <a class="btn" href="/user/login">Inicia Sesión</a>
+              </li>
+              <li>
+                  <a class="btn" href="/user">Registrate</a>
+              </li>
+          </ul>
+      </div>
+      <a href="/">
+          <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo">
+      </a>
+      <div class="cart-icon">
+          <a href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+  </nav>
+  <div class="container">
+      <form class="search-form" action="#">
+          <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+  </div>
+</header>
 
-    <nav>
-        <form action="/product/listProduct" method="get">
-            <label for="filtroPrecio">Filtrar por Precio Máximo:</label>
-                <select id="filtroPrecio" name="price">
-                    <option value="0">Todos</option>
-                    <option value="2000">$2000</option>
-                    <option value="5000">$5000</option>
-                    <option value="10000">$10000</option>
-                    <option value=""></option>
-                </select>
-    
-            <label for="filtroCategoria">Filtrar por Categoría:</label>
-                <select id="filtroCategoria" name="category">
-                    <option value="Figura">Figuras</option>
-                    <option value="Comic">Comics</option>
-                    <option value="Manga">Mangas</option>
-                    <option value="Otro">Otros</option>
-                    <option value=""></option>
-                </select>
-
-            <label for="filtroSubcategoria">Filtrar por Subategoría:</label>
-                <select id="filtroSubcategoria" name="subcategory">
-                    <option value="Indumentaria">Indumentaria</option>
-                    <option value=""></option>
-                </select>
-            <button type="submit">asdasd</button>
-        </form>
-        
-    </nav>
+<!--::::Encabezado de Pagina desktop::::::-->
+<header class="header-desktop">
+  <section class="header-top1">
+      <a href="/">
+          <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
+      </a>
+      <div class="container1">
+          <form class="search-form1" action="#">
+              <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+      </div>
+      <div class="user-cart-icon">
+          <div class="login-options">
+              <a href="/user/login"><i class="fa-solid fa-user"> Inicia Sesion</i></a>
+              <a href="/user"><i class="fa-regular fa-user"> Registrate</i></a>
+          </div>
+          <a id="car-link" href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+  </section>
+  <nav class="navbar">
+      <ul class="menu">
+          <li class="menu-item">
+              <a href="/product/listProduct?category=Figura">Figuras</a>
+              <ul class="submenu">
+                  <li><a href="/product/listProduct?category=Figura&subcategory=Hasbro">Hasbro</a></li>
+                  <li><a href="/product/listProduct?category=Figura&subcategory=Bandai">Bandai</a></li>
+                  <li><a href="/product/listProduct?category=Figura&subcategory=Funko">Funko</a></li>
+              </ul>
+          </li>
+          <li class="menu-item">
+              <a href="/product/listProduct?category=Comic">Comics</a>
+              <ul class="submenu">
+                  <li><a href="/product/listProduct?category=Comic&subcategory=Marvel">Marvel</a></li>
+                  <li><a href="/product/listProduct?category=Comic&subcategory=DC">DC</a></li>
+                  <li><a href="/product/listProduct?category=Comic&subcategory=Star Wars">Star Wars</a></li>
+              </ul>
+          </li>
+          <li class="menu-item">
+              <a href="/product/listProduct?category=Manga">Mangas</a>
+              <ul class="submenu">
+                  <li><a href="/product/listProduct?category=Manga&subcategory=Shonen">Shonen</a></li>
+                  <li><a href="/product/listProduct?category=Manga&subcategory=Shojo">Shojo</a></li>
+                  <li><a href="/product/listProduct?category=Manga&subcategory=Seinen">Seinen</a></li>
+                  <li><a href="/product/listProduct?category=Manga&subcategory=Josei">Josei</a></li>
+              </ul>
+          </li>
+          <li class="menu-item">
+              <a href="/product/listProduct?category=Otro">Otros</a>
+              <ul class="submenu">
+                  <li><a href="/product/listProduct?category=Otro&subcategory=Indumentaria">Indumentaria</a></li>
+                  <li><a href="/product/listProduct?category=Otro&subcategory=Accesorio">Accesorios</a></li>
+              </ul>
+          </li>
+          <li class="menu-item">
+            <a href="/product/listProduct?category=Precio">Filtrar por precio</a>
+            <ul class="submenu">
+                <li><a href="/product/listProduct?price=2000">- $2000</a></li>
+                <li><a href="/product/listProduct?price=5000">- $5000</a></li>
+                <li><a href="/product/listProduct?price=10000">- $10000</a></li>
+                <li><a href="/product/listProduct">Todos</a></li>
+            </ul>
+        </li>   
+      </ul>
+  </nav>
+</header>
+  <main>
     <section>
-        <h2>Nuestros productos: </h2>
+        <h2 class="radius-invertido">Nuestros productos: </h2>
     </section>
     <div class="productos-lista">
         <% for(product of products) { %>
@@ -41,19 +149,22 @@
             <img src="<%=product.image%>" />
           </a>
           <div class="producto-descripcion">
-            <h2 class="producto-nombre"><%= product.tittle %></h2>
+            <h2 class="producto-nombre"><%=product.tittle%></h2>
             <div class="precio-carro">
-              <p class="producto-precio">$<%= product.price %></p>
-              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+              <p class="producto-precio">$<%=product.precio%></p>
+              <button class="btn-add-carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Añadir
+              </button>
             </div>
             <p class="descripcion-producto">
-              <%= product.description %>
+              <%=product.descripcion%>...
             </p>
           </div>
         </div>
         <% } %>
       </div>
-
+    </main>
     <%- include('../parcials/footer') -%>
 </body>
 </html>

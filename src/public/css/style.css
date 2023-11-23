@@ -377,18 +377,33 @@ button.delete-product{
 
 
 
-
+.elegir-filtro{
+    width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      color: #333;
+}
 
 
 /* PRODUCTO */
 
 
 .productos-lista{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
+
+h2.radius-invertido{
+    border-radius: 0px 0px 1rem 1rem;
+}
 
 .producto-descripcion{
     display: flex;
@@ -406,6 +421,8 @@ button.delete-product{
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    max-height: 560px;
+    min-height: 560px;
 }
 
 .producto img {
@@ -418,8 +435,9 @@ button.delete-product{
 .producto-nombre {
     font-size: 1.2em;
     font-weight: bold;
+    min-height: 44px;
     margin: 10px 0;
-    size: 100%;
+    width: 100%;
     color: #ffff;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -440,22 +458,35 @@ button.delete-product{
   
 .producto-precio {
     width: 40%;
-    font-size: 1.2em;
+    font-size: 26px;
     font-weight: bold;
     color: #fdff00; 
     margin-bottom: 5px;
 }
 
+div.producto a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 300px;
+    min-height: 300px;
+    max-width: 300px;
+    ;
+}
 .precio-carro{
     display: flex;
     justify-content:space-between;
     margin: 5px;
     padding: 5px;
     width: 100%;
+    align-items: baseline;
 }
 
 .add-carrito{
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fa-cart-shopping .carro-producto{
@@ -747,7 +778,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 /* Estilos barra de busqueda */
 .container1 {
     width: 70%;
-    max-width: 500px;
+    max-width: 350px;
     background-color: var(--blue-80);
     padding-bottom: 20px;
     display: flex;
