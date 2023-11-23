@@ -16,23 +16,43 @@ const productController = {
         response.render("product/editProduct")
     },
     productList: function(request, response){
-        response.render("product/productList",{productos: products})
+        if (Object.keys(request.query).length == 0 ) {
+            response.render("product/productList",{products});
+            return;
+        }
+
+        let productToFilter = products
+
+        const {category, subcategory, price} = request.query
+
+        if(category){
+            productToFilter = productToFilter.filter(producto => producto.categoria == category)
+        }
+        if(subcategory){
+            productToFilter = productToFilter.filter(producto => producto.subcategoria == subcategory)
+        }
+        if(price){
+            productToFilter = productToFilter.filter(producto => producto.precio == price)
+        }
+        response.render("product/productList",{products: productToFilter});
+
     },
-    // productListFilter: function(request, response){
-    //     const {category, price} = request.query
+    productListFilter: function(request, response){
+        console.log("Product List Filter");
+        const {category, price} = request.query
+        console.log(query);
 
+        // const productosFiltrados = []
+        // if(category){
+        //     productosFiltrados = productos.filter(producto => producto.category == category)
+        // }
 
-    //     const productosFiltrados = []
-    //     if(category){
-    //         productosFiltrados = productos.filter(producto => producto.category == category)
-    //     }
+        // if(price){
+        //     productosFiltrados = productos.filter(producto => producto.price == price)
+        // }
 
-    //     if(price){
-    //         productosFiltrados = productos.filter(producto => producto.price == price)
-    //     }
-
-    //     response.render("product/editProduct", {productos})
-    // },
+        // response.render("product/editProduct", {productos})
+    }
 }
 
 module.exports = productController;
