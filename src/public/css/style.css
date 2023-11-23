@@ -377,7 +377,17 @@ button.delete-product{
 
 
 
-
+.elegir-filtro{
+    width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      color: #333;
+}
 
 
 /* PRODUCTO */
