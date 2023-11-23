@@ -16,9 +16,7 @@ const productController = {
         response.render("product/editProduct")
     },
     productList: function(request, response){
-        
-        response.render("product/editProduct")
-
+        response.render("product/productList",{productos: products})
     },
     // productListFilter: function(request, response){
     //     const {category, price} = request.query
