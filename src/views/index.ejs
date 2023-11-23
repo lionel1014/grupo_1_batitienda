@@ -8,14 +8,21 @@
           <img src="/images/banner1.png" alt="banner nuevas ofertas">
         </div>
       </div>
-      <div class="productos-lista">
-        <%= card %>
-      </div>
-      <script src="../js/card.js"></script>
-      <script>
-        const tarjetas = createCard.agregarTarjetasAlContenedor('categoria', 'figura');
-        document.write(tarjetas);
-      </script>
+      <% productos.forEach(function(producto){ %>
+        <div class="producto">
+          <%= producto.imagen %>
+          <div class="producto-descripcion">
+            <h2 class="producto-nombre"><%= producto.nombre %></h2>
+            <div class="precio-carro">
+              <p class="producto-precio"><%=producto.precio%></p>
+              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+            </div>
+            <p class="descripcion-producto">
+              <%= prodcuto.descripcion %>
+            </p>
+          </div>
+        </div>
+      <% }); %>
     </main>
     <%- include('./parcials/footer') -%>
   </body>

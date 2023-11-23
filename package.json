@@ -2,7 +2,7 @@
   "name": "batitienda",
   "version": "1.0.0",
   "description": "![BatiTienda](https://github.com/lionel1014/grupo_1_batitienda/assets/77951627/d285f110-5db4-49dc-a7cd-bb7568099dd1)",
-  "main": "index.js",
+  "main": "src/views/index.ejs",
   "scripts": {
     "test": "nodemon src/app.js",
     "start": "node src/app.js"

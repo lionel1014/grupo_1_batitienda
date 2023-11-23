@@ -1,9 +1,9 @@
-const card = require('../js/card.js');
+const productos = require('../database/productos.json')
 
 const mainController = {
     index: function(request, response){
-        console.log(card)
-        response.render("index", {card})
+
+        response.render("index", {productos})
     }
 }
 

@@ -3,50 +3,64 @@
     <%- include('../parcials/header') -%>
 
     <nav>
-        <label for="filtroPrecio">Filtrar por Precio:</label>
-        <select id="filtroPrecio">
-            <option value="0">Todos</option>
-            <option value="20">$0 - $2000</option>
-            <option value="50">$2000 - $5000</option>
-            <option value="100">+ $5000</option>
-        </select>
+        <form action="/product" method="get">
+            <label for="filtroPrecio">Filtrar por Precio Máximo:</label>
+                <select id="filtroPrecio">
+                    <option value="0">Todos</option>
+                    <option value="2000">$2000</option>
+                    <option value="5000">$5000</option>
+                    <option value="10000">$10000</option>
+                </select>
     
-        <label for="filtroCategoria">Filtrar por Categoría:</label>
-        <select id="filtroCategoria">
-            <option value="figuras">Figuras</option>
-            <option value="comics">Comics</option>
-            <option value="mangas">Mangas</option>
-            <option value="libros">Otros</option>
-        </select>
+            <label for="filtroCategoria">Filtrar por Categoría:</label>
+                <select id="filtroCategoria">
+                    <option value="figuras">Figuras</option>
+                    <option value="comics">Comics</option>
+                    <option value="mangas">Mangas</option>
+                    <option value="libros">Otros</option>
+                </select>
 
-        <label for="filtroSubcategoria">Filtrar por Subategoría:</label>
-        <select id="filtroSubcategoria">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-        </select>
-    </nav>
-
-    <section class="lista-figuras">
-        <h2 class="lista-titulo">Figuras:</h2>
-
-    </section>
-
-    <section class="lista-figuras">
-        <h2 class="lista-titulo">Comics:</h2>
+            <label for="filtroSubcategoria">Filtrar por Subategoría:</label>
+                <select id="filtroSubcategoria">
+                    <% if(filtroCategoria == 'Figuras'){ %>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    <% } else if(filtroCategoria == 'Comics'){ %>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    <% } else if(filtroCategoria == 'Mangas'){ %>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    <% } else if(filtroCategoria == 'Otros'){ %>
+                        <option value="Indumentaria">Indumentaria</option>
+                        <option value=""></option>
+                    <% }; %>
+                </select>
+        </form>
         
+    </nav>
+    <section>
+        <h2>Nuestros productos: </h2>
     </section>
-
-    <section class="lista-figuras">
-        <h2 class="lista-titulo">Mangas:</h2>
-
-    </section>
-
-    <section class="lista-figuras">
-        <h2 class="lista-titulo">Otros:</h2>
-
-    </section>
+        <% productosFiltrados.forEach(function(producto){ %>
+            <div class="producto">
+                <%= producto.imagen %>
+                <div class="producto-descripcion">
+                    <h2 class="producto-nombre"><%= producto.nombre %></h2>
+                    <div class="precio-carro">
+                        <p class="producto-precio"><%=producto.precio%></p>
+                        <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
+                    </div>
+                    <p class="descripcion-producto"><%= producto.descripcion %></p>
+                </div>
+            </div>
+        <% }); %>
 
     <%- include('../parcials/footer') -%>
 </body>
