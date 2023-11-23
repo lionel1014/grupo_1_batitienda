@@ -22,45 +22,35 @@
 
             <label for="filtroSubcategoria">Filtrar por Subategoría:</label>
                 <select id="filtroSubcategoria">
-                    <% if(filtroCategoria == 'Figuras'){ %>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    <% } else if(filtroCategoria == 'Comics'){ %>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    <% } else if(filtroCategoria == 'Mangas'){ %>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    <% } else if(filtroCategoria == 'Otros'){ %>
-                        <option value="Indumentaria">Indumentaria</option>
-                        <option value=""></option>
-                    <% }; %>
+                    <option value="Indumentaria">Indumentaria</option>
+                    <option value=""></option>
                 </select>
+            <button type="submit">asdasd</button>
         </form>
         
     </nav>
     <section>
         <h2>Nuestros productos: </h2>
     </section>
-        <% productosFiltrados.forEach(function(producto){ %>
-            <div class="producto">
-                <%= producto.imagen %>
-                <div class="producto-descripcion">
-                    <h2 class="producto-nombre"><%= producto.nombre %></h2>
-                    <div class="precio-carro">
-                        <p class="producto-precio"><%=producto.precio%></p>
-                        <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
-                    </div>
-                    <p class="descripcion-producto"><%= producto.descripcion %></p>
-                </div>
+    <div class="productos-lista">
+        <% for(product of productos) { %>
+        <div class="producto">
+          <a href="/product/<%=product.id%>" >
+            <img src="<%=product.imagen%>" />
+          </a>
+          <div class="producto-descripcion">
+            <h2 class="producto-nombre"><%= product.titulo %></h2>
+            <div class="precio-carro">
+              <p class="producto-precio">$<%= product.precio %></p>
+              <p class="add-carrito"> Añadir <i class="fa-solid fa-cart-shopping carro-producto"></i></p>
             </div>
-        <% }); %>
+            <p class="descripcion-producto">
+              <%= product.descripcion %>
+            </p>
+          </div>
+        </div>
+        <% } %>
+      </div>
 
     <%- include('../parcials/footer') -%>
 </body>
