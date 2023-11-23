@@ -409,9 +409,10 @@ button.delete-product{
 }
 
 .producto img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: fill;
 }
 
 .producto-nombre {
@@ -420,6 +421,10 @@ button.delete-product{
     margin: 10px 0;
     size: 100%;
     color: #ffff;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
 }
   
 .descripcion-producto {
@@ -427,6 +432,10 @@ button.delete-product{
     font-size: 0.9em;
     color: #968fa1;
     margin: 10px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
 }
   
 .producto-precio {
@@ -965,7 +974,7 @@ form.create-form textarea {
     .productos-lista{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-start;
         width: 100%;
         padding-left: 20px;
@@ -974,10 +983,6 @@ form.create-form textarea {
 
     .producto{
         width: 40vw;
-    }
-
-    .producto img{
-        height: 254px;
     }
 
     .img-container{
@@ -1085,13 +1090,8 @@ form.create-form textarea {
         width: 25vw;
     }
 
-    .producto img{
-        max-width: 100%;
-        min-height: 340px;
-    }
-
     .producto-nombre{
-        width: 60%;
+        width: 100%;
     }
 
     .form-container {
