@@ -2,8 +2,8 @@ const productos = require('../database/productos.json')
 
 const mainController = {
     index: function(request, response){
-
-        response.render("index", {productos})
+        const productosfiltrados = productos.slice(0,8);
+        response.render("index", {productos: productosfiltrados})
     }
 }
 
