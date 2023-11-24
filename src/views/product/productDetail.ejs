@@ -10,6 +10,12 @@
                 <div class="contenedor-img-PD">
                     <img src="<%= product.image %>" alt="imagen-producto"/>
                 </div>
+            <div class="container-left-bottom">
+                <div class="price-stock">
+                    <h4 class="producto-precio">$<%=product.price%></h4>
+                    
+                    <p class="">Stock: <%=product.stock%></p>
+                </div>
                 <div class="contenedor-add-carrito">
                     <div class="contenedor-cantidad">
                         <input
@@ -29,6 +35,9 @@
                         Añadir al carrito
                     </button>
                 </div>
+            </div>
+
+                
             </section>
             <section class="derecha">
                 <div class="contenedor-info-PD">
@@ -88,8 +97,10 @@
     
             <div class="container-additional-information">
                 <div class="title-additional-information">
-                    <h4>Información adicional</h4>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <h4><a href="/product/editProduct">Editar producto existente</a></h4>
+                </div>
+                <div class="title-additional-information">
+                    <h4><a href="/product/createProduct">Crear nuevo producto</a></h4>
                 </div>
             </div>
     

@@ -226,13 +226,27 @@ button.delete-product{
     width: 100%;
 }
 
+.container-left-bottom{
+    display:flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.price-stock{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .contenedor-add-carrito {
     margin: 20px;
 	display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 	gap: 20px;
-
+    width: 50%;
 }
 
 .contenedor-cantidad {
@@ -302,11 +316,27 @@ button.delete-product{
 	margin-bottom: 30px;
 }
 
-.titulo-descripcion,
-.title-additional-information {
+.titulo-descripcion {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	cursor: pointer;
+    font-size: large;
+}
+
+.container-additional-information{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+}
+
+.title-additional-information {
+    display: flex;
+	align-items: center;
+	justify-content: space-evenly;
 	cursor: pointer;
     font-size: large;
 }
@@ -1010,6 +1040,10 @@ form.create-form textarea {
         width: 100%;
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .container-additional-information{
+        flex-direction: row;
     }
 
     .producto{
