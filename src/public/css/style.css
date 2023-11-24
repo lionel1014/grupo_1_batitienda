@@ -451,15 +451,11 @@ h2.radius-invertido{
     border-radius: 1em;
     display: flex;
     flex-direction: column;
-    max-height: 560px;
-    min-height: 560px;
 }
 
 .producto img {
     width: 100%;
-    min-height: 250px;
-    max-height: 250px;
-    object-fit: fill;
+    border-radius: 5px;
 }
 
 .producto-nombre {
@@ -495,13 +491,7 @@ h2.radius-invertido{
 }
 
 div.producto a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-height: 300px;
-    min-height: 300px;
-    max-width: 300px;
-    ;
+    padding: 5px;
 }
 .precio-carro{
     display: flex;
