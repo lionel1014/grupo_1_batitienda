@@ -1,8 +1,9 @@
 # BatiTienda Marketplace
 ![BatiTienda](https://github.com/lionel1014/grupo_1_batitienda/assets/77951627/d285f110-5db4-49dc-a7cd-bb7568099dd1)
+# [Proyecto en GitHub(cuadro Kanban)](https://github.com/users/lionel1014/projects/5)
 
 Este repositorio contiene el código fuente de BatiTienda Marketplace, un marketplace en línea dedicado a la venta de cómics y productos relacionados con superhéroes. ¡Bienvenido!
-
+!
 ## Descripción del Proyecto
 
 BatiTienda Marketplace es un proyecto de mercado en línea que tiene como objetivo proporcionar a los amantes de los cómics y superhéroes una plataforma para comprar y vender cómics, figuras de acción, ropa, y otros productos relacionados. Nuestra audiencia objetivo incluye tanto a fanáticos de larga data como a nuevos entusiastas que buscan acceder a una amplia variedad de productos de alta calidad.
