@@ -1,4 +1,7 @@
+const fs = require('fs');
+const PATH = require('path');
 const products = require("../database/productos.json");
+const productsFilePath = PATH.join(__dirname, '../database/productos.json');
 
 const productController = {
     index: function(request, response){
@@ -12,7 +15,24 @@ const productController = {
         response.render("product/createProduct")
     },
     create: function(request,response){
-        response.send("hola gente")
+        const { titulo, precio, stock, categoria, subcategoria, descripcion} = request.body;
+		
+		const newProduct = {
+			id: products.length + 1,
+			tittle: titulo,
+			price: precio,
+			stock,
+			category: categoria,
+            subcategory: subcategoria,
+            description: descripcion,
+			image: `/images/img_products/${request.file?.filename}`
+		};
+		products.push(newProduct);
+
+		// Guardar el array actualizado en el archivo
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8');
+
+		response.redirect(`/product/${newProduct.id}`);
     },
     editProduct: function(request, response){
         response.render("product/editProduct")

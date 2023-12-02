@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require('multer');
-const PATCH = require('path')
+const PATH = require('path');
+const products = require('../database/productos.json');
 
 const router = express.Router();
 
@@ -8,11 +9,11 @@ const productController = require("../controllers/productController");
 
 const storage = multer.diskStorage({
 	destination: (req,file,cd) => {
-		cd(null, PATCH.join(__dirname, '../public/images/img_products'))
+		cd(null, PATH.join(__dirname, '../public/images/img_products'))
 	},
 	filename: (req,file,cd) =>{
 		const uniqueSuffix = Date.now();
-		const fileExtension = PATCH.extname(file.originalname);
+		const fileExtension = PATH.extname(file.originalname);
 		cd(null, `${file.fieldname}-${uniqueSuffix}${fileExtension}`);
 	}
 });
