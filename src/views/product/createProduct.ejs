@@ -6,42 +6,42 @@
     <main class="form-container">
         <section class="create-container">
             <h2>Crear Producto</h2>
-            <form class="create-form">
-            <label for="titulo">Título:</label>
-            <input type="text" id="titulo" name="titulo" required>
-    
-            <label for="codigo">Código:</label>
-            <input type="text" id="codigo" name="codigo" required>
-    
-            <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" required>
-    
-            <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock" required>
-    
-            <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria" onchange="changeSubcategories(event)" required>
-                <option value="figuras">Figuras</option>
-                <option value="comics">Comics</option>
-                <option value="mangas">Mangas</option>
-                <option value="otros">Otros</option>
-            </select>
-    
-            <label for="subcategoria">Subcategoría:</label>
-                <select id="subcategoria" name="subcategoria" required>
-                    <option value="">Elige una categoría</option>
+            <form class="create-form" action="/product" method="POST" enctype="multipart/form-data">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+        
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+        
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+        
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+        
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" onchange="changeSubcategories(event)" required>
+                    <option value="figuras">Figuras</option>
+                    <option value="comics">Comics</option>
+                    <option value="mangas">Mangas</option>
+                    <option value="otros">Otros</option>
                 </select>
-    
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-    
-            <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/*" required>
-    
-            <div class="btn-create">
-                <button class="btn" type="submit">Crear</button>
-                <button class="btn" type="button">Vista</button>
-            </div>
+        
+                <label for="subcategoria">Subcategoría:</label>
+                    <select id="subcategoria" name="subcategoria" required>
+                        <option value="">Elige una categoría</option>
+                    </select>
+        
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        
+                <label for="imagen">Imagen:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+        
+                <div class="btn-create">
+                    <button class="btn" type="submit">Crear</button>
+                    <button class="btn" type="button">Vista</button>
+                </div>
             </form>
         </section>
     </main>

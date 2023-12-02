@@ -22,6 +22,7 @@ app.listen(PORT, () => {
   console.log("Servidor funcionando en el puerto 😊 " + PORT);
 });
 
+/* RUTAS */
 app.use("/", mainRoutes);
 app.use("/user",userRoutes)
 app.use("/product",productRoutes)
