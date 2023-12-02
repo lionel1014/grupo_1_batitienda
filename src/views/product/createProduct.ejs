@@ -1,8 +1,6 @@
 <%- include('../parcials/head') -%>
 <body>
-
     <!-- header -->
-
     <%- include('../parcials/header') -%>
 
     <main class="form-container">
@@ -22,7 +20,7 @@
             <input type="number" id="stock" name="stock" required>
     
             <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria" required>
+            <select id="categoria" name="categoria" onchange="mensaje(event)" required>
                 <option value="figuras">Figuras</option>
                 <option value="comics">Comics</option>
                 <option value="mangas">Mangas</option>
@@ -30,14 +28,9 @@
             </select>
     
             <label for="subcategoria">Subcategoría:</label>
-            <select id="subcategoria" name="subcategoria" required>
-                <option value="1">Subcategoría 1</option>
-                <option value="2">Subcategoría 2</option>
-                <option value="3">Subcategoría 3</option>
-                <option value="4">Subcategoría 4</option>
-                <option value="5">Subcategoría 5</option>
-                <option value="6">Subcategoría 6</option>
-            </select>
+                <select id="subcategoria" name="subcategoria" required>
+                    <option value="">Elige una categoría</option>
+                </select>
     
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
