@@ -22,22 +22,22 @@ const subCategories = {
 };
 
 function mensaje(event){
-    const select =  document.getElementById("subcategoria")
-    const selectedCategory = event.target?.value;
-    const selectedSubCategories = subCategories[selectedCategory];
+    const selectCategoryHTML =  document.getElementById("subcategoria")
+    const categorySelected = event.target?.value;
+    const subCategoryOptiones = subCategories[categorySelected];
     
-    if(selectedSubCategories.length == 0) return
+    if(subCategoryOptiones.length == 0) return
     
     const defaultOption = document.createElement("option");
-    select.innerHTML = "";//limpia el select
+    selectCategoryHTML.innerHTML = "";//limpia el select
     defaultOption.value = "";
     defaultOption.text = "Ingresa una subcategoría";
-    select.add(defaultOption)
+    selectCategoryHTML.add(defaultOption)
 
-    selectedSubCategories.forEach(subCategory => {
+    subCategoryOptiones.forEach(subCategory => {
         const option = document.createElement("option");
         option.value = subCategory.value;
         option.text = subCategory.text;
-        select.add(option)
+        selectCategoryHTML.add(option)
     });
 }
