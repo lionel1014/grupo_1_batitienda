@@ -1,9 +1,11 @@
+const fs = require('fs');
+const PATH = require('path');
 const products = require("../database/productos.json");
+const productsFilePath = PATH.join(__dirname, '../database/productos.json');
 
 const productController = {
     index: function(request, response){
         const productSelected = products.find(product => product.id == request.params.id)
-        console.log(productSelected);
         response.render("product/productDetail",{product: productSelected})
     },
     productCar: function(request, response){
@@ -11,6 +13,26 @@ const productController = {
     },
     createProduct: function(request, response){
         response.render("product/createProduct")
+    },
+    create: function(request,response){
+        const { titulo, precio, stock, categoria, subcategoria, descripcion} = request.body;
+		
+		const newProduct = {
+			id: products.length + 1,
+			tittle: titulo,
+			price: precio,
+			stock,
+			category: categoria,
+            subcategory: subcategoria,
+            description: descripcion,
+			image: `/images/img_products/${request.file?.filename}`
+		};
+		products.push(newProduct);
+
+		// Guardar el array actualizado en el archivo
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8');
+
+		response.redirect(`/product/${newProduct.id}`);
     },
     editProduct: function(request, response){
         response.render("product/editProduct")
@@ -20,7 +42,6 @@ const productController = {
             response.render("product/productList",{products});
             return;
         }
-
         let productToFilter = products
 
         const {category, subcategory, price} = request.query
@@ -36,22 +57,6 @@ const productController = {
         }
         response.render("product/productList",{products: productToFilter});
 
-    },
-    productListFilter: function(request, response){
-        console.log("Product List Filter");
-        const {category, price} = request.query
-        console.log(query);
-
-        // const productosFiltrados = []
-        // if(category){
-        //     productosFiltrados = productos.filter(producto => producto.category == category)
-        // }
-
-        // if(price){
-        //     productosFiltrados = productos.filter(producto => producto.price == price)
-        // }
-
-        // response.render("product/editProduct", {productos})
     }
 }
 
