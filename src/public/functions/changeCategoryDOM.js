@@ -21,7 +21,7 @@ const subCategories = {
     ]
 };
 
-function mensaje(event){
+function changeSubcategories(event){
     const selectCategoryHTML =  document.getElementById("subcategoria")
     const categorySelected = event.target?.value;
     const subCategoryOptiones = subCategories[categorySelected];
