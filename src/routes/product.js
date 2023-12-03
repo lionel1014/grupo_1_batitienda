@@ -28,6 +28,7 @@ router.get("/:id", productController.index);
 
 router.put("/:id", uploadFile.single("imagen"), productController.update)
 router.post("/", uploadFile.single("imagen"), productController.create)
+router.delete("/:id", productController.delete)
 //TODO: falta el router.delete()
 
 module.exports = router;

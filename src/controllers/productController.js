@@ -28,6 +28,10 @@ const productController = {
         products.updateProduct(request, response);
     },
 
+    delete: function(request, response){
+        products.deleteProduct(request,response)
+    },
+
     listPage: function(request, response){
 
         if (Object.keys(request.query).length == 0 ) {

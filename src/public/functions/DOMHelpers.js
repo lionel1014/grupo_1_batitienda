@@ -42,10 +42,40 @@ function changeSubcategories(event){
     });
 }
 
-async function loaderOn(event){
-    event.preventDefault();
+async function hideAndShowBat(){
     document.getElementById("loaderBatman").style.display = "flex";
     await new Promise(resolve => setTimeout(resolve, 1000));
     document.getElementById("loaderBatman").style.display = "none";
+}
+
+async function loaderOn(event){
+    event.preventDefault();
+    await hideAndShowBat();
     document.getElementById("createProductForm").submit();
+}
+
+async function confirmDelete(event) {
+    //Asi tiene que ser el boton para que llame este metodo
+    // <div class="title-additional-information">
+    //     <form action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)" >
+    //         <button type="submit" name="delete" class="btn">ELIMINAR</button>
+    //     </form>
+    // </div>
+
+    event.preventDefault();
+
+    // Pregunta al usuario si realmente desea eliminar el producto
+    const confirmation = window.confirm("¿Estás seguro de que quieres eliminar este producto?");
+
+    if (confirmation) {
+        // Si el usuario hace clic en "Aceptar", espera 1 segundos antes de enviar el formulario
+        await hideAndShowBat();
+
+        // Obtén el formulario y envíalo
+        const form = event.target.closest('form');
+        form.submit();
+    }
+
+    // Si el usuario hace clic en "Cancelar" o si ha pasado el tiempo de espera, no se envía el formulario
+    return confirmation;
 }
