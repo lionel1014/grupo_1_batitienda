@@ -19,16 +19,15 @@ const storage = multer.diskStorage({
 });
 const uploadFile = multer({storage});
 
-
-// router.post('/', upload.single('form-image'), productsController.store);  el parametro de .single es el name del input type file
-
 /* RUTAS PARA OBTENER LAS PÁGINAS*/
-router.get("/productCar", productController.productCar);
-router.get("/createProduct", productController.createProduct);
-router.get("/editProduct", productController.editProduct);
-router.get("/listProduct", productController.productList);
+router.get("/productCar", productController.carPage);
+router.get("/createProduct", productController.createPage);
+router.get("/editProduct/:id", productController.editPage);
+router.get("/listProduct", productController.listPage);
 router.get("/:id", productController.index);
 
+router.put("/:id", uploadFile.single("imagen"), productController.update)
 router.post("/", uploadFile.single("imagen"), productController.create)
+//TODO: falta el router.delete()
 
 module.exports = router;

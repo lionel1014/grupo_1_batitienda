@@ -5,7 +5,7 @@
         <%- include('../parcials/header') -%>
 
         <main class="productDetail">
-            <h1 class="nombre-PD"><%=product.tittle%></h1>
+            <h1 class="nombre-PD"><%=product.title%></h1>
             <section class="izquierda">
                 <div class="contenedor-img-PD">
                     <img src="<%= product.image %>" alt="imagen-producto"/>
@@ -97,7 +97,7 @@
     
             <div class="container-additional-information">
                 <div class="title-additional-information">
-                    <h4><a href="/product/editProduct">Editar producto existente</a></h4>
+                    <h4><a href="/product/editProduct/<%=product.id%>">Editar producto existente</a></h4>
                 </div>
                 <div class="title-additional-information">
                     <h4><a href="/product/createProduct">Crear nuevo producto</a></h4>
