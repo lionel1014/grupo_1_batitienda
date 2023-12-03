@@ -6,22 +6,26 @@ const products = require("../helpers/productsFuntions");
 const productsFilePath = PATH.join(__dirname, '../database/productos.json');
 
 const productController = {
+
     index: function(request, response){
         const productSelected = products.findProductByRequest(request);
         response.render("product/productDetail",{product: productSelected, title: ''})
     },
+
     productCar: function(request, response){
         response.render("product/productCar")
     },
+
     createProduct: function(request, response){
         response.render("product/createProduct", {title: '- crear producto'})
     },
+
     create: function(request,response){
         const { titulo, precio, stock, categoria, subcategoria, descripcion} = request.body;
 		
 		const newProduct = {
 			id: productsDB.length + 1,
-			tittle: titulo,
+			title: titulo,
 			price: precio,
 			stock,
 			category: categoria,
@@ -36,14 +40,18 @@ const productController = {
 
 		response.redirect(`/product/${newProduct.id}`);
     },
+
     editProduct: function(request, response){
         const product = products.findProductByRequest(request);
 
         response.render("product/editProduct",{product})
     },
-    update:function(resquest,response){
+
+    update:function(request,response){
+        const productBeforeEdit = products.findProductByRequest(request);
         response.send("update ❤️")
     },
+
     productList: function(request, response){
         if (Object.keys(request.query).length == 0 ) {
             response.render("product/productList",{products: productsDB, title: ''});
