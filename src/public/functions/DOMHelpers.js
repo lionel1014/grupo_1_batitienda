@@ -41,3 +41,10 @@ function changeSubcategories(event){
         selectCategoryHTML.add(option)
     });
 }
+
+async function loaderOn(event){
+    document.getElementById("loaderBatman").style.display = "flex";
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    document.getElementById("loaderBatman").style.display = "none";
+    document.getElementById("createProductForm").submit();
+}

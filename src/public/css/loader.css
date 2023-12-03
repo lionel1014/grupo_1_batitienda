@@ -1,0 +1,55 @@
+#loaderBatman {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(32, 32, 32, 0.925); /* Fondo gris transparente */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.loader-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    25%, 75% {
+        opacity: 1;
+    }
+}
+
+.loader-content p {
+    font-family: 'Comic Sans MS', cursive;
+    color: white;
+    font-size: 37px;
+    position: relative;
+    right: 100px;
+}
+
+.loader-content p span {
+    display: inline-block;
+    width: 0.3em; /* Ajusta el espacio entre los puntos */
+    text-align: center;
+    margin: 0 0.2em; /* Ajusta el espacio entre los puntos */
+    animation: blink 1.8s infinite;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.loader-content p span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.loader-content p span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.loader-content p span:nth-child(3) {
+    animation-delay: 0.6s;
+}

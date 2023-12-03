@@ -1,3 +1,5 @@
+@import url(loader.css);
+
 :root{
     --cinder-200: #dbd8df;
     --cinder-400: #968fa1;
