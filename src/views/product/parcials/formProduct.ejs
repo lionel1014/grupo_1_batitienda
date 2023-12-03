@@ -1,4 +1,4 @@
-<form class="create-form" id="createProductForm" action="<%= Object.keys(product).length > 0 ? `/product/${product.id}?_method=PUT` : '/product' %>" method="POST" enctype="multipart/form-data">
+<form class="create-form" id="createProductForm" onsubmit="loaderOn(event)" action="<%= Object.keys(product).length > 0 ? `/product/${product.id}?_method=PUT` : '/product' %>" method="POST" enctype="multipart/form-data">
     <label for="titulo">Título:</label>
     <input type="text" id="titulo" name="titulo" value="<%= Object.keys(product).length > 0 ? product.title : '' %>" required>
 
@@ -10,10 +10,10 @@
 
     <label for="categoria">Categoría:</label>
     <select id="categoria" name="categoria" onchange="changeSubcategories(event)" required>
-        <option value="figuras" <%= Object.keys(product).length > 0 && product.category === 'Figura' ? 'selected' : '' %>>Figuras</option>
-        <option value="comics" <%= Object.keys(product).length > 0 && product.category === 'Comic' ? 'selected' : '' %>>Comics</option>
-        <option value="mangas" <%= Object.keys(product).length > 0 && product.category === 'Manga' ? 'selected' : '' %>>Mangas</option>
-        <option value="otros" <%= Object.keys(product).length > 0 && product.category === 'Otro' ? 'selected' : '' %>>Otros</option>
+        <option value="Figura" <%= Object.keys(product).length > 0 && product.category === 'Figura' ? 'selected' : '' %>>Figuras</option>
+        <option value="Comic" <%= Object.keys(product).length > 0 && product.category === 'Comic' ? 'selected' : '' %>>Comics</option>
+        <option value="Manga" <%= Object.keys(product).length > 0 && product.category === 'Manga' ? 'selected' : '' %>>Mangas</option>
+        <option value="Otro" <%= Object.keys(product).length > 0 && product.category === 'Otro' ? 'selected' : '' %>>Otros</option>
     </select>
     
     <label for="subcategoria">Subcategoría:</label>
@@ -25,13 +25,13 @@
     </select>
     
     <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" rows="4" value="<%= Object.keys(product).length > 0 ? product.description : '' %>" required></textarea>
+    <textarea id="descripcion" name="descripcion" rows="4" value="" required><%= Object.keys(product).length > 0 ? product.description : '' %></textarea>
     
     <label for="imagen">Imagen:</label>
     <input type="file" id="imagen" name="imagen" accept="image/*" required>
     
     <div class="btn-create">
-        <button class="btn" type="button" onclick="loaderOn(event)">Crear</button>
+        <button class="btn" type="submit">Crear</button>
         <button class="btn" type="button">Vista</button>
     </div>
 </form>
