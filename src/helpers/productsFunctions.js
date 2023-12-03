@@ -31,10 +31,10 @@ const products = {
         return productToFilter;
     },
 
-    saveProduct: function(response, productsPreviousSave, productData){
+    saveProduct: function(response, productsPreviousSave, productData = null){
         // Guardar el array actualizado en el archivo
         fs.writeFileSync(productsFilePath, JSON.stringify(productsPreviousSave, null, 2), 'utf-8');
-		response.redirect(`/product/${productData.id}`);
+        productData != null ? response.redirect(`/product/${productData?.id}`) : response.redirect(`/`)
     },
 
     createProduct: function(request, response){
@@ -79,6 +79,26 @@ const products = {
             }
         }else{
             response.send("no se encontro el producto a editar")
+        }
+    },
+
+    deleteProduct: function (request, response){
+        const productId = request.params.id;
+        const productArrayID = productsDB.findIndex(product => product.id == productId);
+
+        try {
+            const restProducts = productsDB.filter(product => product.id != productId);
+
+            if (restProducts.length === productsDB.length) {
+                throw new Error("Producto no encontrado");
+            }
+
+            fs.unlinkSync(PATH.join(__dirname, `../public${productsDB[productArrayID].image}`));
+            this.saveProduct(response,restProducts);
+
+        } catch (error) {
+            console.log("paso un error 😿",error)
+            response.status(404).send(error)
         }
     }
 }
