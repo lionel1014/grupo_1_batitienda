@@ -25,10 +25,11 @@ const uploadFile = multer({storage});
 /* RUTAS PARA OBTENER LAS PÁGINAS*/
 router.get("/productCar", productController.productCar);
 router.get("/createProduct", productController.createProduct);
-router.get("/editProduct", productController.editProduct);
+router.get("/editProduct/:id", productController.editProduct);
 router.get("/listProduct", productController.productList);
 router.get("/:id", productController.index);
 
+router.put("/:id", uploadFile.single("imagen"), productController.update)
 router.post("/", uploadFile.single("imagen"), productController.create)
 
 module.exports = router;
