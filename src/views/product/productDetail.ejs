@@ -7,37 +7,39 @@
         <main class="productDetail">
             <h1 class="nombre-PD"><%=product.title%></h1>
             <section class="izquierda">
+
                 <div class="contenedor-img-PD">
                     <img src="<%= product.image %>" alt="imagen-producto"/>
                 </div>
-            <div class="container-left-bottom">
-                <div class="price-stock">
-                    <h4 class="producto-precio">$<%=product.price%></h4>
-                    
-                    <p class="">Stock: <%=product.stock%></p>
-                </div>
-                <div class="contenedor-add-carrito">
-                    <div class="contenedor-cantidad">
-                        <input
-                            type="number"
-                            placeholder="1"
-                            value="1"
-                            min="1"
-                            class="input-quantity"
-                        />
-                        <div class="btn-incremento-decremento">
-                            <i class="fa-solid fa-chevron-up" id="incremento"></i>
-                            <i class="fa-solid fa-chevron-down" id="decremento"></i>
-                        </div>
-                    </div>
-                    <button class="btn-add-carrito">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Añadir al carrito
-                    </button>
-                </div>
-            </div>
 
-                
+                <div class="container-left-bottom">
+                    <div class="price-stock">
+                        <h4 class="producto-precio">$<%=product.price%></h4>
+
+                        <p class="stock">Stock: <%=product.stock%></p>
+                    </div>
+
+                    <div class="contenedor-add-carrito">
+                        <!-- <div class="contenedor-cantidad">
+                            <input type="number" placeholder="1" value="1" min="1" class="input-quantity"/>
+                            
+                            <div class="btn-incremento-decremento">
+                                <i class="fa-solid fa-chevron-up" id="incremento"></i>
+                                <i class="fa-solid fa-chevron-down" id="decremento"></i>
+                            </div>
+                        </div> -->
+                        <div class="input-stepper">
+                            <button class="minus"><i class="fa fa-minus"></i></button>
+                            <input type="text" value="1" min="1"/>
+                            <button class="plus"><i class="fa fa-plus"></i></button>
+                          </div>
+
+                        <button class="btn-add-carrito">
+                            <i class="fa-solid fa-plus"></i>
+                            Añadir al carrito
+                        </button>
+                    </div>
+                </div>    
             </section>
             <section class="derecha">
                 <div class="contenedor-info-PD">
@@ -106,6 +108,79 @@
             <%- include('./parcials/loaderBatman') -%>
         </main>
         <%-include('../parcials/footer')-%>
+        <script>
+            var stepper = (function() {
+            var stepperNumber, decrementButton;
+        
+            return {
+                allSteppers: document.querySelectorAll('.input-stepper'),
+        
+                checkStepperNumber: function(thisStepper) {
+                    var stepperInput = thisStepper.querySelector('input');
+                    stepperNumber = stepperInput.value;
+                    decrementButton = thisStepper.querySelector('button.minus');
+        
+                    if (stepperNumber === '0' || stepperNumber <= 0) {
+                        decrementButton.disabled = true;
+                        stepperInput.value = 0;
+                    } else {
+                        decrementButton.disabled = false;
+                    }
+                },
+        
+                init: function() {
+                    stepper.allSteppers.forEach(function(element) {
+                        var thisStepperInput = element.querySelector('input');
+                        var thisMinusButton = element.querySelector('button.minus');
+        
+                        if (thisStepperInput.value === '0' || thisStepperInput.value <= 0) {
+                            thisMinusButton.disabled = true;
+                            thisStepperInput.value = 0;
+                        } else {
+                            thisMinusButton.disabled = false;
+                        }
+                    });
+                }
+            };
+        })();
+        
+        document.querySelectorAll('.input-stepper button.plus').forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                var thisStepper = e.target.closest('.input-stepper');
+                var stepperInput = thisStepper.querySelector('input');
+                stepperNumber = parseInt(stepperInput.value);
+        
+                stepperNumber++;
+                stepperInput.value = stepperNumber;
+        
+                stepper.checkStepperNumber(thisStepper);
+            });
+        });
+        
+        document.querySelectorAll('.input-stepper button.minus').forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                var thisStepper = e.target.closest('.input-stepper');
+                var stepperInput = thisStepper.querySelector('input');
+                stepperNumber = parseInt(stepperInput.value);
+        
+                stepperNumber--;
+                stepperInput.value = stepperNumber;
+        
+                stepper.checkStepperNumber(thisStepper);
+            });
+        });
+        
+        document.querySelectorAll('.input-stepper input').forEach(function(input) {
+            input.addEventListener('blur', function(e) {
+                var thisStepper = e.target.closest('.input-stepper');
+                stepper.checkStepperNumber(thisStepper);
+            });
+        });
+        
+        if (document.querySelectorAll('.input-stepper').length) {
+            stepper.init();
+        }
+        </script>
     </body>
 
 </html>

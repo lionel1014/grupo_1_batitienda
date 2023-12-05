@@ -61,7 +61,7 @@ section h2 {
     background-color: var(--cinder-400);
     padding: 5px;
     margin-top: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 15px;
     border-radius: 1rem 1rem 0px 0px;
 }
 
@@ -231,36 +231,83 @@ button.delete-product{
 .container-left-bottom{
     display:flex;
     justify-content: flex-end;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
     padding: 20px;
 }
 
 .price-stock{
-    width: 50%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-stock .stock {
+    color: var(--cinder-200);
+    font-size: 18px;
 }
 
 .contenedor-add-carrito {
-    margin: 20px;
 	display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-	gap: 20px;
-    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
-.contenedor-cantidad {
+/* .contenedor-cantidad {
     display: flex;
     justify-content: center;
     align-items: center;
 	position: relative;
-}
+} */
 
+.input-stepper {
+    background: white;
+    border: 2px solid #dedede;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px;
+}
+  
+.input-stepper button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+  
+.input-stepper button[disabled] {
+    cursor: not-allowed;
+    opacity: .4;
+}
+  
+.input-stepper button i {
+    color: var(--cinder-900);
+}
+  
+.input-stepper input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-left: 1px solid var(--cinder-400);
+    border-right: 1px solid var(--cinder-400);
+    font-size: 20px;
+    text-align: center;
+    width: 36px;
+}
+  
 .btn-add-carrito {
 	border: none;
-	background-color: #252525;
+	background-color: var(--cinder-950);
 	padding: 10px;
 	color: #f7f7f7;
 	display: flex;
@@ -275,19 +322,19 @@ button.delete-product{
 	color: #fdff00;
 }
 
-.btn-incremento-decremento {
+/* .btn-incremento-decremento {
 	display: flex;
 	flex-direction: column;
 	position: absolute;
 
 	right: 7px;
-}
+} */
 
-.btn-incremento-decremento i {
+/* .btn-incremento-decremento i {
 	font-size: 11px;
 	color: #666;
 	cursor: pointer;
-}
+} */
 
 .contenedor-info-PD{
     width: 100%;
@@ -489,7 +536,6 @@ h2.radius-invertido{
     font-size: 26px;
     font-weight: bold;
     color: #fdff00; 
-    margin-bottom: 5px;
 }
 
 div.producto a{
@@ -521,6 +567,7 @@ div.producto a{
     min-width: 37px;
     height: 40px;
     color: #fff;
+    margin: 20px 0;
     padding: 5px 10px;
     font-weight: bold;
     cursor: pointer;
@@ -555,7 +602,8 @@ div.producto a{
     padding: 20px;
     margin: 0 auto;
     width: 100%; /* Ocupa el 100% del ancho en escritorio */
-    height: 80vh;
+    max-width: 500px;
+    min-height: 635px;
 }
 
 /* Estilos de formulario */
@@ -586,7 +634,9 @@ form.login-form input {
 
 .social-button {
     display: inline-block;
-    margin: 5px;
+    font-size: 18px;
+    width: 90%;
+    margin: 15px 0;
     padding: 10px 15px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -922,6 +972,8 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
     padding: 20px;
     margin: 0 auto;
     width: 100%;
+    max-width: 500px;
+    min-height: 635px;
 }
 
 form.create-form {
@@ -1163,9 +1215,9 @@ form.create-form textarea {
     .register-container,
     .create-container {
         margin: 0;
-        width: 40%; /* Ocupa el 40% del ancho en escritorio */
-        max-width: 504px; /* Ocupa el 100% del ancho en dispositivos móviles */
-        /* height: 80vh; */
+        width: 40%;
+        max-width: 500px;
+        min-width: 350px;
     }
 
     main,footer {
