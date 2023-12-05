@@ -1,59 +1,16 @@
 <%- include('../parcials/head') -%>
 <body>
-
     <!-- header -->
-
     <%- include('../parcials/header') -%>
 
     <main class="form-container">
         <section class="create-container">
             <h2>Crear Producto</h2>
-            <form class="create-form">
-            <label for="titulo">Título:</label>
-            <input type="text" id="titulo" name="titulo" required>
-    
-            <label for="codigo">Código:</label>
-            <input type="text" id="codigo" name="codigo" required>
-    
-            <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" required>
-    
-            <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock" required>
-    
-            <label for="categoria">Categoría:</label>
-            <select id="categoria" name="categoria" required>
-                <option value="figuras">Figuras</option>
-                <option value="comics">Comics</option>
-                <option value="mangas">Mangas</option>
-                <option value="otros">Otros</option>
-            </select>
-    
-            <label for="subcategoria">Subcategoría:</label>
-            <select id="subcategoria" name="subcategoria" required>
-                <option value="1">Subcategoría 1</option>
-                <option value="2">Subcategoría 2</option>
-                <option value="3">Subcategoría 3</option>
-                <option value="4">Subcategoría 4</option>
-                <option value="5">Subcategoría 5</option>
-                <option value="6">Subcategoría 6</option>
-            </select>
-    
-            <label for="descripcion">Descripción:</label>
-            <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-    
-            <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/*" required>
-    
-            <div class="btn-create">
-                <button class="btn" type="submit">Crear</button>
-                <button class="btn" type="button">Vista</button>
-            </div>
-            </form>
+            <%- include('./parcials/formProduct',{product:{}}) -%>
         </section>
     </main>
-
+    
     <%-include('../parcials/footer')-%>
-
+    
 </body>
 </html>

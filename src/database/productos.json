@@ -1,6 +1,6 @@
 [
   {
-    "tittle": "Aquaman Deep Dives",
+    "title": "Aquaman Deep Dives",
     "id": 10,
     "price": 39030,
     "stock": 50,
@@ -10,7 +10,7 @@
     "image": "/images/img_products/5.jpg"
   },
   {
-    "tittle": "Batgirl: La chica murciélago de Burnside",
+    "title": "Batgirl: La chica murciélago de Burnside",
     "id": 11,
     "price": 38427,
     "stock": 100,
@@ -20,7 +20,7 @@
     "image": "/images/img_products/9.jpg"
   },
   {
-    "tittle": "Absolute Batman the Killing Joke HC",
+    "title": "Absolute Batman the Killing Joke HC",
     "id": 12,
     "price": 57106,
     "stock": 75,
@@ -30,7 +30,7 @@
     "image": "/images/img_products/1.jpg"
   },
   {
-    "tittle": "Figura Bandai Jujutsu Kaisen Anime Heroes Megumi",
+    "title": "Figura Bandai Jujutsu Kaisen Anime Heroes Megumi",
     "id": 6,
     "price": 55500,
     "stock": 75,
@@ -40,7 +40,7 @@
     "image": "/images/img_products/6.jpg"
   },
   {
-    "tittle": "Figura Naruto Shippuden Anime Heroes Uzumaki N Sage Mode",
+    "title": "Figura Naruto Shippuden Anime Heroes Uzumaki N Sage Mode",
     "id": 4,
     "price": 31500,
     "stock": 50,
@@ -50,7 +50,7 @@
     "image": "/images/img_products/7.jpg"
   },
   {
-    "tittle": "Figura One Piece Anime Heroes Trafalgar Law Bandai",
+    "title": "Figura One Piece Anime Heroes Trafalgar Law Bandai",
     "id": 5,
     "price": 55500,
     "stock": 100,
@@ -60,7 +60,7 @@
     "image": "/images/img_products/8.jpg"
   },
   {
-    "tittle": "Funko Pop! Marvel: Doctor Strange Multiverse of Madness",
+    "title": "Funko Pop! Marvel: Doctor Strange Multiverse of Madness",
     "id": 3,
     "price": 4310,
     "stock": 75,
@@ -70,7 +70,7 @@
     "image": "/images/img_products/10.jpg"
   },
   {
-    "tittle": "¡Funko Pop! Disney: 30 aniversario de Pesadilla antes de Navidad - Santa Jack",
+    "title": "¡Funko Pop! Disney: 30 aniversario de Pesadilla antes de Navidad - Santa Jack",
     "id": 2,
     "price": 8720,
     "stock": 100,
@@ -80,7 +80,7 @@
     "image": "/images/img_products/11.jpg"
   },
   {
-    "tittle": "¡Funko Pop! Naruto - Naruto",
+    "title": "¡Funko Pop! Naruto - Naruto",
     "id": 1,
     "price": 14720,
     "stock": 50,
@@ -90,7 +90,7 @@
     "image": "/images/img_products/12.jpg"
   },
   {
-    "tittle": "Figura de acción Marvel Legends Series Winter Soldier",
+    "title": "Figura de acción Marvel Legends Series Winter Soldier",
     "id": 7,
     "price": 38350,
     "stock": 50,
@@ -100,7 +100,7 @@
     "image": "/images/img_products/13.jpg"
   },
   {
-    "tittle": "Figura de acción coleccionable Star Wars The Black Series Darth Vader",
+    "title": "Figura de acción coleccionable Star Wars The Black Series Darth Vader",
     "id": 8,
     "price": 51030,
     "stock": 100,
@@ -110,7 +110,7 @@
     "image": "/images/img_products/14.jpg"
   },
   {
-    "tittle": "Figura de acción de X-Men de Marvel Legends",
+    "title": "Figura de acción de X-Men de Marvel Legends",
     "id": 9,
     "price": 21760,
     "stock": 75,
@@ -119,9 +119,8 @@
     "description": "Resucitado de repente y con unas garras de adamantio sobrecalentadas, Wolverine debe luchar una vez más para recuperar su libertad y su mente. Con más de 80 años de historia en el mundo del entretenimiento, Marvel se ha convertido en la piedra angular de las colecciones de fans de todo el mundo. Con la serie Marvel Legends, los personajes favoritos de los fans de Marvel Comic Universe y Marvel Cinematic Universe están diseñados con detalles y articulaciones de primera calidad para posar y exhibirlos en colecciones. Desde figuras hasta vehículos y objetos de juego de rol de primera calidad, la serie Marvel Legends ofrece productos inspirados en personajes de élite para los fanáticos y coleccionistas de Marvel.",
     "image": "/images/img_products/15.jpg"
   },
-  
   {
-    "tittle": "El Inmortal Hulk Vol. 10: Del Infierno y la Muerte",
+    "title": "El Inmortal Hulk Vol. 10: Del Infierno y la Muerte",
     "id": 13,
     "price": 14000,
     "stock": 50,
@@ -131,7 +130,7 @@
     "image": "/images/img_products/19.jpg"
   },
   {
-    "tittle": "La Muerte de Wolverine (Marvel Must Have)",
+    "title": "La Muerte de Wolverine (Marvel Must Have)",
     "id": 14,
     "price": 13000,
     "stock": 100,
@@ -141,7 +140,7 @@
     "image": "/images/img_products/21.jpg"
   },
   {
-    "tittle": "Venom Vol. 8: El Rey de Negro",
+    "title": "Venom Vol. 8: El Rey de Negro",
     "id": 15,
     "price": 13000,
     "stock": 75,
@@ -151,7 +150,7 @@
     "image": "/images/img_products/20.jpg"
   },
   {
-    "tittle": "Star Wars Vol. 4: El último Vuelo De Harbinger",
+    "title": "Star Wars Vol. 4: El último Vuelo De Harbinger",
     "id": 16,
     "price": 6000,
     "stock": 50,
@@ -161,7 +160,7 @@
     "image": "/images/img_products/30.jpg"
   },
   {
-    "tittle": "Star Wars Legends Colección Vol. 10: Lazos de Sangre - Jango Y Boba Fett",
+    "title": "Star Wars Legends Colección Vol. 10: Lazos de Sangre - Jango Y Boba Fett",
     "id": 17,
     "price": 4000,
     "stock": 100,
@@ -171,7 +170,7 @@
     "image": "/images/img_products/32.jpg"
   },
   {
-    "tittle": "Star Wars Legends: Infinities Omnibus",
+    "title": "Star Wars Legends: Infinities Omnibus",
     "id": 18,
     "price": 8000,
     "stock": 75,
@@ -181,7 +180,7 @@
     "image": "/images/img_products/31.jpg"
   },
   {
-    "tittle": "Atom: The Beginning #06",
+    "title": "Atom: The Beginning #06",
     "id": 19,
     "price": 3500,
     "stock": 50,
@@ -191,7 +190,7 @@
     "image": "/images/img_products/29.jpg"
   },
   {
-    "tittle": "Akame Ga Kill! #15",
+    "title": "Akame Ga Kill! #15",
     "id": 20,
     "price": 3600,
     "stock": 100,
@@ -201,7 +200,7 @@
     "image": "/images/img_products/28.jpg"
   },
   {
-    "tittle": "Ahora Soy Zombie #02",
+    "title": "Ahora Soy Zombie #02",
     "id": 21,
     "price": 4100,
     "stock": 75,
@@ -211,7 +210,7 @@
     "image": "/images/img_products/27.jpg"
   },
   {
-    "tittle": "Amar y Ser Amado, Dejar y Ser Dejado #01",
+    "title": "Amar y Ser Amado, Dejar y Ser Dejado #01",
     "id": 22,
     "price": 3200,
     "stock": 50,
@@ -221,7 +220,7 @@
     "image": "/images/img_products/24.jpg"
   },
   {
-    "tittle": "Aoha Ride #07",
+    "title": "Aoha Ride #07",
     "id": 23,
     "price": 3600,
     "stock": 100,
@@ -231,7 +230,7 @@
     "image": "/images/img_products/25.jpg"
   },
   {
-    "tittle": "Cardcaptor Sakura Clear Card Arc #04",
+    "title": "Cardcaptor Sakura Clear Card Arc #04",
     "id": 24,
     "price": 3200,
     "stock": 75,
@@ -241,7 +240,7 @@
     "image": "/images/img_products/26.jpg"
   },
   {
-    "tittle": "20th Century Boys #08",
+    "title": "20th Century Boys #08",
     "id": 25,
     "price": 8900,
     "stock": 50,
@@ -251,7 +250,7 @@
     "image": "/images/img_products/23.jpg"
   },
   {
-    "tittle": "Ajin: Semihumano #01",
+    "title": "Ajin: Semihumano #01",
     "id": 26,
     "price": 3600,
     "stock": 100,
@@ -261,7 +260,7 @@
     "image": "/images/img_products/22.jpg"
   },
   {
-    "tittle": "Perfect World #11",
+    "title": "Perfect World #11",
     "id": 27,
     "price": 6000,
     "stock": 75,
@@ -271,7 +270,7 @@
     "image": "/images/img_products/17.jpg"
   },
   {
-    "tittle": "Wotakoi #03",
+    "title": "Wotakoi #03",
     "id": 28,
     "price": 6000,
     "stock": 75,
@@ -281,7 +280,7 @@
     "image": "/images/img_products/18.jpg"
   },
   {
-    "tittle": "Llavero Spy x Family - Anya Forger",
+    "title": "Llavero Spy x Family - Anya Forger",
     "id": 29,
     "price": 3000,
     "stock": 75,
@@ -291,7 +290,7 @@
     "image": "/images/img_products/4.jpg"
   },
   {
-    "tittle": "Llavero Mjolnir (Thor)",
+    "title": "Llavero Mjolnir (Thor)",
     "id": 30,
     "price": 1000,
     "stock": 75,
@@ -301,7 +300,7 @@
     "image": "/images/img_products/3.jpg"
   },
   {
-    "tittle": "Billetera Batman",
+    "title": "Billetera Batman",
     "id": 31,
     "price": 11500,
     "stock": 75,
@@ -311,7 +310,7 @@
     "image": "/images/img_products/2.jpg"
   },
   {
-    "tittle": "Medias Cortas Joker(TM)",
+    "title": "Medias Cortas Joker(TM)",
     "id": 32,
     "price": 2000,
     "stock": 75,

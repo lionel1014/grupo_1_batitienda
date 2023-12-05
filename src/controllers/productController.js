@@ -1,57 +1,47 @@
-const products = require("../database/productos.json");
+const products = require("../helpers/productsFunctions");
 
 const productController = {
+
     index: function(request, response){
-        const productSelected = products.find(product => product.id == request.params.id)
-        console.log(productSelected);
-        response.render("product/productDetail",{product: productSelected})
+        const productSelected = products.findProductByRequest(request);
+        response.render("product/productDetail",{product: productSelected, title: ''})
     },
-    productCar: function(request, response){
+
+    carPage: function(request, response){
         response.render("product/productCar")
     },
-    createProduct: function(request, response){
-        response.render("product/createProduct")
+
+    createPage: function(request, response){
+        response.render("product/createProduct", {title: '- crear producto'})
     },
-    editProduct: function(request, response){
-        response.render("product/editProduct")
+
+    create: function(request,response){
+        products.createProduct(request, response);
     },
-    productList: function(request, response){
+
+    editPage: function(request, response){
+        const product = products.findProductByRequest(request);
+        response.render("product/editProduct",{product})
+    },
+
+    update: function(request,response){
+        products.updateProduct(request, response);
+    },
+
+    delete: function(request, response){
+        products.deleteProduct(request,response)
+    },
+
+    listPage: function(request, response){
+
         if (Object.keys(request.query).length == 0 ) {
-            response.render("product/productList",{products});
+            response.render("product/productList",{products: products.getAllProducts(), title: ''});
             return;
         }
 
-        let productToFilter = products
+        let productToFilter = products.filterProducts(request);
 
-        const {category, subcategory, price} = request.query
-
-        if(category){
-            productToFilter = productToFilter.filter(producto => producto.category == category)
-        }
-        if(subcategory){
-            productToFilter = productToFilter.filter(producto => producto.subcategory == subcategory)
-        }
-        if(price){
-            productToFilter = productToFilter.filter(producto => producto.price == price)
-        }
-        response.render("product/productList",{products: productToFilter});
-
-    },
-    productListFilter: function(request, response){
-        console.log("Product List Filter");
-        const {category, price} = request.query
-        console.log(query);
-
-        // const productosFiltrados = []
-        // if(category){
-        //     productosFiltrados = productos.filter(producto => producto.category == category)
-        // }
-
-        // if(price){
-        //     productosFiltrados = productos.filter(producto => producto.price == price)
-        // }
-
-        // response.render("product/editProduct", {productos})
+        response.render("product/productList",{products: productToFilter, title: ''});
     }
 }
 
