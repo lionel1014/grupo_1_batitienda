@@ -46,7 +46,13 @@
                     <div class="contenedor-descripcion">
                         <div class="titulo-descripcion">
                             <h3>Descripción</h3>
-                            <i class="fa-solid fa-chevron-down"></i>
+                            <div class="admin-acces">
+                                <a href="/product/editProduct/<%=product.id%>"><button class="btn"><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <a href="/product/createProduct"><button class="btn"><i class="fa-regular fa-square-plus"></i></button></a>
+                                <form action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
+                                    <button type="submit" name="delete" class="btn"><i class="fa-solid fa-trash"></i></button>
+                                </form>
+                            </div>
                         </div>
                         <div class="descripcion-producto-PD">
                             <p>
@@ -97,14 +103,14 @@
                 </div>
             </section>
     
-            <div class="container-additional-information">
+            <!-- <div class="container-additional-information">
                 <div class="title-additional-information">
                     <h4><a href="/product/editProduct/<%=product.id%>">Editar producto existente</a></h4>
                 </div>
                 <div class="title-additional-information">
                     <h4><a href="/product/createProduct">Crear nuevo producto</a></h4>
                 </div>
-            </div>
+            </div> -->
             <%- include('./parcials/loaderBatman') -%>
         </main>
         <%-include('../parcials/footer')-%>

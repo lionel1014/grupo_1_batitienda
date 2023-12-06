@@ -191,8 +191,8 @@ button.delete-product{
 }
 
 .nombre-PD{
-    font-size: 5vw;
-    padding: 25px;
+    font-size: 22px;
+    padding: 10px;
     width: 100%;
 	color: yellow;
 
@@ -203,7 +203,7 @@ button.delete-product{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 2vw;
+    padding: 20px;
     gap: 20px;
 }
 
@@ -212,7 +212,7 @@ button.delete-product{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 2vw;
+    padding: 20px;
 }
 
 .contenedor-img-PD{
@@ -234,7 +234,7 @@ button.delete-product{
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .price-stock{
@@ -350,7 +350,11 @@ button.delete-product{
 	display: flex;
 	flex-direction: column;
 	border-bottom: 1px solid #e4e4e4;
-	padding: 10px;
+}
+
+.contenedor-descripcion p {
+    height: 110px;
+    overflow-y: auto;
 }
 
 .contenedor-productos-relacionados{
@@ -362,7 +366,15 @@ button.delete-product{
 .contenedor-productos-relacionados h2 {
     width: 100%;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+}
+
+.admin-acces{
+    display: flex;
+}
+
+.admin-acces .btn{
+    margin: 0 0 0 5px;
 }
 
 .titulo-descripcion {
@@ -373,29 +385,12 @@ button.delete-product{
     font-size: large;
 }
 
-.container-additional-information{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
-}
-
-.title-additional-information {
-    display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	cursor: pointer;
-    font-size: large;
-}
-
 .descripcion-producto-PD{
     
 	font-size: 20px;
 	color: var(--cinder-200);
 	line-height: 22px;
-	margin-top: 25px;
+	margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -403,7 +398,7 @@ button.delete-product{
 .lista-prodRelacionados {
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .card {
@@ -654,7 +649,7 @@ form.login-form input {
     align-items: center;
     height: 4rem;
     padding: 5px; /* Espacio alrededor del contenedor */
-    background-color: var(--blue-80);
+    background-color: #0d2033;
     position: relative;
 }
 
@@ -812,7 +807,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
     align-items: flex-end;
     height: 5rem;
     padding: 0; /* Espacio alrededor del contenedor */
-    background-color: var(--blue-80);
+    background-color: #0d2033;
   }
   
 /* Estilo para el logo */
@@ -851,7 +846,6 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 .container1 {
     width: 70%;
     max-width: 350px;
-    background-color: var(--blue-80);
     padding-bottom: 20px;
     display: flex;
     align-items: center;
@@ -1086,10 +1080,6 @@ form.create-form textarea {
         padding-right: 20px;
     }
 
-    .container-additional-information{
-        flex-direction: row;
-    }
-
     .producto{
         width: 40vw;
     }
@@ -1129,10 +1119,14 @@ form.create-form textarea {
         justify-content: space-around;
     }
 
+    .nombre-PD {
+        font-size: 32px;
+        padding: 2.5vw;
+    }
+
     .izquierda, .derecha{
         width: 45%;
         align-items: flex-start;
-        margin-bottom: 10px;
     }
     .lista-prodRelacionados{
         flex-direction: row;
@@ -1222,6 +1216,10 @@ form.create-form textarea {
 
     main,footer {
         top: 0;
+    }
+
+    .nombre-PD {
+        font-size: 48px;
     }
 
 }
