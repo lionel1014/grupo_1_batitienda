@@ -1,9 +1,9 @@
 const userController = {
     login: function(request, response){
-        response.render("user/login")
+        response.render("user/login", {title : "Login 😒"})
     },
     register: function(request, response){
-        response.render("user/register")
+        response.render("user/register", {title : "Registrar 😁"})
     }
 }
 
