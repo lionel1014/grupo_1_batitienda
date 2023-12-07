@@ -14,6 +14,16 @@ const products = {
         return product;
     },
 
+    findProductBySubcategory : function (subcategoryParams){
+        const products = productsDB.filter(product => product.subcategory == subcategoryParams);
+        return products;
+    },
+
+    findProductRamdom : function (){
+        const products = productsDB[0]; //implementar logica ramdon
+        return products;
+    },
+
     filterProducts: function(request){
         let productToFilter = productsDB;
         const {category, subcategory, price} = request.query
