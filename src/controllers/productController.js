@@ -4,7 +4,13 @@ const productController = {
 
     index: function(request, response){
         const productSelected = products.findProductByRequest(request);
-        response.render("product/productDetail",{product: productSelected, title: ''})
+        const productsRelationed = products.findProductBySubcategory(productSelected.subcategory);
+        //null , [pro1,ppr2]
+        // if(productsRelationed == null){ //si no viene algun producto, que hago?
+
+        // }
+
+        response.render("product/productDetail",{product: productSelected, title: '' , productsRelationed})
     },
 
     carPage: function(request, response){

@@ -20,14 +20,6 @@
                     </div>
 
                     <div class="contenedor-add-carrito">
-                        <!-- <div class="contenedor-cantidad">
-                            <input type="number" placeholder="1" value="1" min="1" class="input-quantity"/>
-                            
-                            <div class="btn-incremento-decremento">
-                                <i class="fa-solid fa-chevron-up" id="incremento"></i>
-                                <i class="fa-solid fa-chevron-down" id="decremento"></i>
-                            </div>
-                        </div> -->
                         <div class="input-stepper">
                             <button class="minus"><i class="fa fa-minus"></i></button>
                             <input type="text" value="1" min="1"/>
@@ -41,6 +33,7 @@
                     </div>
                 </div>    
             </section>
+
             <section class="derecha">
                 <div class="contenedor-info-PD">
                     <div class="contenedor-descripcion">
@@ -61,56 +54,37 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="contenedor-productos-relacionados">
                     <h2>Productos Relacionados</h2>
                     <div class="lista-prodRelacionados">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="https://acdn.mitiendanube.com/stores/001/017/593/products/ptcol0941-0c54bf680188e0c39016817364362983-640-0.webp" alt="producto-1" />
-                            </div>
-                            <div class="info-card">
-                                <div class="text-product">
-                                    <h3>Funko Moon Knight (1047) - Moon Knight (Marvel)</h3>
-                                    <p class="category">Funko, Pop!</p>
-                                </div>
-                                <div class="price"><p class="send-price">$1000</p></div>
-                            </div>
+                        <div class="arrow arrow-left" onclick="prevSlide()">❮</div>
+                        <div class="slider-wrapper" id="sliderWrapper">
+                    
+                            <% for(product of productsRelationed) { %>
+                                <a href="/product/<%=product.id%>" >
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="<%=product.image%>" alt="producto-relacionado" />
+                                        </div>
+                                        <div class="info-card">
+                                            <p class="send-price">$<%= product.price %></p>
+                                            <h3><%= product.title %></h3>
+                                            <p class="category"><%= product.subcategory %></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            <% } %>
+                    
                         </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="https://acdn.mitiendanube.com/stores/001/017/593/products/xgcol4001-9f012f1a01a448753c16578248490698-640-0.webp" alt="producto-2" />
-                            </div>
-                            <div class="info-card">
-                                <div class="text-product">
-                                    <h3>Funko Killua (1106) Glow Chase - Hunter X Hunter (TV)</h3>
-                                    <p class="category">Funko, Pop!</p>
-                                </div>
-                                <div class="price"><p class="send-price">$1000</p></div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="https://acdn.mitiendanube.com/stores/001/017/593/products/ptcol1021-2b1add57e19662b11216818273017423-640-0.webp" alt="producto-3"/>
-                            </div>
-                            <div class="info-card">
-                                <div class="text-product">
-                                <h3>Funko Infinite Deku With Eri </h3>
-                                <p class="category">Funko, My Hero Academy</p>
-                            </div>
-                            <div class="price"><p class="send-price">$1000</p></div>
-                        </div>
+                        <div class="arrow arrow-right" onclick="nextSlide()">❯</div>
+                    </div>
                     </div>
                 </div>
             </section>
-    
-            <!-- <div class="container-additional-information">
-                <div class="title-additional-information">
-                    <h4><a href="/product/editProduct/<%=product.id%>">Editar producto existente</a></h4>
-                </div>
-                <div class="title-additional-information">
-                    <h4><a href="/product/createProduct">Crear nuevo producto</a></h4>
-                </div>
-            </div> -->
+            <% if(productsRelationed != null) { %>
+
+            <% } %>
             <%- include('./parcials/loaderBatman') -%>
         </main>
         <%-include('../parcials/footer')-%>
@@ -187,6 +161,54 @@
             stepper.init();
         }
         </script>
+
+        <script>
+            const sliderContainer = document.getElementById('sliderContainer');
+            const sliderWrapper = document.getElementById('sliderWrapper');
+            const cards = document.querySelectorAll('.card');
+            const totalCards = cards.length;
+            const cardWidth = cards[0].clientWidth + 15; // Ancho de la tarjeta más el margen derecho
+            let currentSlide = 0;
+
+            // Número de tarjetas visibles según el ancho de la pantalla
+            const cardsVisible = {
+                468: 1,   // Móviles
+                786: 2,   // Tablets
+                1100: 3   // Escritorios
+            };
+
+            function nextSlide() {
+                currentSlide += cardsVisible[window.innerWidth] || 1;
+                if (currentSlide > totalCards - 1) {
+                    currentSlide = 0;
+                }
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentSlide -= cardsVisible[window.innerWidth] || 1;
+                if (currentSlide < 0) {
+                    currentSlide = totalCards - 1;
+                }
+                updateSlider();
+            }
+
+            function updateSlider() {
+                const translateValue = -currentSlide * cardWidth;
+                sliderWrapper.style.transform = `translateX(${translateValue}px)`;
+            }
+
+            // Actualizar al cambiar el tamaño de la pantalla
+            window.addEventListener('resize', () => {
+                const newCardsVisible = cardsVisible[window.innerWidth] || 1;
+                currentSlide = Math.floor(currentSlide / newCardsVisible) * newCardsVisible;
+                updateSlider();
+            });
+
+            // Actualizar al cargar la página
+            window.addEventListener('load', updateSlider);
+        </script>
+
     </body>
 
 </html>
