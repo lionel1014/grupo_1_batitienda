@@ -1,3 +1,25 @@
+# Retroalimentación de Nuestro Proyecto - SPRINT 3
+
+## Logros y Buenas Prácticas
+
+- **Fortalecimiento de la Confianza Grupal:** Durante este sprint, observamos un notable aumento en la confianza entre los miembros del equipo. Esta mejora en la dinámica grupal contribuyó positivamente al ambiente de trabajo y al logro de metas comunes.
+
+- **Desarrollo de Autonomía:** Se evidenció un avance significativo en la autonomía de cada miembro del equipo en el desarrollo de tareas. La capacidad de trabajar de manera más independiente fue una ventaja clave para la eficiencia general del proyecto.
+
+- **Optimizaciones para el Futuro:** Proactivamente, implementamos optimizaciones orientadas al próximo sprint, destacando la creación de un formato JSON para la gestión de productos y la parametrización de los mismos. Estas acciones demuestran un enfoque estratégico hacia la escalabilidad y mejora continua.
+
+- **Reutilización de Código:** Adoptamos la práctica de reutilización de código de manera efectiva, evitando redundancias y promoviendo una base de código más limpia y eficiente.
+
+- **Resolución Ágil de Conflictos en Git:** Enfrentamos conflictos en Git con mayor rapidez y eficacia, demostrando una mejora en la gestión de versiones y la colaboración en el desarrollo.
+
+## Áreas de Mejora
+
+- **Pasamos por Alto Tareas Menos Relevantes:** Reconocemos que descuidamos algunas tareas que, aunque no eran prioritarias, eran importantes. Es crucial mantener un enfoque integral para evitar posibles impactos negativos en el proyecto.
+
+- **Incumplimiento de Metas Establecidas:** Lamentablemente, no logramos cumplir con todas las metas que nos propusimos, específicamente en las mejoras planificadas para el diseño CSS. Esta brecha entre las expectativas y los resultados subraya la necesidad de una planificación más detallada y realista.
+
+La retroalimentación del tercer sprint refleja un avance continuo y un aprendizaje constante. Nos comprometemos a abordar las áreas de mejora identificadas y a aplicar estas lecciones para lograr un desarrollo más eficiente y de alta calidad en los futuros ciclos del proyecto.
+
 # Retroalimentación de Nuestro Proyecto - SPRINT 2
 
 ## Logros y Buenas Prácticas
