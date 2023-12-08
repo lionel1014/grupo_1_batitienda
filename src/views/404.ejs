@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatiTienda desmallada 🦇 %></title>
+    <link rel="stylesheet" href="/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/functions/DOMHelpers.js"></script>
+    <style>
+        main {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yNDctdGVjaGktMjAucG5n.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            h1 {
+            color: #f00;
+        }
+
+        p {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <%- include('../parcials/header') -%>
+    <main>
+        <div>
+            <h1>Error 404 - Página no encontrada</h1><br>
+            <p>Lo sentimos, la página que estás buscando no existe 🤦‍♂️</p><br>
+            <p>Tipo de error: <%= errorType %></p><br>
+        </div>
+        <a href="/">
+            <br><p>volver al inicio? 👀</p>
+        </a>
+    </main>
+
+    <%-include('../parcials/footer')-%>
+</body>

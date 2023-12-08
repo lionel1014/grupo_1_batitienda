@@ -1,4 +1,7 @@
 const products = require("../helpers/productsFunctions");
+const fs = require('fs');
+const bodyParser = require('body-parser');
+const productsDB = require("../database/productos.json");
 
 const productController = {
 
@@ -39,6 +42,21 @@ const productController = {
     },
 
     listPage: function(request, response){
+
+  // Obtén los parámetros de la consulta
+//         const categoria = request.query.category;
+//         const subcategory = request.query.subcategory;
+//         const maxPrice = request.query.price;
+
+//   // Filtra los productos según los parámetros
+//         const productsFiltered = productsDB.filter(producto => {
+//         return (!category || producto.category === categoria) &&
+//            (!subcategory || producto.subcategory === subcategory) &&
+//            (!maxPrice || producto.price <= parseFloat(maxPrice));
+//         });
+
+//   // Puedes enviar los productos filtrados como respuesta
+//         response.json(productsFiltered);
 
         if (Object.keys(request.query).length == 0 ) {
             response.render("product/productList",{products: products.getAllProducts(), title: ''});

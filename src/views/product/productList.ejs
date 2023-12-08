@@ -92,51 +92,39 @@
           <a id="car-link" href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
       </div>
   </section>
-  <nav class="navbar">
-      <ul class="menu">
-          <li class="menu-item">
-              <a href="/product/listProduct?category=Figura">Figuras</a>
-              <ul class="submenu">
-                  <li><a href="/product/listProduct?category=Figura&subcategory=Hasbro">Hasbro</a></li>
-                  <li><a href="/product/listProduct?category=Figura&subcategory=Bandai">Bandai</a></li>
-                  <li><a href="/product/listProduct?category=Figura&subcategory=Funko">Funko</a></li>
-              </ul>
-          </li>
-          <li class="menu-item">
-              <a href="/product/listProduct?category=Comic">Comics</a>
-              <ul class="submenu">
-                  <li><a href="/product/listProduct?category=Comic&subcategory=Marvel">Marvel</a></li>
-                  <li><a href="/product/listProduct?category=Comic&subcategory=DC">DC</a></li>
-                  <li><a href="/product/listProduct?category=Comic&subcategory=Star Wars">Star Wars</a></li>
-              </ul>
-          </li>
-          <li class="menu-item">
-              <a href="/product/listProduct?category=Manga">Mangas</a>
-              <ul class="submenu">
-                  <li><a href="/product/listProduct?category=Manga&subcategory=Shonen">Shonen</a></li>
-                  <li><a href="/product/listProduct?category=Manga&subcategory=Shojo">Shojo</a></li>
-                  <li><a href="/product/listProduct?category=Manga&subcategory=Seinen">Seinen</a></li>
-                  <li><a href="/product/listProduct?category=Manga&subcategory=Josei">Josei</a></li>
-              </ul>
-          </li>
-          <li class="menu-item">
-              <a href="/product/listProduct?category=Otro">Otros</a>
-              <ul class="submenu">
-                  <li><a href="/product/listProduct?category=Otro&subcategory=Indumentaria">Indumentaria</a></li>
-                  <li><a href="/product/listProduct?category=Otro&subcategory=Accesorio">Accesorios</a></li>
-              </ul>
-          </li>
-          <li class="menu-item">
-            <a href="/product/listProduct?category=Precio">Filtrar por precio</a>
-            <ul class="submenu">
-                <li><a href="/product/listProduct?price=2000">- $2000</a></li>
-                <li><a href="/product/listProduct?price=5000">- $5000</a></li>
-                <li><a href="/product/listProduct?price=10000">- $10000</a></li>
-                <li><a href="/product/listProduct">Todos</a></li>
-            </ul>
-        </li>   
-      </ul>
-  </nav>
+  <nav class="navbarFilter">
+    <div class="dropdown">
+        <button class="dropbtn">Filtrar Productos
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <form class="filter-form" action="/product/listPage" method="get">
+                <select name="category">
+                    <option value="Figuras">Figuras</option>
+                    <option value="Comics">Comics</option>
+                    <option value="Mangas">Mangas</option>
+                    <option value="Otros">Otros</option>
+                </select>
+                <select name="subcategory">
+                    <option value="Hasbro">Hasbro</option>
+                    <option value="Bandai">Bandai</option>
+                    <option value="Funko">Funko</option>
+                    <option value="Marvel">Marvel</option>
+                    <option value="DC">DC</option>
+                    <option value="Star Wars">Star Wars</option>
+                    <option value="Shonen">Shonen</option>
+                    <option value="Shojo">Shojo</option>
+                    <option value="Seinen">Seinen</option>
+                    <option value="Josei">Josei</option>
+                    <option value="Indumentaria">Indumentaria</option>
+                    <option value="Accesorios">Accesorios</option>
+                </select>
+                <input type="number" name="price" placeholder="Precio máximo">
+                <button type="submit" class="submit-btn">Filtrar</button>
+            </form>
+        </div>
+    </div>
+  </nav>  
 </header>
   <main>
     <section>
