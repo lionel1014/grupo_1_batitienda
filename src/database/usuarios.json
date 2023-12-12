@@ -1,243 +1,302 @@
 [
-    {
-      "name": "Carlos",
-      "lastName": "García",
-      "email": "carlos.garcia@gmail.com",
-      "password": "P@ssword1",
-      "category": "user",
-      "image": "/images/img_perfil/1.jpg"
-    },
-    {
-      "name": "Isabella",
-      "lastName": "Johnson",
-      "email": "isabella.johnson@yahoo.com",
-      "password": "Secure123!",
-      "category": "admin",
-      "image": "/images/img_perfil/2.jpg"
-    },
-    {
-      "name": "Diego",
-      "lastName": "Martínez",
-      "email": "diego.martinez@outlook.com",
-      "password": "StrongPwd9",
-      "category": "user",
-      "image": "/images/img_perfil/3.jpg"
-    },
-    {
-      "name": "Sophia",
-      "lastName": "López",
-      "email": "sophia.lopez@hotmail.com",
-      "password": "SophiaPass1!",
-      "category": "user",
-      "image": "/images/img_perfil/4.jpg"
-    },
-    {
-      "name": "Lucas",
-      "lastName": "Smith",
-      "email": "lucas.smith@gmail.com",
-      "password": "L0pezPass!",
-      "category": "admin",
-      "image": "/images/img_perfil/5.jpg"
-    },
-    {
-      "name": "Mateo",
-      "lastName": "Silva",
-      "email": "mateo.silva@yahoo.com",
-      "password": "MateoPwd8!",
-      "category": "user",
-      "image": "/images/img_perfil/6.jpg"
-    },
-    {
-      "name": "Valentina",
-      "lastName": "Gómez",
-      "email": "valentina.gomez@outlook.com",
-      "password": "V@lenPwd5",
-      "category": "user",
-      "image": "/images/img_perfil/7.jpg"
-    },
-    {
-      "name": "Andrew",
-      "lastName": "Fernández",
-      "email": "andrew.fernandez@hotmail.com",
-      "password": "AndrewPwd7",
-      "category": "admin",
-      "image": "/images/img_perfil/8.jpg"
-    },
-    {
-      "name": "Renata",
-      "lastName": "Rojas",
-      "email": "renata.rojas@gmail.com",
-      "password": "Ren@taPwd2",
-      "category": "user",
-      "image": "/images/img_perfil/9.jpg"
-    },
-    {
-      "name": "Emiliano",
-      "lastName": "Rodríguez",
-      "email": "emiliano.rodriguez@yahoo.com",
-      "password": "RodriguezPass6!",
-      "category": "user",
-      "image": "/images/img_perfil/10.jpg"
-    },
-    {
-      "name": "Mia",
-      "lastName": "Williams",
-      "email": "mia.williams@outlook.com",
-      "password": "Mia123!Pass",
-      "category": "admin",
-      "image": "/images/img_perfil/11.jpg"
-    },
-    {
-      "name": "Nicolás",
-      "lastName": "Serrano",
-      "email": "nicolas.serrano@hotmail.com",
-      "password": "N1colas!Pwd",
-      "category": "user",
-      "image": "/images/img_perfil/12.jpg"
-    },
-    {
-      "name": "Valeria",
-      "lastName": "Taylor",
-      "email": "valeria.taylor@gmail.com",
-      "password": "V@leriaPwd6",
-      "category": "user",
-      "image": "/images/img_perfil/13.jpg"
-    },
-    {
-      "name": "Emmanuel",
-      "lastName": "Brown",
-      "email": "emmanuel.brown@yahoo.com",
-      "password": "EmmanuelPwd3",
-      "category": "admin",
-      "image": "/images/img_perfil/14.jpg"
-    },
-    {
-      "name": "Camila",
-      "lastName": "Salazar",
-      "email": "camila.salazar@outlook.com",
-      "password": "C@milaPwd4",
-      "category": "user",
-      "image": "/images/img_perfil/15.jpg"
-    },
-    {
-      "name": "Alexander",
-      "lastName": "Fuentes",
-      "email": "alexander.fuentes@hotmail.com",
-      "password": "AlexPwd1!",
-      "category": "user",
-      "image": "/images/img_perfil/16.jpg"
-    },
-    {
-      "name": "Aitana",
-      "lastName": "Méndez",
-      "email": "aitana.mendez@gmail.com",
-      "password": "Ait@naPwd9",
-      "category": "admin",
-      "image": "/images/img_perfil/17.jpg"
-    },
-    {
-      "name": "Daniel",
-      "lastName": "Pérez",
-      "email": "daniel.perez@yahoo.com",
-      "password": "D@nielPwd7",
-      "category": "user",
-      "image": "/images/img_perfil/18.jpg"
-    },
-    {
-      "name": "María",
-      "lastName": "Ramírez",
-      "email": "maria.ramirez@hotmail.com",
-      "password": "MariaPwd8!",
-      "category": "user",
-      "image": "/images/img_perfil/19.jpg"
-    },
-    {
-      "name": "Sebastián",
-      "lastName": "Mendoza",
-      "email": "sebastian.mendoza@gmail.com",
-      "password": "SebasPwd2!",
-      "category": "admin",
-      "image": "/images/img_perfil/20.jpg"
-    },
-    {
-      "name": "Elena",
-      "lastName": "Clark",
-      "email": "elena.clark@yahoo.com",
-      "password": "ElenaPwd5!",
-      "category": "user",
-      "image": "/images/img_perfil/21.jpg"
-    },
-    {
-      "name": "Hugo",
-      "lastName": "González",
-      "email": "hugo.gonzalez@gmail.com",
-      "password": "HugoPwd4!",
-      "category": "user",
-      "image": "/images/img_perfil/22.jpg"
-    },
-    {
-      "name": "Ava",
-      "lastName": "Hill",
-      "email": "ava.hill@outlook.com",
-      "password": "AvaHill123!",
-      "category": "admin",
-      "image": "/images/img_perfil/23.jpg"
-    },
-    {
-      "name": "Oscar",
-      "lastName": "Young",
-      "email": "oscar.young@hotmail.com",
-      "password": "OscarYoung456!",
-      "category": "user",
-      "image": "/images/img_perfil/24.jpg"
-    },
-    {
-      "name": "Lily",
-      "lastName": "Anderson",
-      "email": "lily.anderson@gmail.com",
-      "password": "LilyPwd789!",
-      "category": "user",
-      "image": "/images/img_perfil/25.jpg"
-    },
-    {
-      "name": "Sofía",
-      "lastName": "Williams",
-      "email": "sofia.williams@outlook.com",
-      "password": "SofiaPwd101!",
-      "category": "admin",
-      "image": "/images/img_perfil/26.jpg"
-    },
-    {
-      "name": "Eduardo",
-      "lastName": "Smith",
-      "email": "eduardo.smith@yahoo.com",
-      "password": "EduardoPwd202!",
-      "category": "user",
-      "image": "/images/img_perfil/27.jpg"
-    },
-    {
-      "name": "Amelia",
-      "lastName": "Davis",
-      "email": "amelia.davis@gmail.com",
-      "password": "AmeliaPwd303!",
-      "category": "user",
-      "image": "/images/img_perfil/28.jpg"
-    },
-    {
-      "name": "Luciano",
-      "lastName": "Taylor",
-      "email": "luciano.taylor@hotmail.com",
-      "password": "LucianoPwd404!",
-      "category": "admin",
-      "image": "/images/img_perfil/29.jpg"
-    },
-    {
-      "name": "Violeta",
-      "lastName": "Clark",
-      "email": "violeta.clark@outlook.com",
-      "password": "VioletaPwd505!",
-      "category": "user",
-      "image": "/images/img_perfil/30.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Carlos",
+    "lastName": "García",
+    "email": "carlos.garcia@gmail.com",
+    "password": "P@ssword1",
+    "category": "user",
+    "image": "/images/img_profile/1.jpg",
+    "userName": "carlos_garcia"
+  },
+  {
+    "id": 2,
+    "name": "Isabella",
+    "lastName": "Johnson",
+    "email": "isabella.johnson@yahoo.com",
+    "password": "Secure123!",
+    "category": "admin",
+    "image": "/images/img_profile/2.jpg",
+    "userName": "isabella_johnson"
+  },
+  {
+    "id": 3,
+    "name": "Diego",
+    "lastName": "Martínez",
+    "email": "diego.martinez@outlook.com",
+    "password": "StrongPwd9",
+    "category": "user",
+    "image": "/images/img_profile/3.jpg",
+    "userName": "diego_martinez"
+  },
+  {
+    "id": 4,
+    "name": "Sophia",
+    "lastName": "López",
+    "email": "sophia.lopez@hotmail.com",
+    "password": "SophiaPass1!",
+    "category": "user",
+    "image": "/images/img_profile/4.jpg",
+    "userName": "sophia_lopez"
+  },
+  {
+    "id": 5,
+    "name": "Lucas",
+    "lastName": "Smith",
+    "email": "lucas.smith@gmail.com",
+    "password": "L0pezPass!",
+    "category": "admin",
+    "image": "/images/img_profile/5.jpg",
+    "userName": "lucas_smith"
+  },
+  {
+    "id": 6,
+    "name": "Mateo",
+    "lastName": "Silva",
+    "email": "mateo.silva@yahoo.com",
+    "password": "MateoPwd8!",
+    "category": "user",
+    "image": "/images/img_profile/6.jpg",
+    "userName": "mateo_silva"
+  },
+  {
+    "id": 7,
+    "name": "Valentina",
+    "lastName": "Gómez",
+    "email": "valentina.gomez@outlook.com",
+    "password": "V@lenPwd5",
+    "category": "user",
+    "image": "/images/img_profile/7.jpg",
+    "userName": "valentina_gomez"
+  },
+  {
+    "id": 8,
+    "name": "Andrew",
+    "lastName": "Fernández",
+    "email": "andrew.fernandez@hotmail.com",
+    "password": "AndrewPwd7",
+    "category": "admin",
+    "image": "/images/img_profile/8.jpg",
+    "userName": "andrew_fernandez"
+  },
+  {
+    "id": 9,
+    "name": "Renata",
+    "lastName": "Rojas",
+    "email": "renata.rojas@gmail.com",
+    "password": "Ren@taPwd2",
+    "category": "user",
+    "image": "/images/img_profile/9.jpg",
+    "userName": "renata_rojas"
+  },
+  {
+    "id": 10,
+    "name": "Emiliano",
+    "lastName": "Rodríguez",
+    "email": "emiliano.rodriguez@yahoo.com",
+    "password": "RodriguezPass6!",
+    "category": "user",
+    "image": "/images/img_profile/10.jpg",
+    "userName": "emiliano_rodriguez"
+  },
+  {
+    "id": 11,
+    "name": "Mia",
+    "lastName": "Williams",
+    "email": "mia.williams@outlook.com",
+    "password": "Mia123!Pass",
+    "category": "admin",
+    "image": "/images/img_profile/11.jpg",
+    "userName": "mia_williams"
+  },
+  {
+    "id": 12,
+    "name": "Nicolás",
+    "lastName": "Serrano",
+    "email": "nicolas.serrano@hotmail.com",
+    "password": "N1colas!Pwd",
+    "category": "user",
+    "image": "/images/img_profile/12.jpg",
+    "userName": "nicolas_serrano"
+  },
+  {
+    "id": 13,
+    "name": "Valeria",
+    "lastName": "Taylor",
+    "email": "valeria.taylor@gmail.com",
+    "password": "V@leriaPwd6",
+    "category": "user",
+    "image": "/images/img_profile/13.jpg",
+    "userName": "valeria_taylor"
+  },
+  {
+    "id": 14,
+    "name": "Emmanuel",
+    "lastName": "Brown",
+    "email": "emmanuel.brown@yahoo.com",
+    "password": "EmmanuelPwd3",
+    "category": "admin",
+    "image": "/images/img_profile/14.jpg",
+    "userName": "emmanuel_brown"
+  },
+  {
+    "id": 15,
+    "name": "Camila",
+    "lastName": "Salazar",
+    "email": "camila.salazar@outlook.com",
+    "password": "C@milaPwd4",
+    "category": "user",
+    "image": "/images/img_profile/15.jpg",
+    "userName": "camila_salazar"
+  },
+  {
+    "id": 16,
+    "name": "Alexander",
+    "lastName": "Fuentes",
+    "email": "alexander.fuentes@hotmail.com",
+    "password": "AlexPwd1!",
+    "category": "user",
+    "image": "/images/img_profile/16.jpg",
+    "userName": "alexander_fuentes"
+  },
+  {
+    "id": 17,
+    "name": "Aitana",
+    "lastName": "Méndez",
+    "email": "aitana.mendez@gmail.com",
+    "password": "Ait@naPwd9",
+    "category": "admin",
+    "image": "/images/img_profile/17.jpg",
+    "userName": "aitana_mendez"
+  },
+  {
+    "id": 18,
+    "name": "Daniel",
+    "lastName": "Pérez",
+    "email": "daniel.perez@yahoo.com",
+    "password": "D@nielPwd7",
+    "category": "user",
+    "image": "/images/img_profile/18.jpg",
+    "userName": "daniel_perez"
+  },
+  {
+    "id": 19,
+    "name": "María",
+    "lastName": "Ramírez",
+    "email": "maria.ramirez@hotmail.com",
+    "password": "MariaPwd8!",
+    "category": "user",
+    "image": "/images/img_profile/19.jpg",
+    "userName": "maria_ramirez"
+  },
+  {
+    "id": 20,
+    "name": "Sebastián",
+    "lastName": "Mendoza",
+    "email": "sebastian.mendoza@gmail.com",
+    "password": "SebasPwd2!",
+    "category": "admin",
+    "image": "/images/img_profile/20.jpg",
+    "userName": "sebastian_mendoza"
+  },
+  {
+    "id": 21,
+    "name": "Elena",
+    "lastName": "Clark",
+    "email": "elena.clark@yahoo.com",
+    "password": "ElenaPwd5!",
+    "category": "user",
+    "image": "/images/img_profile/21.jpg",
+    "userName": "elena_clark"
+  },
+  {
+    "id": 22,
+    "name": "Hugo",
+    "lastName": "González",
+    "email": "hugo.gonzalez@gmail.com",
+    "password": "HugoPwd4!",
+    "category": "user",
+    "image": "/images/img_profile/22.jpg",
+    "userName": "hugo_gonzalez"
+  },
+  {
+    "id": 23,
+    "name": "Ava",
+    "lastName": "Hill",
+    "email": "ava.hill@outlook.com",
+    "password": "AvaHill123!",
+    "category": "admin",
+    "image": "/images/img_profile/23.jpg",
+    "userName": "ava_hill"
+  },
+  {
+    "id": 24,
+    "name": "Oscar",
+    "lastName": "Young",
+    "email": "oscar.young@hotmail.com",
+    "password": "OscarYoung456!",
+    "category": "user",
+    "image": "/images/img_profile/24.jpg",
+    "userName": "oscar_young"
+  },
+  {
+    "id": 25,
+    "name": "Lily",
+    "lastName": "Anderson",
+    "email": "lily.anderson@gmail.com",
+    "password": "LilyPwd789!",
+    "category": "user",
+    "image": "/images/img_profile/25.jpg",
+    "userName": "lily_anderson"
+  },
+  {
+    "id": 26,
+    "name": "Sofía",
+    "lastName": "Williams",
+    "email": "sofia.williams@outlook.com",
+    "password": "SofiaPwd101!",
+    "category": "admin",
+    "image": "/images/img_profile/26.jpg",
+    "userName": "sofia_williams"
+  },
+  {
+    "id": 27,
+    "name": "Eduardo",
+    "lastName": "Smith",
+    "email": "eduardo.smith@yahoo.com",
+    "password": "EduardoPwd202!",
+    "category": "user",
+    "image": "/images/img_profile/27.jpg",
+    "userName": "eduardo_smith"
+  },
+  {
+    "id": 28,
+    "name": "Amelia",
+    "lastName": "Davis",
+    "email": "amelia.davis@gmail.com",
+    "password": "AmeliaPwd303!",
+    "category": "user",
+    "image": "/images/img_profile/28.jpg",
+    "userName": "amelia_davis"
+  },
+  {
+    "id": 29,
+    "name": "Luciano",
+    "lastName": "Taylor",
+    "email": "luciano.taylor@hotmail.com",
+    "password": "LucianoPwd404!",
+    "category": "admin",
+    "image": "/images/img_profile/29.jpg",
+    "userName": "luciano_taylor"
+  },
+  {
+    "id": 30,
+    "name": "Violeta",
+    "lastName": "Clark",
+    "email": "violeta.clark@outlook.com",
+    "password": "VioletaPwd505!",
+    "category": "user",
+    "image": "/images/img_profile/30.jpg",
+    "userName": "violeta_clark"
+  }
+]

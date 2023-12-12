@@ -47,8 +47,8 @@ const products = {
         productData != null ? response.redirect(`/product/${productData?.id}`) : response.redirect(`/`)
     },
 
-    createProduct: function(request, response){
-        const { titulo, precio, stock, categoria, subcategoria, descripcion} = request.body;
+    createProduct: function({body}, response){
+        const { titulo, precio, stock, categoria, subcategoria, descripcion} = body;
 		
 		const newProduct = {
 			id: productsDB.length + 1,

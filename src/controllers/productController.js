@@ -1,10 +1,10 @@
-const products = require("../helpers/productsFunctions");
+const Product = require("../models/Product");
 
 const productController = {
 
     index: function(request, response){
-        const productSelected = products.findProductByRequest(request);
-        const productsRelationed = products.findProductBySubcategory(productSelected.subcategory);
+        const productSelected = Product.findProductByRequest(request);
+        const productsRelationed = Product.findProductBySubcategory(productSelected.subcategory);
         //null , [pro1,ppr2]
         // if(productsRelationed == null){ //si no viene algun producto, que hago?
 
@@ -22,30 +22,30 @@ const productController = {
     },
 
     create: function(request,response){
-        products.createProduct(request, response);
+        Product.createProduct(request, response);
     },
 
     editPage: function(request, response){
-        const product = products.findProductByRequest(request);
+        const product = Product.findProductByRequest(request);
         response.render("product/editProduct",{product})
     },
 
     update: function(request,response){
-        products.updateProduct(request, response);
+        Product.updateProduct(request, response);
     },
 
     delete: function(request, response){
-        products.deleteProduct(request,response)
+        Product.deleteProduct(request,response)
     },
 
     listPage: function(request, response){
 
         if (Object.keys(request.query).length == 0 ) {
-            response.render("product/productList",{products: products.getAllProducts(), title: ''});
+            response.render("product/productList",{products: Product.getAllProducts(), title: ''});
             return;
         }
 
-        let productToFilter = products.filterProducts(request);
+        let productToFilter = Product.filterProducts(request);
 
         response.render("product/productList",{products: productToFilter, title: ''});
     }

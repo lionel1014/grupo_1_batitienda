@@ -1,7 +1,6 @@
 <%- include('../parcials/head') -%>
 <body>
     <%- include('../parcials/header') -%>
-
     <main class="form-container">
         <section class="register-container">
             <h2>Regístrate</h2>
@@ -18,6 +17,8 @@
                 <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                 <label for="confirmar_contrasena">Confirmar Contraseña</label>
                 <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
+                <label for="imagen">Imagen de usuario:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required>
                 <button class="btn" type="submit">Registrarse</button>
             </form>
         </section>
