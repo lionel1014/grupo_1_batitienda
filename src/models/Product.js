@@ -47,8 +47,8 @@ const products = {
         productData != null ? response.redirect(`/product/${productData?.id}`) : response.redirect(`/`)
     },
 
-    createProduct: function({body}, response){
-        const { titulo, precio, stock, categoria, subcategoria, descripcion} = body;
+    createProduct: function(request, response){
+        const { titulo, precio, stock, categoria, subcategoria, descripcion} = request.body;
 		
 		const newProduct = {
 			id: productsDB.length + 1,
@@ -58,7 +58,7 @@ const products = {
 			category: categoria,
             subcategory: subcategoria,
             description: descripcion,
-			image: `/images/img_products/${request.file?.filename}`
+			image: `${request.file?.filename}`
 		};
 		productsDB.push(newProduct);
         this.saveProduct(response, productsDB, newProduct)
@@ -79,7 +79,7 @@ const products = {
                 productsDB[productID].category = categoria;
                 productsDB[productID].subcategory = subcategoria;
                 productsDB[productID].description = descripcion;
-                productsDB[productID].image = `/images/img_products/${request.file?.filename}`;
+                productsDB[productID].image = `${request.file?.filename}`;
 
                 this.saveProduct(response, productsDB, productsDB[productID])
 

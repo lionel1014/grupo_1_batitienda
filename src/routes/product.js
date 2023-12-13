@@ -1,7 +1,6 @@
 const express = require("express");
 const multer = require('multer');
 const PATH = require('path');
-const products = require('../database/productos.json');
 
 const router = express.Router();
 

@@ -9,6 +9,12 @@ const userController = {
     register: function(request, response){
         response.render("user/register", {title : "Registrar 😁"})
     },
+
+    createProcess: function(request, response){
+        User.create(request.body, request.file)
+        response.redirect("/user/register")
+    },
+
     loginProcess: function (request, response) {
         const userToLogin = User.findByField('email', request.body.email);
     

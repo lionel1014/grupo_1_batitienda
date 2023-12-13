@@ -6,7 +6,7 @@
     "email": "carlos.garcia@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/1.jpg",
+    "image": "1.jpg",
     "userName": "carlos_garcia"
   },
   {
@@ -16,7 +16,7 @@
     "email": "isabella.johnson@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/2.jpg",
+    "image": "2.jpg",
     "userName": "isabella_johnson"
   },
   {
@@ -26,7 +26,7 @@
     "email": "diego.martinez@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/3.jpg",
+    "image": "3.jpg",
     "userName": "diego_martinez"
   },
   {
@@ -36,7 +36,7 @@
     "email": "sophia.lopez@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/4.jpg",
+    "image": "4.jpg",
     "userName": "sophia_lopez"
   },
   {
@@ -46,7 +46,7 @@
     "email": "lucas.smith@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/5.jpg",
+    "image": "5.jpg",
     "userName": "lucas_smith"
   },
   {
@@ -56,7 +56,7 @@
     "email": "mateo.silva@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/6.jpg",
+    "image": "6.jpg",
     "userName": "mateo_silva"
   },
   {
@@ -66,7 +66,7 @@
     "email": "valentina.gomez@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/7.jpg",
+    "image": "7.jpg",
     "userName": "valentina_gomez"
   },
   {
@@ -76,7 +76,7 @@
     "email": "andrew.fernandez@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/8.jpg",
+    "image": "8.jpg",
     "userName": "andrew_fernandez"
   },
   {
@@ -86,7 +86,7 @@
     "email": "renata.rojas@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/9.jpg",
+    "image": "9.jpg",
     "userName": "renata_rojas"
   },
   {
@@ -96,7 +96,7 @@
     "email": "emiliano.rodriguez@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/10.jpg",
+    "image": "10.jpg",
     "userName": "emiliano_rodriguez"
   },
   {
@@ -106,7 +106,7 @@
     "email": "mia.williams@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/11.jpg",
+    "image": "11.jpg",
     "userName": "mia_williams"
   },
   {
@@ -116,7 +116,7 @@
     "email": "nicolas.serrano@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/12.jpg",
+    "image": "12.jpg",
     "userName": "nicolas_serrano"
   },
   {
@@ -126,7 +126,7 @@
     "email": "valeria.taylor@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/13.jpg",
+    "image": "13.jpg",
     "userName": "valeria_taylor"
   },
   {
@@ -136,7 +136,7 @@
     "email": "emmanuel.brown@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/14.jpg",
+    "image": "14.jpg",
     "userName": "emmanuel_brown"
   },
   {
@@ -146,7 +146,7 @@
     "email": "camila.salazar@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/15.jpg",
+    "image": "15.jpg",
     "userName": "camila_salazar"
   },
   {
@@ -156,7 +156,7 @@
     "email": "alexander.fuentes@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/16.jpg",
+    "image": "16.jpg",
     "userName": "alexander_fuentes"
   },
   {
@@ -166,7 +166,7 @@
     "email": "aitana.mendez@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/17.jpg",
+    "image": "17.jpg",
     "userName": "aitana_mendez"
   },
   {
@@ -176,7 +176,7 @@
     "email": "daniel.perez@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/18.jpg",
+    "image": "18.jpg",
     "userName": "daniel_perez"
   },
   {
@@ -186,7 +186,7 @@
     "email": "maria.ramirez@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/19.jpg",
+    "image": "19.jpg",
     "userName": "maria_ramirez"
   },
   {
@@ -196,7 +196,7 @@
     "email": "sebastian.mendoza@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/20.jpg",
+    "image": "20.jpg",
     "userName": "sebastian_mendoza"
   },
   {
@@ -206,7 +206,7 @@
     "email": "elena.clark@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/21.jpg",
+    "image": "21.jpg",
     "userName": "elena_clark"
   },
   {
@@ -216,7 +216,7 @@
     "email": "hugo.gonzalez@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/22.jpg",
+    "image": "22.jpg",
     "userName": "hugo_gonzalez"
   },
   {
@@ -226,7 +226,7 @@
     "email": "ava.hill@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/23.jpg",
+    "image": "23.jpg",
     "userName": "ava_hill"
   },
   {
@@ -236,7 +236,7 @@
     "email": "oscar.young@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/24.jpg",
+    "image": "24.jpg",
     "userName": "oscar_young"
   },
   {
@@ -246,7 +246,7 @@
     "email": "lily.anderson@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/25.jpg",
+    "image": "25.jpg",
     "userName": "lily_anderson"
   },
   {
@@ -256,7 +256,7 @@
     "email": "sofia.williams@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/26.jpg",
+    "image": "26.jpg",
     "userName": "sofia_williams"
   },
   {
@@ -266,7 +266,7 @@
     "email": "eduardo.smith@yahoo.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/27.jpg",
+    "image": "27.jpg",
     "userName": "eduardo_smith"
   },
   {
@@ -276,7 +276,7 @@
     "email": "amelia.davis@gmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/28.jpg",
+    "image": "28.jpg",
     "userName": "amelia_davis"
   },
   {
@@ -286,7 +286,7 @@
     "email": "luciano.taylor@hotmail.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "admin",
-    "image": "/images/img_profile/29.jpg",
+    "image": "29.jpg",
     "userName": "luciano_taylor"
   },
   {
@@ -296,7 +296,7 @@
     "email": "violeta.clark@outlook.com",
     "password": "$2a$10$6W0fd6kY1HISt/W4kstvQuIf7aceNWNcONcVRpEo0ueQ53r3eaqNm",
     "category": "user",
-    "image": "/images/img_profile/30.jpg",
+    "image": "30.jpg",
     "userName": "violeta_clark"
   }
 ]

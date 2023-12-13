@@ -4,7 +4,7 @@
     <main class="form-container">
         <section class="register-container">
             <h2>Regístrate</h2>
-            <form class="login-form" action="procesar_registro.php" method="POST">
+            <form class="login-form" action="/user/" method="POST" enctype="multipart/form-data">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
                 <label for="apellido">Apellido</label>
@@ -18,7 +18,7 @@
                 <label for="confirmar_contrasena">Confirmar Contraseña</label>
                 <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
                 <label for="imagen">Imagen de usuario:</label>
-                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
                 <button class="btn" type="submit">Registrarse</button>
             </form>
         </section>

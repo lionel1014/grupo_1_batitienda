@@ -1,5 +1,6 @@
 const PATH = require('path');
 const fs = require('fs');
+const bcrypt = require('bcryptjs');
 
 const usersDB = require("../database/usuarios.json");
 const usersFilePath = PATH.join(__dirname, '../database/usuarios.json');
@@ -7,7 +8,11 @@ const usersFilePath = PATH.join(__dirname, '../database/usuarios.json');
 const User = {
 
     saveUser: function(usersPreviousSave, userData = null){
-        fs.writeFileSync(usersFilePath, JSON.stringify(usersPreviousSave, null, 2), 'utf-8');
+        try {
+            fs.writeFileSync(usersFilePath, JSON.stringify(usersPreviousSave, null, 2), 'utf-8');
+        } catch (error) {
+            console.error('Error al guardar el usuario:', error);
+        }
     },
 
     getData: function(){
@@ -27,8 +32,8 @@ const User = {
         return  userFound;
     },
 
-    create: function(request){
-        const { nombre, apellido, correo, usuario, contrasena } = request.body;
+    create: function(userForm, userImage){
+        const { nombre, apellido, correo, usuario, contrasena } = userForm;
 		
         let usersDB = this.getData();
 
@@ -37,14 +42,16 @@ const User = {
 			name: nombre,
 			lastName: apellido,
             email: correo,
-            password: contrasena,
+            password: bcrypt.hashSync(contrasena, 10),
             category: "admin",
             userName: usuario,
-			image: `/images/img_profile/${request.file?.filename}`
+			image: userImage ? `${userImage.filename}` : '',
 		};
+
 		usersDB.push(newUser);
+
         try{
-            this.saveUser(usersDB, newUser)
+            this.saveUser(usersDB)
         }catch(err){
             console.error(err);
         }
