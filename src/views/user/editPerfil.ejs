@@ -1,0 +1,178 @@
+<%- include('../parcials/head') -%>
+  <body>
+    <%- include('../parcials/header') -%>
+    <main>
+
+        <section class="user-edit">
+            <section class="user-section">
+                <section class="user-perfil">
+                    <div class="marco-img">
+                        <img src="/images/img_perfil/7.jpg" alt="imagen de perfil">
+                    </div>
+                    <h3>Pedro Sanchez</h3>
+                    <p>Administrador</p>
+                </section>
+                <ul class="ul-option">
+                    <a href="#subcontainer">
+                        <li class="li activo">Editar Perfil</li>
+                    </a>
+                    <a href="#subcontainer">
+                        <li class="li">Usuarios</li>
+                    </a>
+                    <a href="#subcontainer">
+                        <li class="li">Productos</li>
+                    </a>
+                </ul>
+            </section>
+            <div class="subcontainer" id="subcontainer">
+                <div class="bloque activo">
+                    <h1>Editar Perfil</h1>
+                    <form class="form-edit" action="#" method="get">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                        <label for="correo">Correo Electrónico:</label>
+                        <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+                        <label for="usuario">Nombre de Usuario:</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" required>
+                        <label for="contrasena">Contraseña:</label>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                        <label for="confirmar_contrasena">Confirmar Contraseña:</label>
+                        <input type="password" id="confirmar_contrasena" name="confirmar_contrasena"
+                            placeholder="Confirmar Contraseña" required>
+                        <button class="btn" type="submit">Editar</button>
+                    </form>
+                </div>
+                <div class="bloque">
+                    <h1>Lista de Usuarios</h1>
+                    <div class="table-container">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th class="table-img-user">Img</th>
+                              <th>Nombre</th>
+                              <th>Nickname</th>
+                              <th>Email</th>
+                              <th class="table-perfil">Perfil</th>
+                              <th class="table-acciones">Acción</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            
+                            <tr>
+                              <td class="table-img-user" data-titulo="imagen:"><img src="./cbe6f58df0c598e78e02a656b9f9f1a5.jpg" alt="Usuario 1"></td>
+                              <td data-titulo="Nombre:">John Doe</td>
+                              <td data-titulo="Nick:">john.doe</td>
+                              <td data-titulo="Email:">john@example.com</td>
+                              <td class="table-perfil" data-titulo="Perfil:">Usuario</td>
+                              <td class="table-acciones">
+                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                              </td>
+                            </tr>
+                            
+                            <tr>
+                              <td class="table-img-user" data-titulo="imagen:"><img src="./cbe6f58df0c598e78e02a656b9f9f1a5.jpg" alt="Usuario 2"></td>
+                              <td data-titulo="Nombre:">Jane Smith</td>
+                              <td data-titulo="Nick:">jane.smith</td>
+                              <td data-titulo="Email:">jane@example.com</td>
+                              <td class="table-perfil" data-titulo="Perfil:">Admin</td>
+                              <td class="table-acciones">
+                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                              </td>
+                            </tr>
+                        
+                          </tbody>
+                        </table>
+                      </div>
+                </div>
+                <div class="bloque">
+                    <h1>Lista de Productos</h1>
+                    <div class="table-container">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th class="table-id">Id</th>
+                              <th>Titulo</th>
+                              <th class="table-img-product">Img</th>
+                              <th class="table-price">Precio</th>
+                              <th class="table-stock">Stock</th>
+                              <th class="table-acciones">Acción</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            
+                            <tr>
+                              <td class="table-id" data-titulo="Id:">00</td>
+                              <td class="table-titulo" data-titulo="Titulo:">Figura Bandai Jujutsu Kaisen Anime Heroes Megumi</td>
+                              <td class="table-img-product" data-titulo="Imagen:"><img src="./51k8-BBUZcL._AC_UL600_SR600,600_.jpg" alt="Producto 1"></td>
+                              <td class="table-price" data-titulo="Precio:">00000</td>
+                              <td class="table-stock" data-titulo="Stock:">00</td>
+                              <td class="table-acciones">
+                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                              </td>
+                            </tr>
+      
+                            <tr>
+                              <td class="table-id" data-titulo="Id:">00</td>
+                              <td class="table-titulo" data-titulo="Titulo:">Figura Bandai Jujutsu Kaisen Anime Heroes Megumi</td>
+                              <td class="table-img-product" data-titulo="Imagen:"><img src="./51k8-BBUZcL._AC_UL600_SR600,600_.jpg" alt="Producto 1"></td>
+                              <td class="table-price" data-titulo="Precio:">00000</td>
+                              <td class="table-stock" data-titulo="Stock:">00</td>
+                              <td class="table-acciones">
+                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                              </td>
+                            </tr>            
+                  
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+    <%- include('../parcials/footer') -%>
+
+    
+    <script>
+        'use strict'
+
+        const li = document.querySelectorAll('.li')
+        const bloque = document.querySelectorAll('.bloque')
+
+        // CLICK en li
+        // TODOS .li quitar la clase activo
+        // TODOS .bloque quitar la clase activo
+        // .li con la posicion se añadimos la clase activo
+        // .bloque con la posicion se añadimos la clase activo
+
+        // Recorriendo todos los LI
+        li.forEach((cadaLi, i) => {
+            // Asignando un CLICK a CADALI
+            li[i].addEventListener('click', () => {
+
+                // Recorrer TODOS los .li
+                li.forEach((cadaLi, i) => {
+                    // Quitando la clase activo de cada li
+                    li[i].classList.remove('activo')
+                    // Quitando la clase activo de cada bloque
+                    bloque[i].classList.remove('activo')
+                })
+
+                // En el li que hemos click le añadimos la clase activo
+                li[i].classList.add('activo')
+                // En el bloque con la misma posición le añadimos la clase activo
+                bloque[i].classList.add('activo')
+
+            })
+        })
+
+    </script>
+
+  </body>
+</html>
