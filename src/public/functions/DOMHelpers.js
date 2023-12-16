@@ -55,12 +55,6 @@ async function loaderOn(event){
 }
 
 async function confirmDelete(event) {
-    //Asi tiene que ser el boton para que llame este metodo
-    // <div class="title-additional-information">
-    //     <form action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)" >
-    //         <button type="submit" name="delete" class="btn">ELIMINAR</button>
-    //     </form>
-    // </div>
 
     event.preventDefault();
 
@@ -78,4 +72,23 @@ async function confirmDelete(event) {
 
     // Si el usuario hace clic en "Cancelar" o si ha pasado el tiempo de espera, no se envía el formulario
     return confirmation;
+}
+
+function menuToggle() {
+    const toggleMenu = document.querySelector("#menu-profile-desktop");
+    toggleMenu.classList.toggle("active");
+    // Agrega un listener para el clic en el documento
+    setTimeout(() => {
+        document.addEventListener("click", handleDocumentClick);
+    }, 500);
+}
+
+function handleDocumentClick(event) {
+    const toggleMenu = document.querySelector("#menu-profile-desktop");
+    const targetElement = event.target;
+
+    if (!toggleMenu.contains(targetElement)) {
+        toggleMenu.classList.remove("active");
+        document.removeEventListener("click", handleDocumentClick);
+    }
 }
