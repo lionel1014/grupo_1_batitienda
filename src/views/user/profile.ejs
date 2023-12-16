@@ -7,10 +7,10 @@
             <section class="user-section">
                 <section class="user-perfil">
                     <div class="marco-img">
-                        <img src="/images/img_perfil/7.jpg" alt="imagen de perfil">
+                        <img src="/images/img_profile/<%=userLogin.image%>" alt="imagen de perfil">
                     </div>
-                    <h3>Pedro Sanchez</h3>
-                    <p>Administrador</p>
+                    <h3><%= userLogin.name ? userLogin.name : "Usuario no Logueado" %> <%= userLogin.name ? userLogin.lastName: "Usuario no Logueado"%></h3>
+                    <p><%= userLogin.category %></p>
                 </section>
                 <ul class="ul-option">
                     <a href="#subcontainer">
@@ -29,7 +29,7 @@
                     <h1>Editar Perfil</h1>
                     <form class="form-edit" action="#" method="get">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<%= userLogin.name ? userLogin.name : "" %>" required>
                         <label for="apellido">Apellido:</label>
                         <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
                         <label for="correo">Correo Electrónico:</label>
@@ -140,8 +140,6 @@
 
     
     <script>
-        'use strict'
-
         const li = document.querySelectorAll('.li')
         const bloque = document.querySelectorAll('.bloque')
 

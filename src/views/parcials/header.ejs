@@ -48,10 +48,12 @@
                         <h3> <%= userLogged.name ?? 'Usuario' %> </h3><span><%= userLogged.category.charAt(0).toUpperCase() + userLogged.category.slice(1) %></span></h3>
                     </li>
                     <li>
-                        <a class="btn" href="#"><i class="fa-solid fa-user-gear"></i>Editar perfil</a>
+                        <a class="btn" href="/user/profile"><i class="fa-solid fa-user-gear"></i>Editar perfil</a>
                     </li>
                     <li>
-                        <a class="btn" style="background-color: #721c24; box-shadow: 0 5px #421015;" href="#"><i class="fa-solid fa-user-gear"></i>Cerrar sesión</a>
+                        <form id="logoutForm" action="/user/logout" method="post">
+                            <button type="submit" class="btn" style="background-color: #721c24; box-shadow: 0 5px #421015;"><i class="fa-solid fa-door-open"></i><a href="#"></a>Cerrar sesión</button>
+                        </form>
                     </li>
                 <% }else{ %>
                     <li>
@@ -100,7 +102,7 @@
                         <h3><%= userLogged.name ?? 'Usuario' %><br /><span><%= userLogged.category.charAt(0).toUpperCase() + userLogged.category.slice(1) %></span></h3>
                         <ul>
                             <li>
-                                <i class="fa-solid fa-user-gear"></i><a href="#">Editar perfil</a>
+                                <i class="fa-solid fa-user-gear"></i><a href="/user/profile">Editar perfil</a>
                             </li>
                             <li>
                                 <form id="logoutForm" action="/user/logout" method="post">

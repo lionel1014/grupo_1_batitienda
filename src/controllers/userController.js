@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Product = require("../models/Product")
 const bcrypt = require("bcrypt")
 
 const userController = {
@@ -44,8 +45,12 @@ const userController = {
         response.redirect("/")
     },
 
-    editPerfil: function ( request, response){
-        response.render("user/editPerfil", {title : "Editar Pérfil 😃"})
+    profile: function ( request, response){
+        const allUsers = User.getData();
+        const allProducts = Product.getAllProducts();
+        const userLogin = request.session.userLogged;
+
+        response.render("user/profile", {title : "Editar Pérfil 😃", users : allUsers, products : allProducts, userLogin})
     },
 
     logout: function(request, response){
