@@ -9,7 +9,6 @@ const productController = {
         // if(productsRelationed == null){ //si no viene algun producto, que hago?
 
         // }
-
         response.render("product/productDetail",{product: productSelected, title: '' , productsRelationed})
     },
 

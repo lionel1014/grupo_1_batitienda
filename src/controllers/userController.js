@@ -1,5 +1,5 @@
 const User = require("../models/User");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt")
 
 const userController = {
     login: function(request, response){
@@ -29,7 +29,6 @@ const userController = {
             });
         };
         const isOkPassword = bcrypt.compareSync(request.body.contrasena, userToLogin.password);
-
         if (!isOkPassword)
             return response.render("user/login", {
                 title: "Login 😒",
@@ -39,10 +38,10 @@ const userController = {
                     }
                 }
             });
-        
-        delete userToLogin.password;
+
+        // delete userToLogin.password;
         request.session.userLogged = userToLogin;
-        response.send("Todo okey");
+        response.redirect("/")
     },
 
     profile: function ( request, response){
@@ -57,7 +56,11 @@ const userController = {
             } else {
               response.redirect('/');
             }
-          });
+        });
+    },
+
+    logout2: function(request, response){
+        response.send("Llego el logout")
     }
 };
 

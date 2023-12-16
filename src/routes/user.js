@@ -22,5 +22,6 @@ router.get("/", guessMiddleware,userController.register);
 router.get("/login", userController.login);
 router.post("/", uploadFile.single("imagen") ,userController.createProcess);
 router.post("/login", userController.loginProcess);
+router.post("/logout", userController.logout);
 
 module.exports = router;

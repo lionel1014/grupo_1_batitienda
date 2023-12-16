@@ -1,4 +1,5 @@
 @import url(loader.css);
+@import url(profile.css);
 
 :root{
     --cinder-200: #dbd8df;
@@ -50,7 +51,7 @@ body{
     background-color: var(--cinder-950);
 }
 
-section:not(.header-top1){
+section:not(.header-top){
     background-color: var(--conteneder-info);
     border: 1px solid black;
     border-radius: 1em;
@@ -768,7 +769,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 /*--------------------*/
 
 /* Estilos barra de busqueda */
-.container {
+.wrapper-search-box-mobile {
     width: 100%;
     height: 3rem;
     /*background-image: linear-gradient(45deg, #670000, #000);*/
@@ -817,10 +818,10 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
     display: none;
 }
 
-.header-top1 {
+.header-top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     height: 5rem;
     padding: 0; /* Espacio alrededor del contenedor */
     background-color: #0d2033;
@@ -844,8 +845,7 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 }
 
 .user-cart-icon {
-    padding-bottom: 24px;
-    padding-right: 15px;
+    margin-right: 20px;
     align-items: center;
     display: flex;
 }
@@ -859,10 +859,9 @@ input[type="radio"].menu-toggle:checked ~ .sub-menu {
 /*--------------------*/
 
 /* Estilos barra de busqueda */
-.container1 {
+.wrapper-search-box-desktop {
     width: 70%;
     max-width: 350px;
-    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
