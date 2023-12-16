@@ -43,12 +43,24 @@
                 </li>
             </ul>
             <ul>
-                <li>
-                    <a class="btn" href="/user/login">Inicia Sesión</a>
-                </li>
-                <li>
-                    <a class="btn" href="/user">Registrate</a>
-                </li>
+                <% if(locals?.userLogged) { %>
+                    <li class="user-name">
+                        <h3> <%= userLogged.name ?? 'Usuario' %> </h3><span><%= userLogged.category.charAt(0).toUpperCase() + userLogged.category.slice(1) %></span></h3>
+                    </li>
+                    <li>
+                        <a class="btn" href="#"><i class="fa-solid fa-user-gear"></i>Editar perfil</a>
+                    </li>
+                    <li>
+                        <a class="btn" style="background-color: #721c24; box-shadow: 0 5px #421015;" href="#"><i class="fa-solid fa-user-gear"></i>Cerrar sesión</a>
+                    </li>
+                <% }else{ %>
+                    <li>
+                        <a class="btn" href="/user/login">Inicia Sesión</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="/user">Registrate</a>
+                    </li>
+                <% }%>
             </ul>
         </div>
         <a href="/">
@@ -58,7 +70,7 @@
             <a href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </nav>
-    <div class="container">
+    <div class="wrapper-search-box-mobile">
         <form class="search-form" action="#">
             <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -68,21 +80,42 @@
 
 <!--::::Encabezado de Pagina desktop::::::-->
 <header class="header-desktop">
-    <section class="header-top1">
+    <section class="header-top">
         <a href="/">
             <img src="/images/murcielago1.png" alt="Logo Bati-Tienda" class="logo1">
         </a>
-        <div class="container1">
+        <div class="wrapper-search-box-desktop">
             <form class="search-form1" action="#">
                 <input type="text" name="search" placeholder="Buscar producto..." autocomplete="off">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </div>
         <div class="user-cart-icon">
+            <% if(locals?.userLogged) { %>
+                <div class="action">
+                    <div class="profile">
+                      <img src="/images/img_profile/<%= userLogged.image %>" onclick="menuToggle()"/>
+                    </div>
+                    <div class="menu-profile" id="menu-profile-desktop">
+                        <h3><%= userLogged.name ?? 'Usuario' %><br /><span><%= userLogged.category.charAt(0).toUpperCase() + userLogged.category.slice(1) %></span></h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user-gear"></i><a href="#">Editar perfil</a>
+                            </li>
+                            <li>
+                                <form id="logoutForm" action="/user/logout" method="post">
+                                    <button type="submit" style="border: none; background: none; cursor: pointer;"><i class="fa-solid fa-door-open"></i><a href="#"></a>Cerrar sesión</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <% }else{ %>
             <div class="login-options">
                 <a href="/user/login"><i class="fa-solid fa-user"> Inicia Sesion</i></a>
                 <a href="/user"><i class="fa-regular fa-user"> Registrate</i></a>
             </div>
+            <% }%>
             <a id="car-link" href="/product/productCar"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </section>

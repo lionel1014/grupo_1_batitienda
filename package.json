@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/lionel1014/grupo_1_batitienda#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
