@@ -44,8 +44,8 @@ const userController = {
         response.redirect("/")
     },
 
-    profile: function ( request, response){
-        response.send("Profile")
+    editPerfil: function ( request, response){
+        response.render("user/editPerfil", {title : "Editar Pérfil 😃"})
     },
 
     logout: function(request, response){

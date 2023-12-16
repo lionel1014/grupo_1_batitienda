@@ -23,5 +23,6 @@ router.get("/login", userController.login);
 router.post("/", uploadFile.single("imagen") ,userController.createProcess);
 router.post("/login", userController.loginProcess);
 router.post("/logout", userController.logout);
+router.get("/editPerfil", userController.editPerfil)
 
 module.exports = router;
