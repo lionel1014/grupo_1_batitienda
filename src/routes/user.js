@@ -24,5 +24,6 @@ router.post("/", uploadFile.single("imagen") ,userController.createProcess);
 router.post("/login", userController.loginProcess);
 router.post("/logout", userController.logout);
 router.get("/profile", userController.profile)
+router.put("/img/:id",  uploadFile.single("img-usuario"), userController.changeUserImage)
 
 module.exports = router;

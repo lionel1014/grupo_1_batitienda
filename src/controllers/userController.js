@@ -66,6 +66,11 @@ const userController = {
 
     logout2: function(request, response){
         response.send("Llego el logout")
+    },
+
+    changeUserImage: function(request, response){
+        User.updateImg(request.params.id, request.file)
+        response.redirect("/user/profile")
     }
 };
 

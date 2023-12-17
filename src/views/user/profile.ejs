@@ -7,6 +7,12 @@
             <section class="user-section">
                 <section class="user-perfil">
                     <div class="marco-img">
+                        <div class="cambiar-img">
+                            <form action="/user/img/<%= userLogin.id %>?_method=PUT" id="subirImgFormulario" method="post" enctype="multipart/form-data">
+                              <label for="cambiar-imagen"><i class="fa-solid fa-pen-to-square"></i></label>
+                              <input type="file" name="img-usuario" id="cambiar-imagen" onchange="cambiarImgPerfil()">
+                            </form>
+                        </div>
                         <img src="/images/img_profile/<%=userLogin.image%>" alt="imagen de perfil">
                     </div>
                     <h3><%= userLogin.name ? userLogin.name : "Usuario no Logueado" %> <%= userLogin.name ? userLogin.lastName: "Usuario no Logueado"%></h3>
@@ -31,11 +37,11 @@
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<%= userLogin.name ? userLogin.name : "" %>" required>
                         <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" value="<%= userLogin.lastName ? userLogin.lastName : "" %>" required>
                         <label for="correo">Correo Electrónico:</label>
-                        <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required>
+                        <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" value="<%= userLogin.email ? userLogin.email : "" %>" required>
                         <label for="usuario">Nombre de Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" required>
+                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" value="<%= userLogin.userName ? userLogin.userName: "" %>" required>
                         <label for="contrasena">Contraseña:</label>
                         <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                         <label for="confirmar_contrasena">Confirmar Contraseña:</label>
@@ -45,7 +51,7 @@
                     </form>
                 </div>
                 <div class="bloque">
-                    <h1>Lista de Usuarios</h1>
+                    <h1>Usuarios</h1>
                     <div class="table-container">
                         <table>
                           <thead>
@@ -59,37 +65,28 @@
                             </tr>
                           </thead>
                           <tbody>
-                            
+                            <% for(user of users) { %>
                             <tr>
-                              <td class="table-img-user" data-titulo="imagen:"><img src="./cbe6f58df0c598e78e02a656b9f9f1a5.jpg" alt="Usuario 1"></td>
-                              <td data-titulo="Nombre:">John Doe</td>
-                              <td data-titulo="Nick:">john.doe</td>
-                              <td data-titulo="Email:">john@example.com</td>
-                              <td class="table-perfil" data-titulo="Perfil:">Usuario</td>
+                              <td class="table-img-user" data-titulo="Imagen:"><img src="/images/img_profile/<%= user.image %>" alt="Usuario 1"></td>
+                              <td data-titulo="Nombre:"><%= user.name %> <%= user.lastName %></td>
+                              <td data-titulo="Nick:"><%= user.userName %></td>
+                              <td data-titulo="Email:"><%= user.email %></td>
+                              <td class="table-perfil" data-titulo="Perfil:"><%= user.category %></td>
                               <td class="table-acciones">
                                 <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
                                 <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
                               </td>
                             </tr>
-                            
-                            <tr>
-                              <td class="table-img-user" data-titulo="imagen:"><img src="./cbe6f58df0c598e78e02a656b9f9f1a5.jpg" alt="Usuario 2"></td>
-                              <td data-titulo="Nombre:">Jane Smith</td>
-                              <td data-titulo="Nick:">jane.smith</td>
-                              <td data-titulo="Email:">jane@example.com</td>
-                              <td class="table-perfil" data-titulo="Perfil:">Admin</td>
-                              <td class="table-acciones">
-                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
-                              </td>
-                            </tr>
-                        
+                            <% } %>
                           </tbody>
                         </table>
                       </div>
                 </div>
                 <div class="bloque">
-                    <h1>Lista de Productos</h1>
+                    <div class="encabezadoListProduct">
+                      <h1>Productos</h1>
+                      <a href="/product/createProduct"><button class="btn">Crear <i class="fa-regular fa-square-plus"></i></button></a>
+                    </div>
                     <div class="table-container">
                         <table>
                           <thead>
@@ -103,31 +100,21 @@
                             </tr>
                           </thead>
                           <tbody>
-                            
+                            <% for(product of products) { %>
                             <tr>
-                              <td class="table-id" data-titulo="Id:">00</td>
-                              <td class="table-titulo" data-titulo="Titulo:">Figura Bandai Jujutsu Kaisen Anime Heroes Megumi</td>
-                              <td class="table-img-product" data-titulo="Imagen:"><img src="./51k8-BBUZcL._AC_UL600_SR600,600_.jpg" alt="Producto 1"></td>
-                              <td class="table-price" data-titulo="Precio:">00000</td>
-                              <td class="table-stock" data-titulo="Stock:">00</td>
+                              <td class="table-id" data-titulo="Id:"><%= product.id %></td>
+                              <td class="table-titulo" data-titulo="Titulo:"><%= product.title %></td>
+                              <td class="table-img-product" data-titulo="Imagen:"><img src="/images/img_products/<%= product.image %>" alt="Producto 1"></td>
+                              <td class="table-price" data-titulo="Precio:">$<%= product.price %></td>
+                              <td class="table-stock" data-titulo="Stock:"><%= product.stock %></td>
                               <td class="table-acciones">
-                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                                <a href="/product/editProduct/<%=product.id%>" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <form class="delete-link" action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
+                                  <button type="submit" name="delete"><i class="fa-solid fa-trash"></i></button>
+                                </form>
                               </td>
-                            </tr>
-      
-                            <tr>
-                              <td class="table-id" data-titulo="Id:">00</td>
-                              <td class="table-titulo" data-titulo="Titulo:">Figura Bandai Jujutsu Kaisen Anime Heroes Megumi</td>
-                              <td class="table-img-product" data-titulo="Imagen:"><img src="./51k8-BBUZcL._AC_UL600_SR600,600_.jpg" alt="Producto 1"></td>
-                              <td class="table-price" data-titulo="Precio:">00000</td>
-                              <td class="table-stock" data-titulo="Stock:">00</td>
-                              <td class="table-acciones">
-                                <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
-                              </td>
-                            </tr>            
-                  
+                            </tr>           
+                            <% } %>
                           </tbody>
                         </table>
                     </div>

@@ -92,3 +92,9 @@ function handleDocumentClick(event) {
         document.removeEventListener("click", handleDocumentClick);
     }
 }
+
+function cambiarImgPerfil() {
+    // Obtener el formulario y enviarlo
+    const formulario = document.getElementById("subirImgFormulario");
+    formulario.submit();
+}
