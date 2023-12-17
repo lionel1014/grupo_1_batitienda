@@ -66,6 +66,17 @@ const User = {
         } catch (error) {
             console.error(error);
         }
+    },
+
+    updateImg: function(id, image){
+        let usersDB = this.getData();
+        const userID = usersDB.findIndex(user => user.id == id);
+        if (userID != -1) {
+            fs.unlinkSync(PATH.join(__dirname, `../public/images/img_profile/${usersDB[userID].image}`));
+            usersDB[userID].image = `${image?.filename}`;
+        }
+        this.saveUser(usersDB)
+
     }
 }
 

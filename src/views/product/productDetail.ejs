@@ -39,13 +39,6 @@
                     <div class="contenedor-descripcion">
                         <div class="titulo-descripcion">
                             <h3>Descripción</h3>
-                            <div class="admin-acces">
-                                <a href="/product/editProduct/<%=product.id%>"><button class="btn"><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <a href="/product/createProduct"><button class="btn"><i class="fa-regular fa-square-plus"></i></button></a>
-                                <form action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
-                                    <button type="submit" name="delete" class="btn"><i class="fa-solid fa-trash"></i></button>
-                                </form>
-                            </div>
                         </div>
                         <div class="descripcion-producto-PD">
                             <p>
