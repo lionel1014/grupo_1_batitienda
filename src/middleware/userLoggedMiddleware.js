@@ -11,12 +11,17 @@ function userLoggedMiddleware (request, response, next){
 
     if (userFromCookie) {
         response.locals.userLogged = userFromCookie;
+        console.log("hay un usuario en cookie? 😒😒");
     }
 
     if (request?.session?.userLogged) {
         response.locals.isLogged = true;
         response.locals.userLogged =  request?.session?.userLogged;
+        console.log("Hay session 🔴🔴🔴");
+    }else{
+        console.log("No session 💚💚");
     }
+    
     next();
 }
 module.exports = userLoggedMiddleware;

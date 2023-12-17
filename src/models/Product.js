@@ -103,7 +103,7 @@ const products = {
                 throw new Error("Producto no encontrado");
             }
 
-            fs.unlinkSync(PATH.join(__dirname, `../public${productsDB[productArrayID].image}`));
+            fs.unlinkSync(PATH.join(__dirname, `../public/images/img_products/${productsDB[productArrayID].image}`));
             this.saveProduct(response,restProducts);
 
         } catch (error) {
