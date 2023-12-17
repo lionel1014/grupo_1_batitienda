@@ -107,7 +107,6 @@ const products = {
             this.saveProduct(response,restProducts);
 
         } catch (error) {
-            console.log("paso un error 😿",error)
             response.status(404).send(error)
         }
     }

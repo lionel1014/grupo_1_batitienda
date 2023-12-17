@@ -93,7 +93,7 @@
             </form>
         </div>
         <div class="user-cart-icon">
-            <% if(locals?.userLogged) { %>
+            <% if(locals?.isLogged) { %>
                 <div class="action">
                     <div class="profile">
                       <img src="/images/img_profile/<%= userLogged.image %>" onclick="menuToggle()"/>

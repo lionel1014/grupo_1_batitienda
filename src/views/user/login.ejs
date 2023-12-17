@@ -6,13 +6,14 @@
         <section class="login-container">
             <h2>Iniciar Sesión</h2>
             <form class="login-form" action="/user/login" method="POST">
-                <label for="email">Email y contraseña</label>
-                <input type="email" id="email" name="email" placeholder="📧 Email" required>
+                <label for="email">Email o nombre de usuario</label>
+                <input type="text" id="email" name="userAcount" placeholder="📧 Ingrese tu usuario" value="<%= locals.userName ?? '' %>" required>
                 <% if(locals.errors && errors.email){ %>
                 <div> <%= errors.email.msg %> </div>
                 <% } %>
-                <input type="password" id="contrasena" name="contrasena" placeholder="🔒 Contraseña"required>
-                <label for="recordar"><input type="checkbox" id="recordar" name="recordar">Recordarme</label>
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="🔒 Ingrese su contraseña" required>
+                <label for="recordar"><input type="checkbox" id="recordar" name="recordar_usuario">Recordarme</label>
                 <button class="btn" type="submit">Iniciar Sesión</button>
             </form>
             <a href="recuperar_contrasena.html">¿Olvidaste tu contraseña?</a>

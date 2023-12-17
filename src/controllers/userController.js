@@ -4,7 +4,6 @@ const bcrypt = require("bcrypt")
 
 const userController = {
     login: function(request, response){
-        console.log(request.session);
         response.render("user/login", {title : "Login 😒"})
     },
     register: function(request, response){
@@ -17,8 +16,8 @@ const userController = {
     },
 
     loginProcess: function (request, response) {
-        const userToLogin = User.findByField('email', request.body.email);
-    
+        const {userAcount , contrasena , recordar_usuario} =  request.body;
+        const userToLogin = User.findByFields(userAcount, 'email', 'userName');
         if (!userToLogin) {
             return response.render("user/login", {
                 title: "Login 😒",
@@ -29,7 +28,7 @@ const userController = {
                 }
             });
         };
-        const isOkPassword = bcrypt.compareSync(request.body.contrasena, userToLogin.password);
+        const isOkPassword = bcrypt.compareSync(contrasena, userToLogin.password);
         if (!isOkPassword)
             return response.render("user/login", {
                 title: "Login 😒",
@@ -40,9 +39,16 @@ const userController = {
                 }
             });
 
+        if (recordar_usuario != undefined) {
+            response.cookie("userAcount", userAcount);
+            response.cookie("userName", userAcount);
+        }else{
+            response.clearCookie("userName");
+        }
+        
         // delete userToLogin.password;
         request.session.userLogged = userToLogin;
-        response.redirect("/")
+        response.redirect("/user/profile")
     },
 
     profile: function ( request, response){
@@ -54,18 +60,9 @@ const userController = {
     },
 
     logout: function(request, response){
-        request.session.destroy((err) => {
-            if (err) {
-              console.error('Error al cerrar sesión:', err);
-              response.send('Error al cerrar sesión');
-            } else {
-              response.redirect('/');
-            }
-        });
-    },
-
-    logout2: function(request, response){
-        response.send("Llego el logout")
+        response.clearCookie("userAcount");
+        request.session.destroy();
+        response.redirect("/");
     },
 
     changeUserImage: function(request, response){

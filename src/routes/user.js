@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 const router = express.Router();
 const uploadFile = multer({storage});
 
-router.get("/", guessMiddleware,userController.register);
+router.get("/", guessMiddleware, userController.register);
 router.get("/login", userController.login);
 router.post("/", uploadFile.single("imagen") ,userController.createProcess);
 router.post("/login", userController.loginProcess);

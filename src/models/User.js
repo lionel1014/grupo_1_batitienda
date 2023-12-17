@@ -26,9 +26,9 @@ const User = {
     findByPk: function(id){
         return this.getData().find( user => user.id === id);
     },
-
-    findByField: function(field, text){
-        const userFound =  this.getData().find( user => user[field] == text);
+    
+    findByFields: function(text, ...fields){
+        const userFound =  this.getData().find( user => fields.some(field => user[field] === text ));
         return  userFound;
     },
 
