@@ -24,7 +24,7 @@ const User = {
     },
 
     findByPk: function(id){
-        return this.getData().find( user => user.id === id);
+        return this.getData().find( user => user.id == id);
     },
     
     findByFields: function(text, ...fields){

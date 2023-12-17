@@ -4,7 +4,7 @@ const productController = {
 
     index: function(request, response){
         const productSelected = Product.findProductByRequest(request);
-        const productsRelationed = Product.findProductBySubcategory(productSelected.subcategory);
+        const productsRelationed = Product.findProductBySubcategory(productSelected?.subcategory);
         //null , [pro1,ppr2]
         // if(productsRelationed == null){ //si no viene algun producto, que hago?
 

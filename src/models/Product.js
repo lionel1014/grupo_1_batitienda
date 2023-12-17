@@ -72,7 +72,7 @@ const products = {
 
         if (productID != -1) {
             try {
-                fs.unlinkSync(PATH.join(__dirname, `../public${productsDB[productID].image}`));
+                fs.unlinkSync(PATH.join(__dirname, `../public/images/img_products/${productsDB[productID].image}`));
                 productsDB[productID].title = titulo;
                 productsDB[productID].price = +precio;
                 productsDB[productID].stock = +stock;
