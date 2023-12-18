@@ -72,7 +72,7 @@ const products = {
 
         if (productID != -1) {
             try {
-                fs.unlinkSync(PATH.join(__dirname, `../public${productsDB[productID].image}`));
+                fs.unlinkSync(PATH.join(__dirname, `../public/images/img_products/${productsDB[productID].image}`));
                 productsDB[productID].title = titulo;
                 productsDB[productID].price = +precio;
                 productsDB[productID].stock = +stock;
@@ -103,11 +103,10 @@ const products = {
                 throw new Error("Producto no encontrado");
             }
 
-            fs.unlinkSync(PATH.join(__dirname, `../public${productsDB[productArrayID].image}`));
+            fs.unlinkSync(PATH.join(__dirname, `../public/images/img_products/${productsDB[productArrayID].image}`));
             this.saveProduct(response,restProducts);
 
         } catch (error) {
-            console.log("paso un error 😿",error)
             response.status(404).send(error)
         }
     }
