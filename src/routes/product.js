@@ -5,6 +5,7 @@ const PATH = require('path');
 const router = express.Router();
 
 const productController = require("../controllers/productController");
+const authMiddleware = require("../middleware/authmiddleware");
 
 const storage = multer.diskStorage({
 	destination: (req,file,cd) => {
@@ -20,8 +21,8 @@ const uploadFile = multer({storage});
 
 /* RUTAS PARA OBTENER LAS PÁGINAS*/
 router.get("/productCar", productController.carPage);
-router.get("/createProduct", productController.createPage);
-router.get("/editProduct/:id", productController.editPage);
+router.get("/createProduct", authMiddleware, productController.createPage);
+router.get("/editProduct/:id", authMiddleware,productController.editPage);
 router.get("/listProduct", productController.listPage);
 router.get("/:id", productController.index);
 

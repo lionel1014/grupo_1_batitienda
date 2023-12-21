@@ -17,9 +17,6 @@ function userLoggedMiddleware (request, response, next){
     if (request?.session?.userLogged) {
         response.locals.isLogged = true;
         response.locals.userLogged =  request?.session?.userLogged;
-        console.log("Hay session 🔴🔴🔴");
-    }else{
-        console.log("No session 💚💚");
     }
     
     next();
