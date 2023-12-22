@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const Product = require("../models/Product")
 const bcrypt = require("bcrypt")
+const { validationResult} = require("express-validator")
 
 const userController = {
     login: function(request, response){
@@ -11,8 +12,16 @@ const userController = {
     },
 
     createProcess: function(request, response){
-        User.create(request.body, request.file)
-        response.redirect("/user/register")
+        let errors = validationResult(request);
+        console.log(errors)
+        if (errors.isEmpty()) {
+            User.create(request.body, request.file)
+            response.redirect("/user/register")
+        } else {
+            console.log(request.body)
+            response.render("user/register", {title : "Registrar 😁", errors : errors.array(), old : request.body})
+        }
+        
     },
 
     loginProcess: function (request, response) {

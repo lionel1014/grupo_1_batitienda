@@ -5,6 +5,8 @@ const userController = require("../controllers/userController");
 const guessMiddleware = require("../middleware/guessMiddleware");
 const authMiddleware = require("../middleware/authmiddleware");
 const updateCookieMiddleware = require("../middleware/updateCookieMiddleware")
+const validateRegisterForm = require("../middleware/validateRegisterForm")
+const router = express.Router();
 
 const storage = multer.diskStorage({
 	destination: (req,file,cd) => {
@@ -17,13 +19,12 @@ const storage = multer.diskStorage({
 	}
 });
 
-const router = express.Router();
 const uploadFile = multer({storage});
 
 router.get("/", guessMiddleware, userController.register);
 router.get("/login", guessMiddleware, userController.login);
 router.get("/profile", authMiddleware, userController.profile)
-router.post("/", uploadFile.single("imagen") ,userController.createProcess);
+router.post("/", validateRegisterForm, userController.createProcess);
 router.post("/login", userController.loginProcess);
 router.post("/logout", userController.logout);
 router.put("/img/:id",  uploadFile.single("img-usuario"), updateCookieMiddleware, userController.changeUserImage)
