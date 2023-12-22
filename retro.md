@@ -1,3 +1,17 @@
+# Retroalimentación de Nuestro Proyecto - SPRINT 4
+
+## Aspectos Positivos a Resaltar:
+
+- **Adaptación a Metodologías Ágiles:** Exhibimos una sólida capacidad para adaptarnos a las metodologías ágiles, permitiendo una gestión más eficiente y flexible de nuestro trabajo.
+
+- **Puntualidad y Participación en las Reuniones Diarias:** Demostramos un compromiso más robusto al ser puntuales y participativos en las reuniones diarias. Esta actitud contribuye significativamente a la sincronización del equipo y a un entendimiento compartido de los avances.
+
+## Áreas de Oportunidad para Mejorar:
+
+- **Adaptación a Metodologías Ágiles:** Identificamos una oportunidad para fortalecer nuestro compromiso en la fase finalización de tareas. Abordar este aspecto garantizará una conclusión efectiva de las actividades y una transición fluida a nuevas etapas.
+
+- **Retroalimentación en Tareas Asignadas:** Reconocemos que podemos mejorar en el proceso de proporcionar feedback sobre las tareas asignadas. Establecer una comunicación abierta y constructiva en relación con nuestras responsabilidades permitirá un mejor entendimiento y colaboración en el equipo.
+
 # Retroalimentación de Nuestro Proyecto - SPRINT 3
 
 ## Logros y Buenas Prácticas
