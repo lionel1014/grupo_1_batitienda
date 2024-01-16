@@ -27,6 +27,7 @@ router.get("/profile", authMiddleware, userController.profile)
 router.post("/", validateRegisterForm, userController.createProcess);
 router.post("/login", userController.loginProcess);
 router.post("/logout", userController.logout);
+router.put("/profile", authMiddleware, userController.editProfile)
 router.put("/img/:id",  uploadFile.single("img-usuario"), updateCookieMiddleware, userController.changeUserImage)
 
 module.exports = router;
