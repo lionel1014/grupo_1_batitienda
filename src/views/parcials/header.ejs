@@ -45,7 +45,7 @@
             <ul>
                 <% if(locals?.userLogged) { %>
                     <li class="user-name">
-                        <h3> <%= userLogged.name ?? 'Usuario' %> </h3><span><%= userLogged.category.charAt(0).toUpperCase() + userLogged.category.slice(1) %></span></h3>
+                        <h3> <%= userLogged.name ?? 'Usuario' %> </h3><span><%= userLogged.category == 1 ? userLogged.category = "Admin" : userLogged.category = "Usuario" %></span></h3>
                     </li>
                     <li>
                         <a class="btn" href="/user/profile"><i class="fa-solid fa-user-gear"></i>Editar perfil</a>
