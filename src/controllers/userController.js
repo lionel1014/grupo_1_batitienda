@@ -115,6 +115,8 @@ const userController = {
             where: {
             user_id: request.session.userLogged.user_id
             }
+        })
+
         .then(async usuarioEditado => {
             const usuarioLogueado = await db.User.findByPk(request.session.userLogged.user_id)
             request.session.userLogged = usuarioLogueado;
