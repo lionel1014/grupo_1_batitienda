@@ -101,7 +101,7 @@ const userController = {
                 response.status(500).send('Error en el servidor');
             });
     },
-
+  
     editProfile: function (request, response){
         db.User.update({
                 name: request.body.nombre,
@@ -115,11 +115,12 @@ const userController = {
             where: {
             user_id: request.session.userLogged.user_id
             }
-        }).then(async usuarioEditado => {
+        .then(async usuarioEditado => {
             const usuarioLogueado = await db.User.findByPk(request.session.userLogged.user_id)
             request.session.userLogged = usuarioLogueado;
             response.redirect("/user/profile")
         })
+
     },
 
     logout: function(request, response){
