@@ -1,5 +1,5 @@
 const User = require("../models/User");
-const Product = require("../models/Product")
+const Product = require("../models/ProductService")
 const bcrypt = require("bcrypt")
 const { validationResult} = require("express-validator")
 
@@ -60,9 +60,9 @@ const userController = {
         response.redirect("/user/profile")
     },
 
-    profile: function ( request, response){
+    profile: async function ( request, response){
         const allUsers = User.getData();
-        const allProducts = Product.getAllProducts();
+        const allProducts = await Product.getAllProducts();
         const userLogin = request.session.userLogged;
 
         response.render("user/profile", {title : "Editar Pérfil 😃", users : allUsers, products : allProducts, userLogin})

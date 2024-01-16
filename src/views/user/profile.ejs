@@ -102,14 +102,14 @@
                           <tbody>
                             <% for(product of products) { %>
                             <tr>
-                              <td class="table-id" data-titulo="Id:"><%= product.id %></td>
+                              <td class="table-id" data-titulo="Id:"><%= product.product_id %></td>
                               <td class="table-titulo" data-titulo="Titulo:"><%= product.title %></td>
                               <td class="table-img-product" data-titulo="Imagen:"><img src="/images/img_products/<%= product.image %>" alt="Producto 1"></td>
                               <td class="table-price" data-titulo="Precio:">$<%= product.price %></td>
                               <td class="table-stock" data-titulo="Stock:"><%= product.stock %></td>
                               <td class="table-acciones">
-                                <a href="/product/editProduct/<%=product.id%>" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <form class="delete-link" action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
+                                <a href="/product/editProduct/<%=product.product_id%>" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <form class="delete-link" action="/product/<%=product.product_id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
                                   <button type="submit" name="delete"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                               </td>

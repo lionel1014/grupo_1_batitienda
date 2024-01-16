@@ -2,20 +2,26 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'ProductCategory';
     let cols = {
         product_category_id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         category: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(100),
+            allowNull: false
         },
         sub_category: {
-            type: dataTypes.STRING(100)
+            type: dataTypes.STRING(100),
+            allowNull: false
         }
     };
     let config = {
         tableName: 'product_categories',
-        timestamps: false
+        timestamps: false,
+        createdAt: 'created_at',
+        updatedAt: 'updated_at',
+        deletedAt: false
     };
     const ProductCategory = sequelize.define(alias, cols, config)
 
