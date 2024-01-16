@@ -8,7 +8,7 @@
                 <section class="user-perfil">
                     <div class="marco-img">
                         <div class="cambiar-img">
-                            <form action="/user/img/<%= userLogin.id %>?_method=PUT" id="subirImgFormulario" method="post" enctype="multipart/form-data">
+                            <form action="/user/img/<%= userLogin.user_id %>?_method=PUT" id="subirImgFormulario" method="post" enctype="multipart/form-data">
                               <label for="cambiar-imagen"><i class="fa-solid fa-pen-to-square"></i></label>
                               <input type="file" name="img-usuario" id="cambiar-imagen" onchange="cambiarImgPerfil()">
                             </form>
@@ -33,15 +33,15 @@
             <div class="subcontainer" id="subcontainer">
                 <div class="bloque activo">
                     <h1>Editar Perfil</h1>
-                    <form class="form-edit" action="#" method="get">
+                    <form class="form-edit" action="/user/profile?_method=PUT" method="POST">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<%= userLogin.name ? userLogin.name : "" %>" required>
                         <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" value="<%= userLogin.lastName ? userLogin.lastName : "" %>" required>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" value="<%= userLogin.last_name ? userLogin.last_name : "" %>" required>
                         <label for="correo">Correo Electrónico:</label>
                         <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" value="<%= userLogin.email ? userLogin.email : "" %>" required>
                         <label for="usuario">Nombre de Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" value="<%= userLogin.userName ? userLogin.userName: "" %>" required>
+                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" value="<%= userLogin.user_name ? userLogin.user_name: "" %>" required>
                         <label for="contrasena">Contraseña:</label>
                         <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
                         <label for="confirmar_contrasena">Confirmar Contraseña:</label>
@@ -68,13 +68,13 @@
                             <% for(user of users) { %>
                             <tr>
                               <td class="table-img-user" data-titulo="Imagen:"><img src="/images/img_profile/<%= user.image %>" alt="Usuario 1"></td>
-                              <td data-titulo="Nombre:"><%= user.name %> <%= user.lastName %></td>
-                              <td data-titulo="Nick:"><%= user.userName %></td>
+                              <td data-titulo="Nombre:"><%= user.name %> <%= user.last_name %></td>
+                              <td data-titulo="Nick:"><%= user.user_name %></td>
                               <td data-titulo="Email:"><%= user.email %></td>
-                              <td class="table-perfil" data-titulo="Perfil:"><%= user.category %></td>
+                              <td class="table-perfil" data-titulo="Perfil:"><%=  user.category == 1 ? user.category = "Admin" : user.category = "Usuario"  %></td>
                               <td class="table-acciones">
                                 <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <a href="#" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                                <a href="/user/profile" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
                               </td>
                             </tr>
                             <% } %>
