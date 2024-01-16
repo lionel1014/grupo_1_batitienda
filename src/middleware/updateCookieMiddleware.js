@@ -1,5 +1,3 @@
-const User = require("../models/User");
-
 function updateCookieMiddleware (request, response, next){
 
     if (request?.session?.userLogged) {

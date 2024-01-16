@@ -1,7 +1,6 @@
 const PATH = require('path');
 const fs = require('fs');
 
-const productsMock = require("../database/productos.json");
 const productsFilePath = PATH.join(__dirname, '../database/productos.json');
 const db = require('../database/models');
 

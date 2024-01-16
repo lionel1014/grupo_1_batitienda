@@ -1,10 +1,22 @@
-const User = require("../models/User");
+const { Op } = require('sequelize')
+let db = require("../database/models")
 
-function userLoggedMiddleware (request, response, next){
+async function userLoggedMiddleware (request, response, next){
     response.locals.isLogged = false;
     let userInCookie = request.cookies?.userAcount;
-    let userFromCookie = User.findByFields(userInCookie,'email', 'userName')
-    
+    console.log(userInCookie)
+    let userFromCookie = undefined
+    if(userInCookie){
+        userFromCookie = await db.User.findOne({ //reemplazar por la db
+            where: {
+                [Op.or]: [
+                    { email: userInCookie },
+                    { user_name: userInCookie },
+                ],
+            },
+        })
+    }
+
     if(request.cookies?.userName){
         response.locals.userName = request.cookies?.userName; 
     }
