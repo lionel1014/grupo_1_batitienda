@@ -1,23 +1,23 @@
 const subCategories = {
     Figura: [
-        { value: 'Hasbro', text: 'Hasbro' },
-        { value: 'Bandai', text: 'Bandai' },
-        { value: 'Funko', text: 'Funko' }
+        { value: '20', text: 'Hasbro' },
+        { value: '18', text: 'Bandai' },
+        { value: '19', text: 'Funko' }
     ],
     Comic: [
-        { value: 'Marvel', text: 'Marvel' },
-        { value: 'DC', text: 'DC' },
-        { value: 'Star Wars', text: 'Star Wars' }
+        { value: '16', text: 'Marvel' },
+        { value: '15', text: 'DC' },
+        { value: '17', text: 'Star Wars' }
     ],
     Manga: [
-        { value: 'Shonen', text: 'Shonen' },
-        { value: 'Shojo', text: 'Shojo' },
-        { value: 'Seinen', text: 'Seinen' },
-        { value: 'Josei', text: 'Josei' }
+        { value: '21', text: 'Shonen' },
+        { value: '22', text: 'Shojo' },
+        { value: '23', text: 'Seinen' },
+        { value: '24', text: 'Josei' }
     ],
     Otro: [
-        { value: 'Indumentaria', text: 'Indumentaria' },
-        { value: 'Accesorio', text: 'Accesorio' }
+        { value: '25', text: 'Indumentaria' },
+        { value: '26', text: 'Accesorio' }
     ]
 };
 

@@ -101,7 +101,7 @@ const userController = {
                 response.status(500).send('Error en el servidor');
             });
     },
-
+  
     editProfile: function (request, response){
         db.User.update({
                 name: request.body.nombre,
@@ -122,7 +122,7 @@ const userController = {
             request.session.userLogged = usuarioLogueado;
             response.redirect("/user/profile")
         })
-        
+
     },
 
     logout: function(request, response){

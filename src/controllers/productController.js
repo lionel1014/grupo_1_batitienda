@@ -1,15 +1,13 @@
-const Product = require("../models/Product");
+const ProductService = require("../models/ProductService");
 
 const productController = {
 
     index: function(request, response){
-        const productSelected = Product.findProductByRequest(request);
-        const productsRelationed = Product.findProductBySubcategory(productSelected?.subcategory);
-        //null , [pro1,ppr2]
-        // if(productsRelationed == null){ //si no viene algun producto, que hago?
-
-        // }
-        response.render("product/productDetail",{product: productSelected, title: '' , productsRelationed})
+        ProductService.findProductByRequest(request)
+            .then(async productSelected => {
+                const productsRelationed = await ProductService.findProductBySubcategory(productSelected?.product_category_id);
+                response.render("product/productDetail",{product: productSelected, title: '' , productsRelationed})
+            })
     },
 
     carPage: function(request, response){
@@ -20,33 +18,62 @@ const productController = {
         response.render("product/createProduct", {title: '- crear producto'})
     },
 
-    create: function(request,response){
-        Product.createProduct(request, response);
+    create: function(request, response){
+        ProductService.createProduct(request)
+            .then( productCreatedId => {
+                if (Number.isInteger(productCreatedId)) {
+                    response.redirect(`/product/${productCreatedId}`)
+                }else{
+                    response.redirect(`/`)
+                }
+            })
     },
 
     editPage: function(request, response){
-        const product = Product.findProductByRequest(request);
-        response.render("product/editProduct",{product})
+        ProductService.findProductByRequest(request)
+            .then(async productSelected => {
+                response.render("product/editProduct",{product: productSelected})
+            })
     },
 
     update: function(request,response){
-        Product.updateProduct(request, response);
+        ProductService.updateProduct(request)
+            .then( productEditedId => {
+                if (productEditedId) {
+                    response.redirect(`/product/${productEditedId}`)
+                }else{
+                    response.redirect(`/`)
+                }
+            })
+
     },
 
     delete: function(request, response){
-        Product.deleteProduct(request,response)
+        ProductService.deleteProduct(request)
+            .then( wasProductDeleted => {
+                if (wasProductDeleted == true) {
+                    response.redirect(`/user/profile`)
+                }else{
+                    response.redirect(`/`)
+                }
+            })
     },
 
     listPage: function(request, response){
 
         if (Object.keys(request.query).length == 0 ) {
-            response.render("product/productList",{products: Product.getAllProducts(), title: ''});
+            ProductService.getAllProducts()
+                .then(products => {
+                    response.render("product/productList",{products, title: ''});
+                })
             return;
         }
 
-        let productToFilter = Product.filterProducts(request);
+        ProductService.filterProducts(request)
+            .then(filterProducts => {
+                response.render("product/productList",{products: filterProducts, title: ''});
+            })
 
-        response.render("product/productList",{products: productToFilter, title: ''});
     }
 }
 

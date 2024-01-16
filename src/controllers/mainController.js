@@ -1,13 +1,14 @@
-const products = require("../database/productos.json");
-const db = require('../database/models');
+const ProductService = require("../models/ProductService");
 
 const mainController = {
     index: function(request, response){
-        db.Product.findAll({include: ['product_category']})
+        ProductService.getAllProducts()
             .then(products => {
-                console.log("😭😭",products[0]);
+                response.render("index",{products: products.slice(0,12), title:''})
             })
-        response.render("index",{products: products.slice(0,12), title:''})
+            .catch(error => {
+                console.error(error);
+            });
     }
 }
 

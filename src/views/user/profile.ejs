@@ -108,8 +108,8 @@
                               <td class="table-price" data-titulo="Precio:">$<%= product.price %></td>
                               <td class="table-stock" data-titulo="Stock:"><%= product.stock %></td>
                               <td class="table-acciones">
-                                <a href="/product/editProduct/<%=product.id%>" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <form class="delete-link" action="/product/<%=product.id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
+                                <a href="/product/editProduct/<%=product.product_id%>" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                                <form class="delete-link" action="/product/<%=product.product_id%>?_method=delete" method="POST" onsubmit="confirmDelete(event)">
                                   <button type="submit" name="delete"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                               </td>

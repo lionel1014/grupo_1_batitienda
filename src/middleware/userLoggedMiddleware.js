@@ -9,10 +9,8 @@ function userLoggedMiddleware (request, response, next){
         response.locals.userName = request.cookies?.userName; 
     }
 
-    if (userFromCookie) {
+    if (userFromCookie)
         response.locals.userLogged = userFromCookie;
-        console.log("hay un usuario en cookie? 😒😒");
-    }
 
     if (request?.session?.userLogged) {
         response.locals.isLogged = true;
