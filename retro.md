@@ -1,3 +1,25 @@
+# Retroalimentación de Nuestro Proyecto - SPRINT 5
+
+## Logros y Buenas Prácticas
+**Login y Register:**
+- Se replicó con éxito la estructura de archivos para la entidad de usuarios, siguiendo las pautas proporcionadas.
+- El formulario de registro de usuarios y login se implementó exitosamente, incluyendo los campos mínimos requeridos.
+- La integración de la subida de imágenes de perfil con Multer fue funcional.
+- La contraseña ingresada por el usuario se encriptó correctamente mediante bcrypt.js.
+- Los datos de usuarios se guardaron adecuadamente en el archivo JSON de usuarios.
+- La verificación de la información enviada por el usuario se implementó con éxito.
+**Adaptación a Metodologías Ágiles:**
+- Se completaron todas las tareas dentro del tiempo establecido para el sprint.
+- Se llevaron a cabo dos dailys semanales de 30 minutos cada uno para corroborar avances, discutir problemas y despejar dudas, asegurando una comunicación fluida.
+- La comunicación entre los miembros del equipo fue fluida en todo momento, facilitando la resolución rápida de problemas y el progreso continuo del trabajo.
+
+## Áreas de Mejora
+- **Conflicto para subir imagen de perfil:** Experimentamos conflictos en la subida de imágenes de perfil con Multer y Express Validator, generando ciertos problemas durante el sprint. Se reconoce la necesidad de abordar este problema en futuras iteraciones.
+- **Fallas en seguridad:** Se identificó la necesidad de mejoraras y reforzar la seguridad en las funcionalidades de registro y login del proyecto.
+- **Afianzar conocimientos:** Identificamos que la falta de lectura de la bibliografía asignada generó conflictos durante el sprint y afectó la eficiencia del equipo. 
+- **Actualizacion de codigo:** Se identificaron secciones de código que se volvieron obsoletas o innecesarias debido a la introducción de nuevas funcionalidades. Fue necesario reemplazar esos bloques de código para garantizar la coherencia y eficiencia del proyecto.
+
+
 # Retroalimentación de Nuestro Proyecto - SPRINT 4
 
 ## Aspectos Positivos a Resaltar:
