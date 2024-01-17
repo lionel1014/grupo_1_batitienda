@@ -1,6 +1,7 @@
 # Retroalimentación de Nuestro Proyecto - SPRINT 5
 
 ## Logros y Buenas Prácticas
+
 **Login y Register:**
 - Se replicó con éxito la estructura de archivos para la entidad de usuarios, siguiendo las pautas proporcionadas.
 - El formulario de registro de usuarios y login se implementó exitosamente, incluyendo los campos mínimos requeridos.
@@ -8,6 +9,7 @@
 - La contraseña ingresada por el usuario se encriptó correctamente mediante bcrypt.js.
 - Los datos de usuarios se guardaron adecuadamente en el archivo JSON de usuarios.
 - La verificación de la información enviada por el usuario se implementó con éxito.
+- 
 **Adaptación a Metodologías Ágiles:**
 - Se completaron todas las tareas dentro del tiempo establecido para el sprint.
 - Se llevaron a cabo dos dailys semanales de 30 minutos cada uno para corroborar avances, discutir problemas y despejar dudas, asegurando una comunicación fluida.
