@@ -14,7 +14,6 @@
 - Se completaron todas las tareas dentro del tiempo establecido para el sprint.
 - Se llevaron a cabo dos dailys semanales de 30 minutos cada uno para corroborar avances, discutir problemas y despejar dudas, asegurando una comunicación fluida.
 - La comunicación entre los miembros del equipo fue fluida en todo momento, facilitando la resolución rápida de problemas y el progreso continuo del trabajo.
-
 ## Áreas de Mejora
 - **Conflicto para subir imagen de perfil:** Experimentamos conflictos en la subida de imágenes de perfil con Multer y Express Validator, generando ciertos problemas durante el sprint. Se reconoce la necesidad de abordar este problema en futuras iteraciones.
 - **Fallas en seguridad:** Se identificó la necesidad de mejoraras y reforzar la seguridad en las funcionalidades de registro y login del proyecto.
