@@ -89,7 +89,13 @@ const userController = {
     
     profile: function ( request, response){
         const userLogin = request.session.userLogged;
-        const usersPromise = db.User.findAll();
+        const usersPromise = db.User.findAll({
+            where: {
+                user_id: {
+                    [Op.ne]: userLogin.user_id 
+                }
+            }
+        });
         const productsPromise = db.Product.findAll();
 
         Promise.all([usersPromise, productsPromise])
@@ -155,6 +161,42 @@ const userController = {
           }
       
           response.redirect('/user/profile');
+        } catch (error) {
+          console.error(error);
+          response.status(500).send('Error en el servidor');
+        }
+    },
+
+    deleteSelectedUser: async function (request, response) {
+        try {
+          const { userIdToDelete } = request.body;
+    
+          // Verificar si se proporcionó un ID de usuario para eliminar
+          if (!userIdToDelete) {
+            return response.status(400).send('ID de usuario no proporcionado');
+          }
+    
+          // Obtener la información del usuario a eliminar
+          const userToDelete = await db.User.findByPk(userIdToDelete);
+    
+          // Verificar si el usuario existe
+          if (!userToDelete) {
+            return response.status(404).send('Usuario no encontrado');
+          }
+    
+          // Eliminar la imagen de perfil del usuario
+          if (userToDelete.image) {
+            const imagePath = path.join(__dirname, `../public/images/img_profile/${userToDelete.image}`);
+            fs.unlinkSync(imagePath);
+          }
+    
+          // Eliminar al usuario de la base de datos
+          await db.User.destroy({
+            where: { user_id: userIdToDelete },
+          });
+    
+        //   return response.status(200).send('');
+        response.redirect('/user/profile');
         } catch (error) {
           console.error(error);
           response.status(500).send('Error en el servidor');
