@@ -29,5 +29,5 @@ router.post("/login", userController.loginProcess);
 router.post("/logout", userController.logout);
 router.put("/profile", authMiddleware, userController.editProfile)
 router.put("/img/:id",  uploadFile.single("img-usuario"), updateCookieMiddleware, userController.changeUserImage)
-
+router.delete('/profile', userController.deleteSelectedUser);
 module.exports = router;

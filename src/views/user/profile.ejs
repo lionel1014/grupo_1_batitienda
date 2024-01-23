@@ -74,7 +74,10 @@
                               <td class="table-perfil" data-titulo="Perfil:"><%=  user.category == 1 ? user.category = "Admin" : user.category = "Usuario"  %></td>
                               <td class="table-acciones">
                                 <a href="#" class="edit-link"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
-                                <a href="/user/profile" class="delete-link"><button><i class="fa-solid fa-trash"></i></button></a>
+                                <form class="delete-link" action="/user/profile?_method=delete" method="POST" onsubmit="confirmDelete(event)">
+                                  <input type="hidden" name="userIdToDelete" value="<%= user.user_id %>">
+                                  <button type="submit" name="delete"><i class="fa-solid fa-trash"></i></button>
+                                </form>
                               </td>
                             </tr>
                             <% } %>
