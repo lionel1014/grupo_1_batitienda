@@ -29,6 +29,7 @@ const userController = {
 
             response.redirect("/user/register")
         } else {
+            console.log(errors)
             response.render("user/register", {title : "Registrar 😁", errors : errors.array(), old : request.body})
         }
         
@@ -46,7 +47,6 @@ const userController = {
             },
         })
             .then((userToLogin) => {
-                console.log(userToLogin);
                 if (!userToLogin) {
                     return response.render("user/login", {
                         title: "Login 😒",

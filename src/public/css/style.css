@@ -1079,6 +1079,25 @@ form.create-form textarea {
 
 /*-----------------------*/
 
+form.login-form .correct {
+    border: 2px solid green;
+    background-color: rgb(166, 241, 166);
+}
+form.login-form .incorrect {
+    border: 2px solid red;
+    background-color: rgb(202, 118, 118);
+}
+form.login-form .msg-Error {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(167, 53, 53);
+    margin-bottom: 10px;
+    display: none;
+}
+form.login-form .warning {
+    display: block;
+}
+
 /* Tablets */
 @media (min-width: 468px) {
     body{

@@ -4,33 +4,64 @@
     <main class="form-container">
         <section class="register-container">
             <h2>Regístrate</h2>
-            <% if (locals.errors) {
-                errors.forEach(error => { %>
-                <div class="errorRegister">
-                    <p><%= error.msg %></p>
-                </div>
-            <% }) %>
-            <% } %>
-            <form class="login-form" action="/user/" method="POST" enctype="multipart/form-data">
+            <form class="login-form" id="form-register" action="/user/" method="POST" enctype="multipart/form-data">
+                
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<%= locals.old && old.nombre ? old.nombre : ''%>" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" value="<%= locals.old && old.nombre ? old.nombre : ''%>">
+                <p class="msg-Error" id="nombre-Error">El nombre debe contener como min 2 LETRAS.</p>
+                <% if (locals.errors?.some(error => error.path == "nombre")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "nombre").msg%></p>
+                <%}%>
+
                 <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Apellido" value="<%= locals.old && old.apellido ? old.apellido : ''%>"  required>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido" value="<%= locals.old && old.apellido ? old.apellido : ''%>">
+                <p class="msg-Error" id="apellido-Error">El apellido debe contener como min 2 LETRAS</p>
+                <% if (locals.errors?.some(error => error.path == "apellido")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "apellido").msg%></p>
+                <%}%>
+
                 <label for="correo">Correo Electrónico</label>
-                <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" value="<%= locals.old && old.correo ? old.correo : ''%>" required>
+                <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" value="<%= locals.old && old.correo ? old.correo : ''%>">
+                <p class="msg-Error" id="correo-Error">El correo debe ser valido.</p>
+                <% if (locals.errors?.some(error => error.path == "correo")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "correo").msg%></p>
+                <%}%>
+
                 <label for="usuario">Nombre de Usuario</label>
-                <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" value="<%= locals.old && old.usuario ? old.usuario : ''%>"  required>
+                <input type="text" id="usuario" name="usuario" placeholder="Nombre de Usuario" value="<%= locals.old && old.usuario ? old.usuario : ''%>">
+                <p class="msg-Error" id="usuario-Error">El usuario debe contener como min 5 caracteres.</p>
+                <% if (locals.errors?.some(error => error.path == "usuario")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "usuario").msg%></p>
+                <%}%>
+
                 <label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+                <p class="msg-Error" id="contrasena-Error">La contraseña debe tener almenos una mayuscula, un numero, un signo y un min de 8 caracteres.</p>
+                <% if (locals.errors?.some(error => error.path == "contrasena")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "contrasena").msg%></p>
+                <%}%>
+
                 <label for="confirmar_contrasena">Confirmar Contraseña</label>
-                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirmar Contraseña" required>
+                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" placeholder="Confirmar Contraseña">
+                <p class="msg-Error" id="confirmar_contrasena-Error">Las contraseñas deben coincidir.</p>
+                <% if (locals.errors?.some(error => error.path == "confirmar_contrasena")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "confirmar_contrasena").msg%></p>
+                <%}%>
+
                 <label for="imagen">Imagen de usuario:</label>
-                <input type="file" id="imagen" name="imagen" accept="image/*" required>
+                <input type="file" id="imagen" name="imagen" accept="image/*">
+                <p class="msg-Error" id="imagen-Error">Ingresa un formato válido. Utiliza JPG, JPEG, PNG o GIF.</p>
+                <% if (locals.errors?.some(error => error.path == "imagen")) { %>
+                    <p class="msg-Error warning"><%=locals.errors?.find(error => error.path == "imagen").msg%></p>
+                <%}%>
+
                 <button class="btn" type="submit">Registrarse</button>
+                <p class="msg-Error" id="button-Error">Rellena todos los campos del formulario.</p>
             </form>
         </section>
     </main>
 
     <%- include('../parcials/footer') -%>
+    <script src="/js/validator.js"></script>
 </body>
 </html>
