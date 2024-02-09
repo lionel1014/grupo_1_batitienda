@@ -1,4 +1,5 @@
 const ProductService = require("../services/ProductService");
+const { validationResult } = require("express-validator")
 
 const productController = {
 
@@ -19,14 +20,19 @@ const productController = {
     },
 
     create: function(request, response){
-        ProductService.createProduct(request)
-            .then( productCreatedId => {
-                if (Number.isInteger(productCreatedId)) {
-                    response.redirect(`/product/${productCreatedId}`)
-                }else{
-                    response.redirect(`/`)
-                }
-            })
+        let errors = validationResult(request);
+        if (errors.isEmpty()){
+            ProductService.createProduct(request)
+                .then( productCreatedId => {
+                    if (Number.isInteger(productCreatedId)) {
+                        response.redirect(`/product/${productCreatedId}`)
+                    }else{
+                        response.redirect(`/`)
+                    }
+                })
+        }else{
+            response.render("product/createProduct", {title : '- crear producto', errors : errors.array()})
+        }
     },
 
     editPage: function(request, response){
@@ -45,7 +51,6 @@ const productController = {
                     response.redirect(`/`)
                 }
             })
-
     },
 
     delete: function(request, response){

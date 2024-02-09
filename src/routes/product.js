@@ -6,6 +6,7 @@ const router = express.Router();
 
 const productController = require("../controllers/productController");
 const authMiddleware = require("../middleware/authmiddleware");
+const validateProduct = require("../middleware/validateProduct");
 
 const storage = multer.diskStorage({
 	destination: (req,file,cd) => {
@@ -26,8 +27,8 @@ router.get("/editProduct/:id", authMiddleware,productController.editPage);
 router.get("/listProduct", productController.listPage);
 router.get("/:id", productController.index);
 
-router.put("/:id", uploadFile.single("imagen"), productController.update)
-router.post("/", uploadFile.single("imagen"), productController.create)
+router.put("/:id", uploadFile.single("imagen"), validateProduct, productController.update)
+router.post("/", uploadFile.single("imagen"), validateProduct, productController.create)
 router.delete("/:id", productController.delete)
 //TODO: falta el router.delete()
 

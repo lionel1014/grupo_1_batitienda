@@ -48,11 +48,79 @@ async function hideAndShowBat(){
     document.getElementById("loaderBatman").style.display = "none";
 }
 
-async function loaderOn(event){
-    event.preventDefault();
-    await hideAndShowBat();
-    document.getElementById("createProductForm").submit();
+
+function showError(inputElement, message) {
+    const errorElement = inputElement.nextElementSibling;
+    if (errorElement && errorElement.className === "error-message") {
+        errorElement.remove();
+    }
+
+    const newErrorElement = document.createElement("div");
+    newErrorElement.className = "error-message";
+    newErrorElement.innerHTML = message;
+
+
+    inputElement.parentNode.insertBefore(newErrorElement, inputElement.nextElementSibling);
 }
+
+
+function clearErrors() {
+    const errorElements = document.querySelectorAll(".error-message");
+    errorElements.forEach(element => element.remove());
+}
+
+
+function validateNombre(nombre) {
+    return nombre.length >= 5;
+}
+
+function validateDescripcion(descripcion) {
+    return descripcion.length >= 20;
+}
+
+function validateImagen(fileName) {
+    const allowedExtensions = ["jpg", "jpeg", "png", "gif"];
+    const extension = fileName.split(".").pop().toLowerCase();
+    return allowedExtensions.includes(extension);
+}
+
+function validateForm() {
+    clearErrors();
+
+    const titulo = document.getElementById("titulo").value;
+    const descripcion = document.getElementById("descripcion").value;
+    const imagenInput = document.getElementById("imagen");
+    const imagenFileName = imagenInput.value;
+
+    if (!validateNombre(titulo)) {
+        showError(document.getElementById("titulo"), "El nombre debe tener al menos 5 caracteres.");
+        return false;
+    }
+
+
+    if (!validateDescripcion(descripcion)) {
+        showError(document.getElementById("descripcion"), "La descripción debe tener al menos 20 caracteres.");
+        return false;
+    }
+
+    // if (imagenFileName !== "" && !validateImagen(imagenFileName)) {
+    //     showError(document.getElementById("imagen"), "La imagen debe ser un archivo válido (JPG, JPEG, PNG, GIF).");
+    //     return false;
+    // }
+
+    return true;
+}
+
+async function loaderOn(event) {
+    event.preventDefault();
+
+    if (validateForm()) {
+        await hideAndShowBat();
+        document.getElementById("createProductForm").submit();
+    }
+}
+
+
 
 async function confirmDelete(event) {
 

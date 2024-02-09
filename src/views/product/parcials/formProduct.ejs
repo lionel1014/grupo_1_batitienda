@@ -1,15 +1,18 @@
 <form class="create-form" id="createProductForm" onsubmit="loaderOn(event)" action="<%= Object.keys(product).length > 0 ? `/product/${product.product_id}?_method=PUT` : '/product' %>" method="POST" enctype="multipart/form-data">
     <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo" value="<%= Object.keys(product).length > 0 ? product.title : '' %>" required>
+    <input type="text" id="titulo" name="titulo" value="<%= Object.keys(product).length > 0 ? product.title : '' %>" required oninvalid="setCustomValidity('Por favor, ingrese el titulo del producto')" oninput="setCustomValidity('')">
+    <% if (locals.errors?.some(error => error.path == "titulo")) { %>
+        <p class="error-message"><%=locals.errors?.find(error => error.path == "titulo").msg%></p>
+    <%}%>
 
     <label for="precio">Precio:</label>
-    <input type="number" id="precio" name="precio" value="<%= Object.keys(product).length > 0 ? product.price : '' %>" required>
+    <input type="number" id="precio" name="precio" value="<%= Object.keys(product).length > 0 ? product.price : '' %>" required oninvalid="setCustomValidity('Por favor, ingrese el precio del producto')" oninput="setCustomValidity('')">
 
     <label for="stock">Stock:</label>
-    <input type="number" id="stock" name="stock" value="<%= Object.keys(product).length > 0 ? product.stock : '' %>" required>
+    <input type="number" id="stock" name="stock" value="<%= Object.keys(product).length > 0 ? product.stock : '' %>" required oninvalid="setCustomValidity('Ingrese un stock mínimo')" oninput="setCustomValidity('')">
 
     <label for="categoria">Categoría:</label>
-    <select id="categoria" name="categoria" onchange="changeSubcategories(event)" required>
+    <select id="categoria" name="categoria" onchange="changeSubcategories(event)">
         <option value="Figura" <%= Object.keys(product).length > 0 && product?.product_categories.category === 'Figura' ? 'selected' : '' %>>Figuras</option>
         <option value="Comic" <%= Object.keys(product).length > 0 && product?.product_categories.category === 'Comic' ? 'selected' : '' %>>Comics</option>
         <option value="Manga" <%= Object.keys(product).length > 0 && product?.product_categories.category === 'Manga' ? 'selected' : '' %>>Mangas</option>
@@ -17,7 +20,7 @@
     </select>
     
     <label for="subcategoria">Subcategoría:</label>
-    <select id="subcategoria" name="subcategoria" required>
+    <select id="subcategoria" name="subcategoria" required oninvalid="setCustomValidity('Por favor, ingrese la subcategoria del producto')" oninput="setCustomValidity('')">
         <option value="">Elije una categoría</option>
         <option value="20">Hasbro</option>
         <option value="18">Bandai</option>
@@ -25,11 +28,17 @@
     </select>
     
     <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" rows="4" value="" required><%= Object.keys(product).length > 0 ? product.description : '' %></textarea>
-    
+    <textarea id="descripcion" name="descripcion" rows="4" value="" required oninvalid="setCustomValidity('Ingrese una descripción')" oninput="setCustomValidity('')"><%= Object.keys(product).length > 0 ? product.description : '' %></textarea>
+    <% if (locals.errors?.some(error => error.path == "descripcion")) { %>
+        <p class="error-message"><%=locals.errors?.find(error => error.path == "descripcion").msg%></p>
+    <%}%>
+
     <label for="imagen">Imagen:</label>
-    <input type="file" id="imagen" name="imagen" accept="image/*">
-    
+    <input type="file" id="imagen" name="imagen" accept="image/*" required oninvalid="setCustomValidity('No se olvide de la imagen del producto')" oninput="setCustomValidity('')">
+    <% if (locals.errors?.some(error => error.path == "imagen")) { %>
+        <p class="error-message"><%=locals.errors?.find(error => error.path == "imagen").msg%></p>
+    <%}%>
+
     <div class="btn-create">
         <button class="btn" type="submit">Crear</button>
         <button class="btn" type="button">Vista</button>
