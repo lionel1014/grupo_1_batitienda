@@ -1,3 +1,18 @@
+# Retroalimentación de Nuestro Proyecto - SPRINT 6
+
+## Logros y Buenas Prácticas
+
+**Validaciones del BACKEND y FRONT END**
+- Se aplico con exito las validaciones por parte del front end y backend tanto del formulario de creacion de usuario y creacion de producto.
+- Las mismas fueron encaminadas por Esteban, ya que durante el sprint se encargo de investigar, estudiar y consultar para implementarlas con mayor efectividad
+**Adaptación a Metodologías Ágiles:**
+- Aunque la comunicación fue menos frecuente debido al tamaño del equipo, se mantuvo de manera efectiva para abordar dudas.
+- Se continuó utilizando el formato de trabajo con las tareas del sprint, lo que ayudó a mantener el rumbo y la claridad en las responsabilidades de cada miembro
+  
+## Áreas de Mejora
+- **Comunicacion menos frecuente** Durante este sprint la comunicacion fue justa y necesario, ya que por parte de Lionel las reuniones fueron dificiles de concretar por el trabajo.
+- **Deuda tecnica** Por falta de coordinacion, aun no se pudo implementar las mejoras al proyecto, tanto a nivel diseño como logico
+
 # Retroalimentación de Nuestro Proyecto - SPRINT 5
 
 ## Logros y Buenas Prácticas
