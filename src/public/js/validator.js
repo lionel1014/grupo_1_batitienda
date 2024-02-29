@@ -71,6 +71,15 @@ window.addEventListener("load", function () {
         const inputPassword = document.getElementById('contrasena');
         const inputRepassword = document.getElementById('confirmar_contrasena');
 
+        if (inputRepassword.value.trim() === '') {
+            document.getElementById(`confirmar_contrasena`).classList.add('incorrect');
+            document.getElementById(`confirmar_contrasena`).classList.remove('correct');
+            document.querySelector(`#confirmar_contrasena-Error`).innerText = "Debes confirmar la contraseña"
+            document.querySelector(`#confirmar_contrasena-Error`).classList.add('warning');
+            campos['contrasena'] = false;
+            return; // Salir de la función si el campo está vacío
+        }
+        
         if(inputPassword.value !== inputRepassword.value){
             document.getElementById(`confirmar_contrasena`).classList.add('incorrect');
             document.getElementById(`confirmar_contrasena`).classList.remove('correct');
@@ -86,15 +95,43 @@ window.addEventListener("load", function () {
         }
     }
 
+    const generarUsuario = () => {
+        const nombre = document.getElementById('nombre').value.trim();
+        const apellido = document.getElementById('apellido').value.trim();
+
+        if (nombre && apellido) {
+            return `${nombre}_${apellido}`;
+        } else {
+            return ''; // En caso de que no haya nombre o apellido
+        }
+    };
+
     inputs.forEach((input) => {
-        // input.addEventListener('keyup', validarFormulario);
+        input.addEventListener('keyup', validarFormulario);
         input.addEventListener('blur', validarFormulario);
         input.addEventListener('change', validarFormulario);
     });
 
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
-        if (campos.nombre && campos.apellido && campos.correo && campos.usuario && campos.contrasena && campos.imagen){
+
+        // Verificar si el campo de usuario está vacío
+        if (!campos.usuario) {
+            // Generar el nombre de usuario
+            const nuevoUsuario = generarUsuario();
+            // Asignar el nuevo usuario al campo de entrada del usuario
+            document.getElementById('usuario').value = nuevoUsuario
+            
+            document.getElementById('usuario').classList.remove('incorrect');
+            document.getElementById('usuario').classList.add('correct');
+
+            document.querySelector(`#usuario-Error`).classList.remove('warning');
+            
+            campos['usuario'] = true;
+        }
+
+        const camposRegisterValidados = campos.nombre && campos.apellido && campos.correo && campos.usuario && campos.contrasena && campos.imagen
+        if (camposRegisterValidados){
             formulario.submit()
         }else{
             document.querySelector(`#button-Error`).classList.add('warning');
@@ -112,16 +149,18 @@ window.addEventListener("load", function () {
 
         const username = usernameInput.value;
         const password = passwordInput.value;
+        const esCorreoValido = expresiones.correo.test(username);
+        const esUsuarioValido = expresiones.usuario.test(username);
+        const esContrasenaValido = password.length === 0;
 
-        if (!expresiones.correo.test(username)) {
-            document.querySelector(`#userAccount-Error`).classList.add('warning');
-        }else{
+        if (esCorreoValido || esUsuarioValido) {
             document.querySelector(`#userAccount-Error`).classList.remove('warning');
-
             campos['userAccount'] = true;
+        }else{
+            document.querySelector(`#userAccount-Error`).classList.add('warning');
         }
             
-        if (password.length === 0) {
+        if (esContrasenaValido) {
             document.querySelector(`#password-Error`).classList.add('warning');
         }else{
             document.querySelector(`#password-Error`).classList.remove('warning');

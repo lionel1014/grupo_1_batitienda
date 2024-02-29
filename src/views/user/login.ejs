@@ -8,7 +8,7 @@
             <form class="login-form" id="form-login" action="/user/login" method="POST">
                 <label for="email">Email o nombre de usuario</label>
                 <input type="text" id="email" name="userAcount" placeholder="📧 Ingrese tu usuario" value="<%= locals.userName ?? '' %>">
-                <p class="msg-Error" id="userAccount-Error">Debe ingresar un email valido.</p>
+                <p class="msg-Error" id="userAccount-Error">Debe ingresar un email o un nombre de usuario valido.</p>
                 <% if(locals.errors && errors.email){ %>
                 <p class="msg-Error warning"> <%= errors.email.msg %> </p>
                 <% } %>

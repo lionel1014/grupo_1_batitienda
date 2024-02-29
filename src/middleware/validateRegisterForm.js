@@ -86,31 +86,45 @@ let validateRegisterForm = [
 			return true;
         }),
 
-	check("imagen")
-		.custom((value, { req }) => {
-			// Verifica si se ha seleccionado un archivo (imagen)
-			if (!req.file) {
-				// Si no se ha seleccionado una imagen, devuelve el mensaje de error
-				return Promise.reject ('Debes seleccionar una imagen');
-			}
+		check("imagen")
+        .custom((value, { req }) => {
+            // Verifica si todos los campos del formulario son válidos
+            if (
+                req.body.nombre &&
+                req.body.apellido &&
+                req.body.correo &&
+                req.body.usuario &&
+                req.body.contrasena &&
+                req.body.confirmar_contrasena
+            ) {
+                // Verifica si se ha seleccionado un archivo (imagen)
+                if (!req.file) {
+                    // Si no se ha seleccionado una imagen, devuelve el mensaje de error
+                    return Promise.reject('Debes seleccionar una imagen');
+                }
 
-			// Verifica la extensión del archivo
-			const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-			const fileExtension = req.file.originalname.split('.').pop().toLowerCase();
+                // Verifica la extensión del archivo
+                const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+                const fileExtension = req.file.originalname.split('.').pop().toLowerCase();
+                if (!allowedExtensions.includes(fileExtension)) {
+                    // Si la extensión no está permitida, devuelve el mensaje de error
+                    return Promise.reject('Formato de imagen no válido. Utiliza JPG, JPEG, PNG o GIF.');
+                }
 
-			if (!allowedExtensions.includes(fileExtension)) {
-				// Si la extensión no está permitida, devuelve el mensaje de error
-				return Promise.reject('Formato de imagen no válido. Utiliza JPG, JPEG, PNG o GIF.');
-			}
+                // Verifica el tipo MIME del archivo
+                const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                if (!allowedMimeTypes.includes(req.file.mimetype)) {
+                    // Si el tipo MIME no está permitido, devuelve el mensaje de error
+                    return Promise.reject('Tipo de imagen no válido.');
+                }
 
-			// Verifica el tipo MIME del archivo
-			const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif'];
-			if (!allowedMimeTypes.includes(req.file.mimetype)) {
-				// Si el tipo MIME no está permitido, devuelve el mensaje de error
-				return Promise.reject ('Tipo de imagen no válido.');
-			}
-			return true;
-		})
-]
+                // Si todos los campos son válidos y se ha seleccionado una imagen, retorna true
+                return true;
+            }
+
+            // Si algún campo no es válido, retorna true ya que esta validación no es obligatoria
+            return true;
+        })
+];
 
 module.exports = validateRegisterForm 
