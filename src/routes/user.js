@@ -24,10 +24,22 @@ const uploadFile = multer({storage});
 router.get("/", guessMiddleware, userController.register);
 router.get("/login", guessMiddleware, userController.login);
 router.get("/profile", authMiddleware, userController.profile)
+
+router.get("/api/users", userController.list);
+router.get("/api/users/search", userController.search);
+router.get("/api/users/:id", userController.show);
+router.post("/api/users", userController.store);
+router.put("/api/users/:id", userController.update);
+router.delete("/api/users/:id", userController.delete);
+
 router.post("/", validateRegisterForm, userController.createProcess);
 router.post("/login", userController.loginProcess);
 router.post("/logout", userController.logout);
 router.put("/profile", authMiddleware, userController.editProfile)
 router.put("/img/:id",  uploadFile.single("img-usuario"), updateCookieMiddleware, userController.changeUserImage)
 router.delete('/profile', userController.deleteSelectedUser);
+
+
+
+
 module.exports = router;

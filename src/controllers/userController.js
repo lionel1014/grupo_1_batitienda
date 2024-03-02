@@ -201,7 +201,149 @@ const userController = {
           console.error(error);
           response.status(500).send('Error en el servidor');
         }
-      }
+    },
+
+    list: (req, res) => {
+        db.User
+            .findAll()
+            .then(users => {
+                return res.status(200).json({
+                    total: users.length,
+                    data: users,
+                    status: 200
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    show: (req, res) => {
+        db.User
+            .findByPk(req.params.id)
+            .then(user => {
+                if (!user) {
+                    return res.status(404).json({
+                        error: 'User not found',
+                        status: 404
+                    });
+                }
+                return res.status(200).json({
+                    data: user,
+                    status: 200
+                });
+            })
+            .catch(error => {
+                console.error('Error finding user:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    store: (req, res) => {
+        db.User
+            .create(req.body)
+            .then(user => {
+                return res.status(200).json({
+                    data: user,
+                    status: 200,
+                    created: "ok"
+                });
+            })
+            .catch(error => {
+                console.error('Error creating user:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    update: (req, res) => {
+        db.User.findByPk(req.params.id)
+            .then(user => {
+                if (!user) {
+                    return res.status(404).json({
+                        error: 'User not found',
+                        status: 404
+                    });
+                }
+                user.update(req.body)
+                    .then(updatedUser => {
+                        return res.status(200).json({
+                            data: updatedUser,
+                            status: 200,
+                            message: 'User updated successfully'
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error updating user:', error);
+                        return res.status(500).json({
+                            error: 'Internal Server Error',
+                            status: 500
+                        });
+                    });
+            })
+            .catch(error => {
+                console.error('Error finding user:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+        
+    delete: (req, res) => {
+        db.User
+            .destroy({
+                where: {
+                    user_id: req.params.id
+                }
+            })
+            .then(response => {
+                return res.json(response);
+            })
+            .catch(error => {
+                console.error('Error deleting user:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    search: (req, res) => {
+        db.User
+            .findAll({
+                where: {
+                    user_name: {[Op.like]: "%" + req.query.keyword + "%"}
+                }
+            })
+            .then(users => {
+                if (users.length > 0) {
+                    return res.status(200).json({
+                        total: users.length,
+                        data: users,
+                        status: 200
+                    });
+                }
+                return res.status(200).json("No se encontro ningun usuario")
+            })
+            .catch(error => {
+                console.error('Error searching users:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    }    
+
 };
 
 module.exports = userController;

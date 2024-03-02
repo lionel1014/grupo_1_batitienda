@@ -27,9 +27,17 @@ router.get("/editProduct/:id", authMiddleware,productController.editPage);
 router.get("/listProduct", productController.listPage);
 router.get("/:id", productController.index);
 
-router.put("/:id", uploadFile.single("imagen"), validateProduct, productController.update)
-router.post("/", uploadFile.single("imagen"), validateProduct, productController.create)
-router.delete("/:id", productController.delete)
+router.get("/api/products", productController.list);
+router.get("/api/products/search", productController.search);
+router.get("/api/products/:id", productController.show);
+router.post("/api/products", productController.store);
+router.put("/api/products/:id", productController.update);
+router.delete("/api/products/:id", productController.delete);
+
+
+router.put("/:id", uploadFile.single("imagen"), validateProduct, productController.updateProduct)
+router.post("/", uploadFile.single("imagen"), validateProduct, productController.createProduct)
+router.delete("/:id", productController.deleteProduct)
 //TODO: falta el router.delete()
 
 module.exports = router;

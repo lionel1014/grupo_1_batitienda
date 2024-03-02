@@ -1,6 +1,9 @@
 const ProductService = require("../services/ProductService");
 const { validationResult } = require("express-validator")
 
+const db = require('../database/models');
+const { Op } = require('sequelize')
+
 const productController = {
 
     index: function(request, response){
@@ -19,7 +22,7 @@ const productController = {
         response.render("product/createProduct", {title: '- crear producto'})
     },
 
-    create: function(request, response){
+    createProduct: function(request, response){
         let errors = validationResult(request);
         if (errors.isEmpty()){
             ProductService.createProduct(request)
@@ -42,7 +45,7 @@ const productController = {
             })
     },
 
-    update: function(request,response){
+    updateProduct: function(request,response){
         ProductService.updateProduct(request)
             .then( productEditedId => {
                 if (productEditedId) {
@@ -53,7 +56,7 @@ const productController = {
             })
     },
 
-    delete: function(request, response){
+    deleteProduct: function(request, response){
         ProductService.deleteProduct(request)
             .then( wasProductDeleted => {
                 if (wasProductDeleted == true) {
@@ -79,7 +82,148 @@ const productController = {
                 response.render("product/productList",{products: filterProducts, title: ''});
             })
 
-    }
+    },
+
+    list: (req, res) => {
+        db.Product
+            .findAll()
+            .then(products => {
+                return res.status(200).json({
+                    total: products.length,
+                    data: products,
+                    status: 200
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching users:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    show: (req, res) => {
+        db.Product
+            .findByPk(req.params.id)
+            .then(product => {
+                if (!product) {
+                    return res.status(404).json({
+                        error: 'Product not found',
+                        status: 404
+                    });
+                }
+                return res.status(200).json({
+                    data: product,
+                    status: 200
+                });
+            })
+            .catch(error => {
+                console.error('Error finding product:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    store: (req, res) => {
+        db.Product
+            .create(req.body)
+            .then(product => {
+                return res.status(200).json({
+                    data: product,
+                    status: 200,
+                    created: "ok"
+                });
+            })
+            .catch(error => {
+                console.error('Error creating product:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    update: (req, res) => {
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+                if (!product) {
+                    return res.status(404).json({
+                        error: 'Product not found',
+                        status: 404
+                    });
+                }
+                product.update(req.body)
+                    .then(updatedProduct => {
+                        return res.status(200).json({
+                            data: updatedProduct,
+                            status: 200,
+                            message: 'Product updated successfully'
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error updating user:', error);
+                        return res.status(500).json({
+                            error: 'Internal Server Error',
+                            status: 500
+                        });
+                    });
+            })
+            .catch(error => {
+                console.error('Error finding product:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+        
+    delete: (req, res) => {
+        db.Product
+            .destroy({
+                where: {
+                    product_id: req.params.id
+                }
+            })
+            .then(response => {
+                return res.json(response);
+            })
+            .catch(error => {
+                console.error('Error deleting product:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    },
+    
+    search: (req, res) => {
+        db.Product
+            .findAll({
+                where: {
+                    title: {[Op.like]: "%" + req.query.keyword + "%"}
+                }
+            })
+            .then(products => {
+                if (products.length > 0) {
+                    return res.status(200).json({
+                        total: products.length,
+                        data: products,
+                        status: 200
+                    });
+                }
+                return res.status(200).json("No se encontro ningun producto")
+            })
+            .catch(error => {
+                console.error('Error searching products:', error);
+                return res.status(500).json({
+                    error: 'Internal Server Error',
+                    status: 500
+                });
+            });
+    }  
 }
 
 module.exports = productController;
