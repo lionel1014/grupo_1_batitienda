@@ -207,9 +207,18 @@ const userController = {
         db.User
             .findAll()
             .then(users => {
+                const usersData = users.map(user => {
+                    return {
+                        id: user.user_id,
+                        name: user.name,
+                        email: user.email,
+                        detail: `${req.protocol}://${req.get('host')}/user/api/users/${user.user_id}`
+                    };
+                });
+                
                 return res.status(200).json({
-                    total: users.length,
-                    data: users,
+                    count: users.length,
+                    users: usersData,
                     status: 200
                 });
             })
@@ -221,10 +230,12 @@ const userController = {
                 });
             });
     },
-    
+
     show: (req, res) => {
+        const userId = req.params.id;
+
         db.User
-            .findByPk(req.params.id)
+            .findByPk(userId)
             .then(user => {
                 if (!user) {
                     return res.status(404).json({
@@ -232,8 +243,18 @@ const userController = {
                         status: 404
                     });
                 }
+
+                const userData = {
+                    id: user.user_id,
+                    name: user.name,
+                    lastName: user.last_name,
+                    email: user.email,
+                    imageUrl: user.image ? `${req.protocol}://${req.get('host')}/images/img_profile/${user.image}` : null,
+                    userName: user.user_namen,
+                };
+                
                 return res.status(200).json({
-                    data: user,
+                    ...userData,
                     status: 200
                 });
             })

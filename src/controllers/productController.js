@@ -86,26 +86,57 @@ const productController = {
 
     list: (req, res) => {
         db.Product
-            .findAll()
+            .findAll({
+                include: {
+                    model: db.ProductCategory,
+                    as: 'product_categories'
+                }
+            })
             .then(products => {
+                const productsData = products.map(product => ({
+                    id: product.product_id,
+                    name: product.title,
+                    description: product.description,
+                    category: product.product_categories.category,
+                    detail: `${req.protocol}://${req.get('host')}/product/api/products/${product.product_id}`
+                }));
+
+                const countByCategory = {};
+                products.forEach(product => {
+                    const category = product.product_categories.category;
+                    if (countByCategory[category]) {
+                    countByCategory[category]++;
+                    } else {
+                    countByCategory[category] = 1;
+                    }
+                });
+                
                 return res.status(200).json({
-                    total: products.length,
-                    data: products,
+                    count: products.length,
+                    countByCategory: countByCategory,
+                    products: productsData,
                     status: 200
                 });
             })
             .catch(error => {
-                console.error('Error fetching users:', error);
+                console.error('Error fetching products:', error);
                 return res.status(500).json({
                     error: 'Internal Server Error',
                     status: 500
                 });
             });
     },
-    
+
     show: (req, res) => {
+        const productId = req.params.id;
+
         db.Product
-            .findByPk(req.params.id)
+            .findByPk(productId, {
+                include: {
+                    model: db.ProductCategory,
+                    as: 'product_categories'
+                }
+            })
             .then(product => {
                 if (!product) {
                     return res.status(404).json({
@@ -113,8 +144,20 @@ const productController = {
                         status: 404
                     });
                 }
+
+                const productData = {
+                    id: product.product_id,
+                    name: product.title,
+                    price: product.price,
+                    stock: product.stock,
+                    description: product.description,
+                    imageUrl: `${req.protocol}://${req.get('host')}/images/img_products/${product.image}`, // Ajusta la ruta relativa de la imagen según la estructura de tu proyecto
+                    category: product.product_categories.category,
+                    subcategory: product.product_categories.sub_category
+                };
+                
                 return res.status(200).json({
-                    data: product,
+                    ...productData,
                     status: 200
                 });
             })
@@ -126,7 +169,7 @@ const productController = {
                 });
             });
     },
-    
+
     store: (req, res) => {
         db.Product
             .create(req.body)
