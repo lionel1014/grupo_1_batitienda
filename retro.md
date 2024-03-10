@@ -1,3 +1,26 @@
+# Retroalimentación de Nuestro Proyecto - SPRINT 7
+
+## Logros y Buenas Prácticas
+
+- **Implementación Exitosa de Validaciones:** Se logró implementar correctamente las validaciones tanto en el back-end como en el front-end para los formularios de registro de usuarios y creación/modificación de productos. Esto asegura la integridad de los datos y mejora la experiencia del usuario al proporcionar retroalimentación inmediata.
+
+- **Cumplimiento de Requisitos Esenciales:** Todas las validaciones requeridas en los formularios, como la obligatoriedad de campos, formatos válidos de email y contraseña, y la verificación de existencia en la base de datos, fueron implementadas de acuerdo a las especificaciones.
+
+- **Uso de Herramientas Adecuadas:** Se utilizó Express Validator en el back-end y validaciones personalizadas en el front-end, lo que demostró un enfoque técnico sólido y adaptado a las necesidades del proyecto.
+
+- **Complejidad de Validaciones Opcionales:** Todas las validaciones opcionales, como la complejidad de la contraseña, pudieron completarse minimamente sin incovenientes.
+
+## Áreas de Mejora
+
+- **Refinamiento de Validaciones Opcionales:** Revisar y mejorar las validaciones opcionales para garantizar un nivel adecuado de seguridad, especialmente en lo que respecta a la complejidad de las contraseñas.
+
+- **Claridad en la Experiencia del Usuario:** Aunque se proporciona retroalimentación inmediata al usuario en el front-end, podría mejorarse la claridad de los mensajes de error para una comprensión más fácil por parte del usuario.
+
+- **Optimización de Mensajes de Error:** Revisar y mejorar la redacción de los mensajes de error en el front-end para una mejor comprensión por parte del usuario, lo que contribuirá a una experiencia más intuitiva y satisfactoria.
+
+- **Seguimiento de Mejoras Continuas:** Mantener un seguimiento constante de las validaciones implementadas y recopilar feedback de usuarios para futuras iteraciones y mejoras en el sistema.
+
+
 # Retroalimentación de Nuestro Proyecto - SPRINT 6
 
 ## Logros y Buenas Prácticas
