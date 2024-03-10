@@ -85,14 +85,23 @@ const productController = {
     },
 
     list: (req, res) => {
+        const page = parseInt(req.query.page) || 1;
+        const limit = 10;
+        const offset = (page - 1) * limit;
+    
         db.Product
-            .findAll({
+            .findAndCountAll({
                 include: {
                     model: db.ProductCategory,
                     as: 'product_categories'
-                }
+                },
+                limit,
+                offset
             })
-            .then(products => {
+            .then(result => {
+                const products = result.rows;
+                const count = result.count;
+    
                 const productsData = products.map(product => ({
                     id: product.product_id,
                     name: product.title,
@@ -100,20 +109,29 @@ const productController = {
                     category: product.product_categories.category,
                     detail: `${req.protocol}://${req.get('host')}/product/api/products/${product.product_id}`
                 }));
-
+    
                 const countByCategory = {};
                 products.forEach(product => {
                     const category = product.product_categories.category;
                     if (countByCategory[category]) {
-                    countByCategory[category]++;
+                        countByCategory[category]++;
                     } else {
-                    countByCategory[category] = 1;
+                        countByCategory[category] = 1;
                     }
                 });
-                
+    
+                const totalPages = Math.ceil(count / limit);
+                const hasNextPage = page < totalPages;
+                const hasPrevPage = page > 1;
+                const nextPage = hasNextPage ? page + 1 : null;
+                const prevPage = hasPrevPage ? page - 1 : null;
+    
                 return res.status(200).json({
-                    count: products.length,
+                    count: count,
                     countByCategory: countByCategory,
+                    totalPages: totalPages,
+                    nextPage: nextPage,
+                    prevPage: prevPage,
                     products: productsData,
                     status: 200
                 });

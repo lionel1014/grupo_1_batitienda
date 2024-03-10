@@ -204,32 +204,49 @@ const userController = {
     },
 
     list: (req, res) => {
-        db.User
-            .findAll()
-            .then(users => {
-                const usersData = users.map(user => {
-                    return {
-                        id: user.user_id,
-                        name: user.name,
-                        email: user.email,
-                        detail: `${req.protocol}://${req.get('host')}/user/api/users/${user.user_id}`
-                    };
-                });
-                
-                return res.status(200).json({
-                    count: users.length,
-                    users: usersData,
-                    status: 200
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching users:', error);
-                return res.status(500).json({
-                    error: 'Internal Server Error',
-                    status: 500
-                });
+        const page = parseInt(req.query.page) || 1;
+        const limit = 10;
+        const offset = (page - 1) * limit;
+    
+        db.User.findAndCountAll({
+            limit,
+            offset
+        })
+        .then(result => {
+            const users = result.rows;
+            const count = result.count;
+    
+            const usersData = users.map(user => ({
+                id: user.user_id,
+                name: user.name,
+                email: user.email,
+                detail: `${req.protocol}://${req.get('host')}/user/api/users/${user.user_id}`
+            }));
+    
+            const totalPages = Math.ceil(count / limit);
+            const hasNextPage = page < totalPages;
+            const hasPrevPage = page > 1;
+            const nextPage = hasNextPage ? page + 1 : null;
+            const prevPage = hasPrevPage ? page - 1 : null;
+    
+            return res.status(200).json({
+                count: count,
+                totalPages: totalPages,
+                nextPage: nextPage,
+                prevPage: prevPage,
+                users: usersData,
+                status: 200
             });
+        })
+        .catch(error => {
+            console.error('Error fetching users:', error);
+            return res.status(500).json({
+                error: 'Internal Server Error',
+                status: 500
+            });
+        });
     },
+    
 
     show: (req, res) => {
         const userId = req.params.id;
