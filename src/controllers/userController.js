@@ -87,6 +87,11 @@ const userController = {
             });
     },
     
+    list: async function(request,response){
+        const usersPromise = await db.User.findAll();
+
+    },
+
     profile: function ( request, response){
         const userLogin = request.session.userLogged;
         const usersPromise = db.User.findAll({
