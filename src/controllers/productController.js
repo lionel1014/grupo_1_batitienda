@@ -89,45 +89,50 @@ const productController = {
         const limit = 10;
         const offset = (page - 1) * limit;
     
-        db.Product
-            .findAndCountAll({
-                include: {
-                    model: db.ProductCategory,
-                    as: 'product_categories'
-                },
-                limit,
-                offset
+        // Consulta para obtener todos los productos con sus categorías asociadas
+        db.Product.findAndCountAll({
+            include: {
+                model: db.ProductCategory,
+                as: 'product_categories'
+            },
+            limit,
+            offset
+        })
+        .then(result => {
+            const products = result.rows;
+            const count = result.count;
+    
+            const productsData = products.map(product => ({
+                id: product.product_id,
+                name: product.title,
+                description: product.description,
+                image: product.image,
+                category: product.product_categories.category,
+                detail: `${req.protocol}://${req.get('host')}/product/api/products/${product.product_id}`
+            }));
+
+            
+    
+            const totalPages = Math.ceil(count / limit);
+            const hasNextPage = page < totalPages;
+            const hasPrevPage = page > 1;
+            const nextPage = hasNextPage ? page + 1 : null;
+            const prevPage = hasPrevPage ? page - 1 : null;
+    
+            // Consulta para contar la cantidad de productos por cada categoría
+            db.ProductCategory.findAll({
+                attributes: ['category', [db.Sequelize.fn('COUNT', 'category'), 'productCount']],
+                group: ['category']
             })
-            .then(result => {
-                const products = result.rows;
-                const count = result.count;
-    
-                const productsData = products.map(product => ({
-                    id: product.product_id,
-                    name: product.title,
-                    description: product.description,
-                    category: product.product_categories.category,
-                    detail: `${req.protocol}://${req.get('host')}/product/api/products/${product.product_id}`
-                }));
-    
+            .then(categories => {
                 const countByCategory = {};
-                products.forEach(product => {
-                    const category = product.product_categories.category;
-                    if (countByCategory[category]) {
-                        countByCategory[category]++;
-                    } else {
-                        countByCategory[category] = 1;
-                    }
+                categories.forEach(category => {
+                    countByCategory[category.category] = category.dataValues.productCount;
                 });
-    
-                const totalPages = Math.ceil(count / limit);
-                const hasNextPage = page < totalPages;
-                const hasPrevPage = page > 1;
-                const nextPage = hasNextPage ? page + 1 : null;
-                const prevPage = hasPrevPage ? page - 1 : null;
     
                 return res.status(200).json({
                     count: count,
+                    categoryCount: categories.length,
                     countByCategory: countByCategory,
                     totalPages: totalPages,
                     nextPage: nextPage,
@@ -137,13 +142,22 @@ const productController = {
                 });
             })
             .catch(error => {
-                console.error('Error fetching products:', error);
+                console.error('Error counting products by category:', error);
                 return res.status(500).json({
                     error: 'Internal Server Error',
                     status: 500
                 });
             });
+        })
+        .catch(error => {
+            console.error('Error fetching products:', error);
+            return res.status(500).json({
+                error: 'Internal Server Error',
+                status: 500
+            });
+        });
     },
+    
 
     show: (req, res) => {
         const productId = req.params.id;

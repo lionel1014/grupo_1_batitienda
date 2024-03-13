@@ -1,35 +1,39 @@
 import React, { useEffect, useState } from 'react';
-import { AgGridReact } from 'ag-grid-react'; // AG Grid Component
-import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the grid
-import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the grid
-
+import { AgGridReact } from 'ag-grid-react';
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-quartz.css';
 
 const Chart = () => {
-    fetch('https://rickandmortyapi.com/api/character')
-        .then(response => response.json())
-        .then(data => console.log(data));
+    // Estado para almacenar los datos de los productos
+    const [productData, setProductData] = useState([]);
 
-    const [rowData, setRowData] = useState([
-        { make: 'Tesla', model: 'Model Y', price: 64950, electric: true },
-        { make: 'Ford', model: 'F-Series', price: 33850, electric: false },
-        { make: 'Toyota', model: 'Corolla', price: 29600, electric: false },
-        { make: 'Mercedes', model: 'EQA', price: 48890, electric: true },
-        { make: 'Fiat', model: '500', price: 15774, electric: false },
-        { make: 'Nissan', model: 'Juke', price: 20675, electric: false },
-    ]);
+    // Column Definitions
+    const columnDefs = [
+        { headerName: 'ID', field: 'id', flex: 1 },
+        { headerName: 'Nombre', field: 'name', flex: 1 },
+        { headerName: 'Descripción', field: 'description', flex: 2 },
+        { headerName: 'Categoría', field: 'category', flex: 1 },
+    ];
 
-    // Column Definitions: Defines & controls grid columns.
-    const [columnDefs, setColumnDefs] = useState([
-        { field: "make", flex: 2 }, //This column will be twice as wide as the others
-        { field: "model", flex: 1 },
-        { field: "price", flex: 1 },
-        { field: "electric", flex: 1 }
-    ]);
+    useEffect(() => {
+        // Fetching data from the product API
+        fetch('http://localhost:3001/product/api/products/')
+            .then(response => response.json())
+            .then(data => {
+                if (data && Array.isArray(data.products)) {
+                    // Actualizar el estado con los datos de los productos
+                    setProductData(data.products);
+                } else {
+                    console.error('Error fetching product data: Invalid format');
+                }
+            })
+            .catch(error => console.error('Error fetching product data:', error));
+    }, []);
 
     return (
-        <div className={"Lionel"} style={{ width: '100%', height: '200px' }}>
-            <div className={"ag-theme-quartz"} style={{ width: '100%', height: '100%' }}>
-                <AgGridReact rowData={rowData} columnDefs={columnDefs} />
+        <div className="Lionel" style={{ width: '100%', height: '200px' }}>
+            <div className="ag-theme-quartz" style={{ width: '100%', height: '100%' }}>
+                <AgGridReact rowData={productData} columnDefs={columnDefs} />
             </div>
         </div>
     );
