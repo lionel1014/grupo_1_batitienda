@@ -110,8 +110,6 @@ const productController = {
                 category: product.product_categories.category,
                 detail: `${req.protocol}://${req.get('host')}/product/api/products/${product.product_id}`
             }));
-
-            
     
             const totalPages = Math.ceil(count / limit);
             const hasNextPage = page < totalPages;
@@ -121,7 +119,12 @@ const productController = {
     
             // Consulta para contar la cantidad de productos por cada categoría
             db.ProductCategory.findAll({
-                attributes: ['category', [db.Sequelize.fn('COUNT', 'category'), 'productCount']],
+                attributes: ['category', [db.Sequelize.fn('COUNT', 'ProductCategories.product_category_id'), 'productCount']],
+                include: {
+                    model: db.Product,
+                    as: 'product_categories',
+                    attributes: []
+                },
                 group: ['category']
             })
             .then(categories => {
@@ -157,7 +160,7 @@ const productController = {
             });
         });
     },
-    
+        
 
     show: (req, res) => {
         const productId = req.params.id;

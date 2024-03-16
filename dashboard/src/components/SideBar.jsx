@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/murcielago1.png';
 import { Link } from 'react-router-dom';
 
 function SideBar(){
@@ -11,7 +11,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src={image} alt="Bati-tienda"/>
                     </div>
                 </Link>
 
@@ -22,7 +22,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></a>
+                        <span>Dashboard - Bati-tienda</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}
